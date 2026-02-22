@@ -3,8 +3,8 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #1434CB;
-  --color-primary-hover: #F7B600;
+  --color-primary: #1434cb;
+  --color-primary-hover: #f7b600;
 
   --font-sans: var(--font-inter), "Inter", "Helvetica Neue", sans-serif;
   --font-serif: var(--font-inter), "Inter", "Helvetica Neue", sans-serif;
@@ -28,7 +28,6 @@
     0% {
       opacity: 0;
     }
-
     100% {
       opacity: 1;
     }
@@ -39,10 +38,18 @@
       opacity: 0;
       transform: translateY(20px);
     }
-
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -400px 0;
+    }
+    100% {
+      background-position: 400px 0;
     }
   }
 
@@ -57,12 +64,19 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
     @apply antialiased bg-white text-neutral-900 font-light leading-relaxed;
     font-family: var(--font-sans);
     text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1434cb;
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 
   h1,
@@ -79,6 +93,12 @@
   a {
     transition: color 0.3s ease;
   }
+
+  img {
+    transition:
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.3s ease;
+  }
 }
 
 @utility container {
@@ -94,13 +114,13 @@
     letter-spacing: -0.02em;
   }
   .btn {
-    @apply inline-flex items-center justify-center gap-3 px-8 py-4 transition-colors;
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 transition-all duration-200;
   }
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-3 px-8 py-4 transition-colors bg-neutral-900 text-white border border-neutral-900 hover:bg-neutral-800;
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 transition-all duration-200 bg-neutral-900 text-white border border-neutral-900 hover:bg-neutral-800 hover:shadow-lg active:scale-[0.98];
   }
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-3 px-8 py-4 transition-colors border border-neutral-300 text-neutral-900 hover:border-neutral-900;
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 transition-all duration-200 border border-neutral-300 text-neutral-900 hover:border-neutral-900 hover:shadow-sm active:scale-[0.98];
   }
   .typ-h1 {
     @apply text-[40px] md:text-[56px] lg:text-[64px] leading-[1.05] font-light tracking-tight;
@@ -119,5 +139,30 @@
   }
   .typ-subtle {
     @apply text-neutral-500;
+  }
+
+  /* Card lift micro-interaction */
+  .card-lift {
+    @apply transition-all duration-300;
+  }
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Skeleton shimmer */
+  .skeleton {
+    background: linear-gradient(90deg, #f4f4f5 25%, #e4e4e7 50%, #f4f4f5 75%);
+    background-size: 400px 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+  }
+
+  /* Hide scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

@@ -1,4 +1,4 @@
-export interface ProductVariant {
+﻿export interface ProductVariant {
   id: string;
   variantName: string; // e.g., "With Headrest", "Without Headrest"
   galleryImages: string[]; // Exactly 7 images for the split layout
@@ -79,9 +79,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Steel frame, powder-coated", "Melamine-finish MDF work surface", "Adjustable levelling feet"
               ]
             },
             metadata: {
@@ -112,9 +112,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Steel frame, powder-coated", "Melamine-finish MDF work surface", "Adjustable levelling feet"
               ]
             },
             metadata: {
@@ -145,9 +145,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Steel frame, powder-coated", "Melamine-finish MDF work surface", "Adjustable levelling feet"
               ]
             },
             metadata: {
@@ -178,9 +178,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Steel frame, powder-coated", "Melamine-finish MDF work surface", "Adjustable levelling feet"
               ]
             },
             metadata: {
@@ -211,9 +211,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Steel frame, powder-coated", "Melamine-finish MDF work surface", "Adjustable levelling feet"
               ]
             },
             metadata: {
@@ -244,9 +244,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Steel frame, powder-coated", "Melamine-finish MDF work surface", "Adjustable levelling feet"
               ]
             },
             metadata: {
@@ -277,9 +277,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Steel frame, powder-coated", "Melamine-finish MDF work surface", "Adjustable levelling feet"
               ]
             },
             metadata: {
@@ -310,9 +310,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Steel frame, powder-coated", "Melamine-finish MDF work surface", "Adjustable levelling feet"
               ]
             },
             metadata: {
@@ -357,9 +357,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -390,9 +390,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -423,9 +423,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -456,9 +456,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -489,9 +489,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -522,9 +522,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -555,9 +555,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -588,9 +588,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -621,9 +621,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -654,9 +654,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -687,9 +687,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -720,9 +720,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -753,9 +753,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -786,9 +786,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -819,9 +819,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -852,9 +852,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -885,9 +885,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -918,9 +918,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -951,9 +951,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -984,9 +984,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -1017,9 +1017,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -1050,9 +1050,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -1083,9 +1083,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -1116,9 +1116,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -1149,9 +1149,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -1182,9 +1182,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -1215,9 +1215,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -1248,9 +1248,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -1281,9 +1281,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -1314,9 +1314,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "1800900750mm (standard)",
               materials: [
-                "Premium materials"
+                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
               ]
             },
             metadata: {
@@ -1361,9 +1361,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W900D450H1800mm (wardrobe)",
               materials: [
-                "Premium materials"
+                "CRCA steel, powder-coated", "Piano hinge doors", "Adjustable shelves"
               ]
             },
             metadata: {
@@ -1394,9 +1394,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W900D450H1800mm (wardrobe)",
               materials: [
-                "Premium materials"
+                "CRCA steel, powder-coated", "Piano hinge doors", "Adjustable shelves"
               ]
             },
             metadata: {
@@ -1427,9 +1427,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W900D450H1800mm (wardrobe)",
               materials: [
-                "Premium materials"
+                "CRCA steel, powder-coated", "Piano hinge doors", "Adjustable shelves"
               ]
             },
             metadata: {
@@ -1460,9 +1460,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W900D450H1800mm (wardrobe)",
               materials: [
-                "Premium materials"
+                "CRCA steel, powder-coated", "Piano hinge doors", "Adjustable shelves"
               ]
             },
             metadata: {
@@ -1493,9 +1493,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W900D450H1800mm (wardrobe)",
               materials: [
-                "Premium materials"
+                "CRCA steel, powder-coated", "Piano hinge doors", "Adjustable shelves"
               ]
             },
             metadata: {
@@ -1526,9 +1526,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W900D450H1800mm (wardrobe)",
               materials: [
-                "Premium materials"
+                "CRCA steel, powder-coated", "Piano hinge doors", "Adjustable shelves"
               ]
             },
             metadata: {
@@ -1559,9 +1559,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W900D450H1800mm (wardrobe)",
               materials: [
-                "Premium materials"
+                "CRCA steel, powder-coated", "Piano hinge doors", "Adjustable shelves"
               ]
             },
             metadata: {
@@ -1592,9 +1592,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W900D450H1800mm (wardrobe)",
               materials: [
-                "Premium materials"
+                "CRCA steel, powder-coated", "Piano hinge doors", "Adjustable shelves"
               ]
             },
             metadata: {
@@ -1639,9 +1639,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -1672,9 +1672,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -1705,9 +1705,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -1738,9 +1738,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -1771,9 +1771,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -1804,9 +1804,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -1837,9 +1837,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -1870,9 +1870,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -1903,9 +1903,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -1936,9 +1936,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -1969,9 +1969,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2002,9 +2002,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2035,9 +2035,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2068,9 +2068,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2101,9 +2101,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2134,9 +2134,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2167,9 +2167,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2200,9 +2200,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2233,9 +2233,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2266,9 +2266,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2299,9 +2299,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2332,9 +2332,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2365,9 +2365,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2398,9 +2398,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2431,9 +2431,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2464,9 +2464,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2497,9 +2497,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2530,9 +2530,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2563,9 +2563,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2596,9 +2596,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2629,9 +2629,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2662,9 +2662,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2695,9 +2695,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2728,9 +2728,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2761,9 +2761,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2794,9 +2794,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2827,9 +2827,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2860,9 +2860,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2893,9 +2893,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2926,9 +2926,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -2959,9 +2959,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
-                "Premium materials"
+                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
               ]
             },
             metadata: {
@@ -3006,9 +3006,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3039,9 +3039,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3072,9 +3072,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3105,9 +3105,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3138,9 +3138,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3171,9 +3171,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3204,9 +3204,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3237,9 +3237,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3270,9 +3270,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3303,9 +3303,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3336,9 +3336,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3369,9 +3369,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3402,9 +3402,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3435,9 +3435,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3468,9 +3468,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3501,9 +3501,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3534,9 +3534,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3567,9 +3567,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3600,9 +3600,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3633,9 +3633,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3666,9 +3666,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3699,9 +3699,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3732,9 +3732,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3765,9 +3765,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3798,9 +3798,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3831,9 +3831,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3864,9 +3864,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3897,9 +3897,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3930,9 +3930,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3963,9 +3963,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -3996,9 +3996,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4029,9 +4029,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4062,9 +4062,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4095,9 +4095,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4128,9 +4128,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4161,9 +4161,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4194,9 +4194,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4227,9 +4227,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4260,9 +4260,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4293,9 +4293,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4326,9 +4326,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4359,9 +4359,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Premium materials"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
               ]
             },
             metadata: {
@@ -4406,9 +4406,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4439,9 +4439,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4472,9 +4472,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4505,9 +4505,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4538,9 +4538,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4571,9 +4571,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4604,9 +4604,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4637,9 +4637,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4670,9 +4670,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4703,9 +4703,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4736,9 +4736,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4769,9 +4769,9 @@ export const oandoCatalog: Category[] = [
                 "Manufacturing",
                 "Sustainability"
               ],
-              dimensions: "Customizable",
+              dimensions: "W600D500H720900mm",
               materials: [
-                "Premium materials"
+                "Steel frame, epoxy-coated", "Plywood seat & back", "Rubber feet, stackable"
               ]
             },
             metadata: {
@@ -4878,6 +4878,7 @@ export const oandoCatalog: Category[] = [
   }
 
 ];
+
 
 
 
