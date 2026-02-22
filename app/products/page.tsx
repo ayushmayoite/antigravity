@@ -86,7 +86,7 @@ export default function ProductsPage() {
                 solo work.
               </p>
               <Link
-                href="/products/afc-workstations"
+                href="/products/oando-workstations"
                 className="inline-flex items-center gap-2 border-b border-neutral-900 pb-1"
               >
                 Explore <span className="text-xl">→</span>
@@ -99,7 +99,7 @@ export default function ProductsPage() {
                 Lounge systems and meeting tables for dynamic discussions.
               </p>
               <Link
-                href="/products/afc-soft-seating"
+                href="/products/oando-soft-seating"
                 className="inline-flex items-center gap-2 border-b border-neutral-900 pb-1"
               >
                 Explore <span className="text-xl">→</span>
@@ -113,7 +113,7 @@ export default function ProductsPage() {
                 office.
               </p>
               <Link
-                href="/products/afc-storage"
+                href="/products/oando-storage"
                 className="inline-flex items-center gap-2 border-b border-neutral-900 pb-1"
               >
                 Explore <span className="text-xl">→</span>
@@ -147,7 +147,7 @@ export default function ProductsPage() {
                   "Stepless height adjustment for ergonomic sitting and standing.",
                   "Acoustic shielding options for focused work.",
                   "Modular storage solutions for organized workflows.",
-                  "Sustainable materials and durable construction made in Germany.",
+                  "Sustainable materials and durable construction.",
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -188,7 +188,7 @@ export default function ProductsPage() {
               demands both comfort and style.
             </p>
             <Link
-              href="/products/seating/mesh-seating/fluid-x"
+              href="/products/oando-seating/oando-seating-series/fluid-x"
               className="inline-flex items-center gap-2 text-white border-b border-white hover:border-primary hover:text-primary transition-colors text-lg uppercase tracking-[0.2em] mt-8 pb-1"
             >
               Discover Fluid X <span className="text-2xl">→</span>

@@ -13,8 +13,8 @@ export function PartnershipSection() {
           <div className="shrink-0">
             <div className="relative w-80 h-24 md:w-96 md:h-32">
               <Image
-                src="/afc-logo.png"
-                alt="AFC India"
+                src="/oando-logo.png"
+                alt="One and Only"
                 fill
                 className="object-contain object-center md:object-left"
               />
@@ -40,12 +40,12 @@ export function PartnershipSection() {
             </p>
 
             <a
-              href="https://www.afcindia.com"
+              href="https://www.oando.co.in"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs font-medium text-neutral-900 hover:text-neutral-600 transition-colors border-b border-neutral-200 pb-0.5"
             >
-              Visit afcindia.com <ArrowRight className="w-3 h-3" />
+              Visit oando.co.in <ArrowRight className="w-3 h-3" />
             </a>
           </div>
         </div>
@@ -53,3 +53,5 @@ export function PartnershipSection() {
     </section>
   );
 }
+
+

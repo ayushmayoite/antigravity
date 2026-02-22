@@ -4,18 +4,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-export function AFCSection() {
+export function PartnerSection() {
   return (
     <section className="bg-white">
       <div className="container mx-auto px-6 lg:px-12 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           {/* Logo and Text Group */}
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 text-center md:text-left">
-            {/* AFC Logo */}
+            {/* Partner Logo */}
             <div className="relative w-32 h-12 grayscale-0 opacity-100 transition-opacity hover:opacity-100">
               <Image
-                src="/afc-logo.png"
-                alt="AFC India"
+                src="/oando-logo.png"
+                alt="One and Only"
                 fill
                 className="object-contain"
               />
@@ -37,7 +37,7 @@ export function AFCSection() {
 
           {/* CTA Link */}
           <Link
-            href="https://afcindia.com"
+            href="https://oando.co.in"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 text-base text-[#BF0D17] font-medium hover:text-[#9A0A12] transition-colors"
@@ -50,3 +50,5 @@ export function AFCSection() {
     </section>
   );
 }
+
+

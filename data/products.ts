@@ -143,3 +143,4 @@ export const CATEGORIES = [
     { id: "workstations", title: "Workstations", image: "/images/products/deskpro-workstation-1.webp" },
     { id: "soft-seating", title: "Soft Seating", image: "/images/products/softseating-solace-1.webp" }
 ];
+

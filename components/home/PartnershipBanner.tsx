@@ -6,11 +6,11 @@ export function PartnershipBanner() {
     <section className="bg-white py-12 border-y border-neutral-100">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* AFC Logo Side */}
+          {/* Partner Logo Side */}
           <div className="shrink-0">
             <div className="flex items-center gap-1">
               <span className="text-6xl font-black text-[#E31A22] tracking-tighter italic">
-                afc
+                oando
               </span>
             </div>
           </div>
@@ -28,11 +28,11 @@ export function PartnershipBanner() {
               furniture solutions to your workspace.
             </p>
             <Link
-              href="https://afcindia.com"
+              href="https://oando.co.in"
               target="_blank"
               className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-neutral-900 hover:text-primary transition-colors border-b-2 border-neutral-100 pb-1"
             >
-              Visit afcindia.com <ArrowRight className="w-4 h-4" />
+              Visit oando.co.in <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -40,3 +40,5 @@ export function PartnershipBanner() {
     </section>
   );
 }
+
+

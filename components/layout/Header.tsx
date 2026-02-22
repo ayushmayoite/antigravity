@@ -16,30 +16,28 @@ const discoverMenuItems = oandoCatalog
     label: category.name,
     href: `/products/${category.id}`,
   }))
-  .concat([
-    { label: "Collaborative Spaces", href: "/products/afc-collaborative" },
-    { label: "All Products", href: "/products" },
-  ]);
+  .concat([{ label: "All Products", href: "/products" }]);
 
 const discoverMenuCards = [
   {
-    title: "Collaborative Spaces",
-    description: "Soft seating for dynamic team work and informal discussions.",
-    image: "/images/products/imported/cocoon/image-1.webp",
-    href: "/products/afc-collaborative",
+    title: "Seating",
+    description:
+      "Ergonomic office chairs and task seating for every workspace.",
+    image: "/images/products/imported/fluid/image-1.webp",
+    href: "/products/oando-seating",
   },
   {
     title: "Workstations",
     description: "Modular workstation solutions for modern offices.",
     image: "/images/products/imported/cabin/image-1.webp",
-    href: "/products/afc-workstations",
+    href: "/products/oando-workstations",
   },
   {
     title: "Soft Seating",
     description:
       "Comfortable seating solutions for collaborative environments.",
-    image: "/images/products/imported/fluid/image-1.webp",
-    href: "/products/afc-soft-seating",
+    image: "/images/products/imported/cocoon/image-1.webp",
+    href: "/products/oando-soft-seating",
   },
 ];
 

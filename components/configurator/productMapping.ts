@@ -8,7 +8,7 @@ export interface RecommendedProduct {
 
 /**
  * Get recommended products based on configurator selections
- * Maps layout and seating configuration to specific AFC products
+ * Maps layout and seating configuration to specific catalog products
  */
 export function getRecommendedProducts(config: ConfigState): RecommendedProduct[] {
     const { layout, seatingCount, furnitureType } = config;
@@ -105,3 +105,4 @@ export function getRecommendedProducts(config: ConfigState): RecommendedProduct[
 
     return products;
 }
+

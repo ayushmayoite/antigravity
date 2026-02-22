@@ -64,7 +64,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ categor
                     <Reveal>
                         <p className="text-xl md:text-2xl font-light text-neutral-500 leading-relaxed">
                             The {series.name} collection represents the pinnacle of modern workspace design.
-                            Manufactured with precision by AFC Furniture Solutions, and curated exclusively for the visionary office environments constructed by One and Only.
+                            Manufactured with precision by One and Only, and curated exclusively for the visionary office environments constructed by One and Only.
                         </p>
                     </Reveal>
                 </div>
@@ -104,7 +104,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ categor
                                             The {product.name} from our {series.name} series is a testament to manufacturing excellence.
                                         </p>
 
-                                        {/* Mock Features since AFC didn't provide them, but we need the luxury feel */}
+                                        {/* Mock Features since data not yet available them, but we need the luxury feel */}
                                         <ul className="space-y-4 pt-4 border-t border-neutral-200">
                                             {["Premium materials and finishes", "Ergonomically engineered", "Industry-leading warranty"].map((feature, i) => (
                                                 <li key={i} className="flex items-center gap-3">
@@ -149,7 +149,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ categor
                             <Mail className="w-4 h-4" /> Contact a Consultant
                         </Link>
                         <a
-                            href="https://www.afcindia.in"
+                            href="https://www.oando.co.in"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full sm:w-auto btn border border-white/20 text-white typ-cta hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
@@ -162,4 +162,6 @@ export default async function SeriesPage({ params }: { params: Promise<{ categor
         </main>
     );
 }
+
+
 
