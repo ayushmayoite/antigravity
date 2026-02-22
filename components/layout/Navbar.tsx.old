@@ -1,0 +1,290 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, ChevronDown, Search } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { MegaMenu } from "./MegaMenu";
+import { afcCatalog } from "@/lib/catalog";
+import Image from "next/image";
+
+const discoverMenuItems = afcCatalog.map((category) => ({
+  label: category.name,
+  href: `/products/${category.id}`,
+}));
+
+const discoverMenuCards = [
+  {
+    title: "Fluid X",
+    description: "The next generation of ergonomic performance.",
+    image: "/products/fluid-chair-1.jpg",
+    href: "/products/seating/fluid-x", // fixed path
+  },
+  {
+    title: "Project Solutions",
+    description: "Modular architecture for any workspace.",
+    image: "/products/60x30-workstation-1.jpg",
+    href: "/solutions/corporate",
+  },
+  {
+    title: "Solace Lounge",
+    description: "Where comfort meets collaboration.",
+    image: "/products/softseating-solace-1.jpg",
+    href: "/products/fabric-seating/solace",
+  },
+];
+
+const navItems = [
+  { name: "Products", href: "/products", hasMegaMenu: true },
+  { name: "Solutions", href: "/solutions" },
+  { name: "Project Gallery", href: "/gallery" },
+  { name: "About", href: "/about" },
+];
+
+// Will be populated from lib/catalog.ts
+const solutionIndustries = [
+  { title: "Corporate Office", href: "/solutions/corporate" },
+  { title: "Government \u0026 PSU", href: "/solutions/government" },
+  { title: "Education \u0026 Institutional", href: "/solutions/education" },
+  { title: "Healthcare", href: "/solutions/healthcare" },
+];
+
+export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close mobile menu and dropdowns when pathname changes
+  useEffect(() => {
+    // Wrap in setTimeout to avoid React's synchronous cascading render warning
+    const timer = setTimeout(() => {
+      setIsMobileMenuOpen(false);
+      setActiveDropdown(null);
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [pathname]);
+
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
+
+  return (
+    <>
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out border-b ${
+          isScrolled || isMobileMenuOpen
+            ? "bg-white/95 backdrop-blur-md py-4 border-neutral-100 shadow-sm"
+            : "bg-white/0 py-6 border-transparent"
+        }`}
+      >
+        <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="relative z-50 flex items-center py-2 h-14 w-48"
+          >
+            <Image
+              src="https://oando.co.in/logo-final.png"
+              alt="One and Only Logo"
+              fill
+              className="object-contain transition-all duration-300"
+            />
+          </Link>
+
+          <div
+            className="hidden lg:flex"
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
+            <nav className="flex items-center gap-10 h-full">
+              {navItems.map((item) => (
+                <div
+                  key={item.name}
+                  className="relative h-full flex items-center"
+                  onMouseEnter={() =>
+                    item.hasMegaMenu &&
+                    setActiveDropdown(item.name.toLowerCase())
+                  }
+                >
+                  <Link
+                    href={item.href}
+                    className={`text-[13px] font-semibold uppercase tracking-[0.15em] transition-colors hover:text-[color:var(--color-primary)] ${
+                      isScrolled ? "text-neutral-600" : "text-white"
+                    } ${activeDropdown === item.name.toLowerCase() ? "text-[color:var(--color-primary)]" : ""}`}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.hasMegaMenu &&
+                    activeDropdown === item.name.toLowerCase() && (
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-full h-[2px] bg-[color:var(--color-primary-hover)] mt-4" />
+                    )}
+                </div>
+              ))}
+            </nav>
+          </div>
+
+          {/* Right Actions */}
+          <div className="flex items-center gap-6">
+            <button
+              title="Search"
+              className={`hidden sm:block transition-colors hover:text-[color:var(--color-primary)] ${
+                isScrolled ? "text-neutral-900" : "text-white"
+              }`}
+            >
+              <Search className="w-5 h-5" />
+            </button>
+
+            <Link
+              href="/contact"
+              className={`hidden md:block px-6 py-3 text-sm font-bold uppercase tracking-widest transition-all ${
+                isScrolled
+                  ? "bg-neutral-900 text-white hover:bg-neutral-800"
+                  : "bg-white text-neutral-900 hover:bg-neutral-100"
+              } rounded-none`}
+            >
+              Request Quote
+            </Link>
+
+            {/* Mobile Menu Button */}
+            <button
+              className={`lg:hidden relative z-50 ${isScrolled || isMobileMenuOpen ? "text-neutral-900" : "text-white"}`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-7 h-7" />
+              ) : (
+                <Menu className="w-7 h-7" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Desktop Mega Menu Overlay */}
+        <div
+          onMouseEnter={() => setActiveDropdown("products")}
+          onMouseLeave={() => setActiveDropdown(null)}
+        >
+          <MegaMenu
+            isOpen={activeDropdown === "products"}
+            onClose={() => setActiveDropdown(null)}
+            items={discoverMenuItems}
+            cards={discoverMenuCards}
+          />
+        </div>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+            className="fixed inset-0 bg-white z-40 flex flex-col pt-28 px-8 pb-12 overflow-y-auto lg:hidden"
+          >
+            <nav className="flex flex-col gap-8 mb-12">
+              <div className="border-b border-neutral-100 pb-4">
+                <button
+                  onClick={() => toggleDropdown("mob-products")}
+                  className="w-full flex items-center justify-between text-2xl font-bold text-neutral-900"
+                >
+                  Products{" "}
+                  <ChevronDown
+                    className={`w-6 h-6 transition-transform ${activeDropdown === "mob-products" ? "rotate-180" : ""}`}
+                  />
+                </button>
+                <AnimatePresence>
+                  {activeDropdown === "mob-products" && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden mt-4 space-y-4 pl-4"
+                    >
+                      {/* Removed productCategories mapping to fix build */}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              <div className="border-b border-neutral-100 pb-4">
+                <button
+                  onClick={() => toggleDropdown("mob-solutions")}
+                  className="w-full flex items-center justify-between text-2xl font-bold text-neutral-900"
+                >
+                  Solutions{" "}
+                  <ChevronDown
+                    className={`w-6 h-6 transition-transform ${activeDropdown === "mob-solutions" ? "rotate-180" : ""}`}
+                  />
+                </button>
+                <AnimatePresence>
+                  {activeDropdown === "mob-solutions" && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden mt-4 flex flex-col gap-3 pl-4"
+                    >
+                      {solutionIndustries.map((industry) => (
+                        <Link
+                          key={industry.title}
+                          href={industry.href}
+                          className="text-lg text-neutral-600"
+                        >
+                          {industry.title}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              <Link
+                href="/gallery"
+                className="text-2xl font-bold text-neutral-900 border-b border-neutral-100 pb-4"
+              >
+                Projects
+              </Link>
+              <Link
+                href="/about"
+                className="text-2xl font-bold text-neutral-900 border-b border-neutral-100 pb-4"
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                className="text-2xl font-bold text-neutral-900 border-b border-neutral-100 pb-4"
+              >
+                Contact
+              </Link>
+            </nav>
+
+            <div className="mt-auto space-y-4">
+              <Link
+                href="/contact"
+                className="block w-full text-center bg-neutral-900 text-white py-4 font-bold uppercase tracking-widest"
+              >
+                Request Quote
+              </Link>
+              <div className="flex items-center justify-center gap-6 text-neutral-500">
+                <Search className="w-6 h-6" />
+                <span className="w-px h-6 bg-neutral-200" />
+                <p className="text-sm font-medium">sales@oando.co.in</p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
