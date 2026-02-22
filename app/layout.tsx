@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/layout/Navbar";
+import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AdvancedBot } from "@/components/bot/AdvancedBot";
 
@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "One and Only Furniture | Premium Office Solutions",
   description:
-    "Experience the pinnacle of workspace design with One and Only Furniture. Authorized Strategic Partner of AFC India.",
+    "Experience the pinnacle of workspace design with One and Only Furniture. Premium office furniture solutions for modern workspaces.",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased bg-white selection:bg-primary selection:text-white">
-        <Navbar />
+        <Header />
         {children}
         <Footer />
         <AdvancedBot />
