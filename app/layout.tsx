@@ -5,16 +5,11 @@ import { Header } from "@/components/layout/Header";
 import dynamic from "next/dynamic";
 
 // Lazy-load non-critical components — improves LCP / TTI
+// Note: ssr:false is NOT allowed in Server Components; use regular dynamic() here
 const Footer = dynamic(() =>
   import("@/components/layout/Footer").then((m) => ({ default: m.Footer })),
 );
-const AdvancedBot = dynamic(
-  () =>
-    import("@/components/bot/AdvancedBot").then((m) => ({
-      default: m.AdvancedBot,
-    })),
-  { ssr: false },
-);
+import { BotLoader } from "@/components/bot/BotLoader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -122,7 +117,7 @@ export default function RootLayout({
         <Header />
         <div id="main-content">{children}</div>
         <Footer />
-        <AdvancedBot />
+        <BotLoader />
       </body>
     </html>
   );
