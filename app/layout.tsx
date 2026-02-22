@@ -9,7 +9,11 @@ import dynamic from "next/dynamic";
 const Footer = dynamic(() =>
   import("@/components/layout/Footer").then((m) => ({ default: m.Footer })),
 );
-import { BotLoader } from "@/components/bot/BotLoader";
+const AdvancedBot = dynamic(() =>
+  import("@/components/bot/AdvancedBot").then((m) => ({
+    default: m.AdvancedBot,
+  })),
+);
 
 const inter = Inter({
   subsets: ["latin"],
@@ -117,7 +121,7 @@ export default function RootLayout({
         <Header />
         <div id="main-content">{children}</div>
         <Footer />
-        <BotLoader />
+        <AdvancedBot />
       </body>
     </html>
   );
