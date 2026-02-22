@@ -2,8 +2,19 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { AdvancedBot } from "@/components/bot/AdvancedBot";
+import dynamic from "next/dynamic";
+
+// Lazy-load non-critical components — improves LCP / TTI
+const Footer = dynamic(() =>
+  import("@/components/layout/Footer").then((m) => ({ default: m.Footer })),
+);
+const AdvancedBot = dynamic(
+  () =>
+    import("@/components/bot/AdvancedBot").then((m) => ({
+      default: m.AdvancedBot,
+    })),
+  { ssr: false },
+);
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,10 +22,79 @@ const inter = Inter({
   display: "swap",
 });
 
+const BASE_URL = "https://oando.co.in";
+
 export const metadata: Metadata = {
-  title: "One and Only Furniture | Premium Office Solutions",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "One and Only Furniture | Premium Office Solutions — Patna, Bihar",
+    template: "%s | One and Only Furniture",
+  },
   description:
-    "Experience the pinnacle of workspace design with One and Only Furniture. Premium office furniture solutions for modern workspaces.",
+    "One and Only Furniture — premium ergonomic office furniture in Patna, Bihar, India. Workstations, seating, storage, tables & soft seating. Trusted by DMRC, TVS, Titan & more.",
+  keywords: [
+    "office furniture Patna",
+    "premium office furniture Bihar",
+    "ergonomic chairs India",
+    "modular workstations Patna",
+    "office furniture Bihar",
+    "One and Only Furniture",
+    "oando furniture",
+    "office chairs Patna",
+    "meeting tables Bihar",
+    "storage solutions India",
+  ],
+  authors: [{ name: "One and Only Furniture", url: BASE_URL }],
+  creator: "One and Only Furniture",
+  publisher: "One and Only Furniture",
+  robots: { index: true, follow: true },
+  alternates: { canonical: BASE_URL },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: BASE_URL,
+    siteName: "One and Only Furniture",
+    title: "One and Only Furniture | Premium Office Solutions",
+    description:
+      "Premium ergonomic office furniture in Patna, Bihar. Workstations, seating, storage & more. Trusted by leading corporates.",
+    images: [
+      {
+        url: "/images/products/imported/fluid/image-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "One and Only Furniture – Premium Office Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "One and Only Furniture | Premium Office Solutions",
+    description:
+      "Premium ergonomic office furniture in Patna, Bihar. Workstations, seating, storage & more.",
+    images: ["/images/products/imported/fluid/image-1.webp"],
+  },
+};
+
+const LOCAL_BUSINESS_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "FurnitureStore",
+  name: "One and Only Furniture",
+  url: BASE_URL,
+  logo: `${BASE_URL}/logo.webp`,
+  description:
+    "Premium ergonomic office furniture in Patna, Bihar, India. Authorized dealer for leading office furniture brands.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Patna",
+    addressRegion: "Bihar",
+    addressCountry: "IN",
+  },
+  geo: { "@type": "GeoCoordinates", latitude: 25.5941, longitude: 85.1376 },
+  telephone: "+91-XXXXXXXXXX",
+  openingHours: "Mo-Sa 09:00-18:00",
+  priceRange: "₹₹₹",
+  areaServed: ["Bihar", "Jharkhand", "Uttar Pradesh", "Delhi NCR"],
+  sameAs: ["https://oando.co.in"],
 };
 
 export default function RootLayout({
@@ -23,10 +103,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en-IN" className={inter.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(LOCAL_BUSINESS_JSON_LD),
+          }}
+        />
+      </head>
       <body className="font-sans antialiased bg-white selection:bg-primary selection:text-white">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:outline-none focus:ring-2 focus:ring-primary"
+        >
+          Skip to main content
+        </a>
         <Header />
-        {children}
+        <div id="main-content">{children}</div>
         <Footer />
         <AdvancedBot />
       </body>

@@ -2,6 +2,28 @@ import { oandoCatalog, Category } from "@/lib/catalog";
 import { notFound } from "next/navigation";
 import { Hero } from "@/components/home/Hero";
 import { FilterGrid } from "./FilterGrid";
+import type { Metadata } from "next";
+
+const BASE_URL = "https://oando.co.in";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ category: string }>;
+}): Promise<Metadata> {
+  const { category: categoryId } = await params;
+  const category = oandoCatalog.find((c: Category) => c.id === categoryId);
+  if (!category) return {};
+  const title = `${category.name} | One and Only Furniture`;
+  const description = `${category.description} Browse our full range of ${category.name.toLowerCase()} in Patna, Bihar.`;
+  const url = `${BASE_URL}/products/${categoryId}`;
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "website" },
+  };
+}
 
 // Hardcoded hero images per category — never rely on product images for hero
 const CATEGORY_HEROES: Record<string, string> = {

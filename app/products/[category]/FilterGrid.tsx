@@ -61,7 +61,10 @@ export function FilterGrid({
   };
 
   return (
-    <section className="w-full bg-[#f8f9fa]">
+    <section
+      className="w-full bg-[#f8f9fa]"
+      aria-label={`${category.name} product catalog`}
+    >
       {/* Top toolbar */}
       <div className="container px-6 2xl:px-0 py-5 border-b border-neutral-200 bg-white sticky top-16 z-20">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
@@ -71,6 +74,7 @@ export function FilterGrid({
             <input
               type="text"
               placeholder={`Search ${category.name.toLowerCase()}…`}
+              aria-label={`Search ${category.name}`}
               className="w-full h-10 pl-9 pr-8 bg-white border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-neutral-800 transition-colors"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -88,10 +92,16 @@ export function FilterGrid({
 
           {/* Sort */}
           <div className="flex items-center gap-3 shrink-0">
-            <span className="text-xs text-neutral-500 font-medium">
+            <span
+              aria-live="polite"
+              aria-atomic="true"
+              className="text-xs text-neutral-500 font-medium"
+            >
               {filteredProducts.length} products
             </span>
             <select
+              aria-label="Sort products"
+              title="Sort products"
               className="h-10 px-3 bg-white border border-neutral-200 rounded-sm text-sm text-neutral-700 focus:outline-none focus:border-neutral-800"
               value={sort}
               onChange={(e) => setSort(e.target.value as "az" | "za")}

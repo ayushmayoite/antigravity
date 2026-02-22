@@ -183,6 +183,8 @@ export function AdvancedBot() {
               </div>
               <button
                 onClick={closeBot}
+                aria-label="Close chat assistant"
+                title="Close chat assistant"
                 className="p-1 rounded-full hover:bg-neutral-100 text-neutral-500"
               >
                 <X className="w-4 h-4" />
@@ -397,6 +399,9 @@ export function AdvancedBot() {
                       setState({ ...state, budget: e.target.value })
                     }
                     className="w-full rounded-md border border-neutral-200 px-3 py-2 text-xs text-neutral-700 focus:outline-none focus:ring-1 focus:ring-amber-400 focus:border-amber-400"
+                    aria-label="Your approximate budget"
+                    placeholder="e.g. ₹5,00,000"
+                    title="Your approximate budget"
                   />
                 </div>
               )}
