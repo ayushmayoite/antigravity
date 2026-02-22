@@ -3,6 +3,17 @@ import { notFound } from "next/navigation";
 import { Hero } from "@/components/home/Hero";
 import { FilterGrid } from "./FilterGrid";
 
+// Hardcoded hero images per category — never rely on product images for hero
+const CATEGORY_HEROES: Record<string, string> = {
+  "oando-workstations": "/images/products/imported/cabin/image-1.webp",
+  "oando-tables": "/images/products/imported/meeting-table/image-33.webp",
+  "oando-storage": "/images/products/imported/storage/image-14.webp",
+  "oando-seating": "/images/products/imported/fluid/image-1.webp",
+  "oando-soft-seating": "/images/products/imported/cocoon/image-1.webp",
+  "oando-educational": "/images/products/imported/adam/image-1.webp",
+  "oando-collaborative": "/images/products/imported/pod/image-2.webp",
+};
+
 export async function generateStaticParams() {
   return oandoCatalog.map((c: Category) => ({ category: c.id }));
 }
@@ -19,8 +30,8 @@ export default async function CategoryPage({
   }
 
   const heroImage =
-    category.series[0]?.products[0]?.flagshipImage ||
-    "/images/products/60x30-workstation-1.webp";
+    CATEGORY_HEROES[categoryId] ||
+    "/images/products/imported/cabin/image-1.webp";
 
   return (
     <main className="flex min-h-screen flex-col items-center bg-white">
@@ -35,4 +46,3 @@ export default async function CategoryPage({
     </main>
   );
 }
-
