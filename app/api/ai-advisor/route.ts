@@ -7,8 +7,10 @@ const openai = new OpenAI({
 });
 
 export async function POST(req: NextRequest) {
+    console.log("➡️  [ai-advisor] POST request received");
     try {
         const { query } = await req.json();
+        console.log("📝  [ai-advisor] Query:", query);
 
         if (!query || typeof query !== "string") {
             return NextResponse.json({ error: "Query is required" }, { status: 400 });
@@ -55,6 +57,7 @@ Respond ONLY with valid JSON in this exact shape:
   "summary": "<2-sentence enterprise consultation summary>"
 }`;
 
+        console.log("🤖  [ai-advisor] Calling OpenAI...");
         const completion = await openai.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [
@@ -64,6 +67,7 @@ Respond ONLY with valid JSON in this exact shape:
             temperature: 0.4,
             response_format: { type: "json_object" },
         });
+        console.log("✅  [ai-advisor] OpenAI response received");
 
         const raw = completion.choices[0]?.message?.content ?? "{}";
         const result = JSON.parse(raw);
@@ -71,8 +75,9 @@ Respond ONLY with valid JSON in this exact shape:
         return NextResponse.json(result);
     } catch (err) {
         console.error("[ai-advisor] Error:", err);
+        const errorMessage = err instanceof Error ? err.message : String(err);
         return NextResponse.json(
-            { error: "Failed to generate recommendations. Please try again." },
+            { error: `Failed to generate recommendations: ${errorMessage}` },
             { status: 500 }
         );
     }
