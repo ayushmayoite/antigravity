@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import dynamic from "next/dynamic";
+import { Analytics } from "@vercel/analytics/next";
 
 // Lazy-load non-critical components — improves LCP / TTI
 // Note: ssr:false is NOT allowed in Server Components; use regular dynamic() here
@@ -128,6 +129,7 @@ export default function RootLayout({
         <Footer />
         <AdvancedBot />
         <AIAdvisor />
+        <Analytics />
       </body>
     </html>
   );
