@@ -1,8 +1,10 @@
-import { oandoCatalog, Category } from "@/lib/catalog";
+import { getCatalog, getCategoryIds } from "@/lib/getProducts";
+import type { CompatCategory } from "@/lib/getProducts";
 import { notFound } from "next/navigation";
 import { Hero } from "@/components/home/Hero";
 import { FilterGrid } from "./FilterGrid";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 const BASE_URL = "https://oando.co.in";
 
@@ -12,7 +14,8 @@ export async function generateMetadata({
   params: Promise<{ category: string }>;
 }): Promise<Metadata> {
   const { category: categoryId } = await params;
-  const category = oandoCatalog.find((c: Category) => c.id === categoryId);
+  const catalog = await getCatalog();
+  const category = catalog.find((c: CompatCategory) => c.id === categoryId);
   if (!category) return {};
   const title = `${category.name} | One and Only Furniture`;
   const description = `${category.description} Browse our full range of ${category.name.toLowerCase()} in Patna, Bihar.`;
@@ -37,7 +40,24 @@ const CATEGORY_HEROES: Record<string, string> = {
 };
 
 export async function generateStaticParams() {
-  return oandoCatalog.map((c: Category) => ({ category: c.id }));
+  const ids = await getCategoryIds();
+  return ids.map((id) => ({ category: id }));
+}
+
+// Loading skeleton for the grid while Supabase data resolves
+function GridSkeleton() {
+  return (
+    <div className="container-wide py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <div
+            key={i}
+            className="animate-pulse bg-neutral-100 rounded-sm aspect-4/3"
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default async function CategoryPage({
@@ -46,7 +66,9 @@ export default async function CategoryPage({
   params: Promise<{ category: string }>;
 }) {
   const { category: categoryId } = await params;
-  const category = oandoCatalog.find((c: Category) => c.id === categoryId);
+  const catalog = await getCatalog();
+  const category = catalog.find((c: CompatCategory) => c.id === categoryId);
+
   if (!category) {
     notFound();
   }
@@ -64,7 +86,9 @@ export default async function CategoryPage({
         showButton={false}
         backgroundImage={heroImage}
       />
-      <FilterGrid category={category} categoryId={categoryId} />
+      <Suspense fallback={<GridSkeleton />}>
+        <FilterGrid category={category} categoryId={categoryId} />
+      </Suspense>
     </main>
   );
 }

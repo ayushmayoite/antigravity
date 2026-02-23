@@ -1,4 +1,19 @@
-﻿export interface ProductVariant {
+﻿/**
+ * @deprecated — LEGACY STATIC CATALOG
+ *
+ * Product pages now fetch dynamically from Supabase via lib/getProducts.ts.
+ * This file is ONLY kept for client-side components that need category
+ * names/IDs for navigation (Header, CategoryGrid, InteractiveRoom).
+ *
+ * DO NOT add new products here. Add them to the Supabase 'products' table
+ * and use getCatalog() from lib/getProducts.ts instead.
+ *
+ * To fully remove this file:
+ *   1. Convert Header/CategoryGrid/InteractiveRoom to receive catalog
+ *      data as props from a server component parent.
+ *   2. Delete this file.
+ */
+export interface ProductVariant {
   id: string;
   variantName: string; // e.g., "With Headrest", "Without Headrest"
   galleryImages: string[]; // Exactly 7 images for the split layout

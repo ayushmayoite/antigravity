@@ -1,6 +1,9 @@
 "use client";
 
-import { Category, Product } from "@/lib/catalog";
+import type {
+  CompatCategory as Category,
+  CompatProduct as Product,
+} from "@/lib/getProducts";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
@@ -241,7 +244,7 @@ function ProductCard({
 
   return (
     <Link
-      href={`/products/${categoryId}/${product.id}`}
+      href={`/products/${categoryId}/${product.seriesId}/${product.id}`}
       className="group block bg-white border border-neutral-100 hover:border-neutral-300 transition-all duration-200 hover:shadow-sm"
     >
       {/* Image */}

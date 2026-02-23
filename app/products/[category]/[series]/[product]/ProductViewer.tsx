@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Product, ProductVariant } from "@/lib/catalog";
+import type {
+  CompatProduct as Product,
+  ProductVariant,
+} from "@/lib/getProducts";
 import { ArrowLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import clsx from "clsx";
