@@ -2995,27 +2995,29 @@ export const oandoCatalog: Category[] = [
             id: "myel",
             name: "Myel",
             description: "A task chair for modern thinkers. MYEL combines weight-sensitive tilt and a dynamic backrest to provide effortless support throughout the workday.",
-            flagshipImage: "/images/products/imported/fluid/image-1.webp",
+            flagshipImage: "/images/products/imported/myel/with-headrest/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/myel/image-1.webp"
+                  "/images/products/imported/myel/with-headrest/image-2.webp",
+                  "/images/products/imported/myel/no-headrest/image-1.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "A task chair for modern thinkers. MYEL combines weight-sensitive tilt and a dynamic backrest to provide effortless support throughout the workday.",
+              overview: "Myel is a task chair that adapts to your movements. It features a weight-sensitive tilt mechanism that provides automatic tension based on the user's weight.",
               features: [
                 "Weight-sensitive Tilt",
                 "Dynamic Backrest",
+                "Adjustable Armrests",
                 "Effortless Support"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3049,7 +3051,7 @@ export const oandoCatalog: Category[] = [
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3083,7 +3085,7 @@ export const oandoCatalog: Category[] = [
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3116,7 +3118,7 @@ export const oandoCatalog: Category[] = [
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3130,26 +3132,28 @@ export const oandoCatalog: Category[] = [
             id: "sway",
             name: "Sway",
             description: "Sway office chairs designed for posture support and comfort. Discover seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/flex/image-1.webp",
+            flagshipImage: "/images/products/imported/sway/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/sway/image-1.webp"
+                  "/images/products/imported/sway/image-2.webp",
+                  "/images/products/imported/sway/image-3.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Sway office chairs designed for posture support and comfort. Discover seating for modern workspaces.",
+              overview: "Sway ergonomic mesh chairs designed for posture support and long-term comfort. Features a high mesh back with headrest and synchronous tilt mechanism.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Adjustable Headrest",
+                "Synchronous Tilt",
+                "Ergonomic Lumbar Support"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3160,9 +3164,9 @@ export const oandoCatalog: Category[] = [
             }
           },
           {
-            id: "snap",
-            name: "Snap",
-            description: "Snap office chairs for modern workspaces. Discover ergonomic seating for modern workspaces.",
+            id: "halo",
+            name: "Halo",
+            description: "Halo ergonomic mesh chair with a wide headrest and supportive shell design. Engineered for daily productivity and style.",
             flagshipImage: "/images/products/imported/halo/image-1.webp",
             sceneImages: [],
             variants: [
@@ -3170,19 +3174,20 @@ export const oandoCatalog: Category[] = [
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
+                  "/images/products/imported/halo/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Snap office chairs for modern workspaces. Discover ergonomic seating for modern workspaces.",
+              overview: "Halo ergonomic mesh chair featuring a distinctive wide headrest and a robust frame for maximum support throughout the workday.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Wide Headrest",
+                "Supportive Shell Design",
+                "Premium Mesh Breathability"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3215,7 +3220,7 @@ export const oandoCatalog: Category[] = [
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3248,7 +3253,7 @@ export const oandoCatalog: Category[] = [
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3262,26 +3267,27 @@ export const oandoCatalog: Category[] = [
             id: "phoenix",
             name: "Phoenix",
             description: "Phoenix office chairs for durability and ergonomic support. Discover seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/padora/image-1.webp",
+            flagshipImage: "/images/products/imported/phoenix/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/phoenix/image-1.webp"
+                  "/images/products/imported/phoenix/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Phoenix office chairs for durability and ergonomic support. Discover seating for modern workspaces.",
+              overview: "Phoenix ergonomic chair designed for durability and comprehensive support. Includes a wide headrest and white frame for a modern office aesthetic.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "White Modern Frame",
+                "Durable Construction",
+                "Advanced Ergonomics"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3314,7 +3320,7 @@ export const oandoCatalog: Category[] = [
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3347,7 +3353,7 @@ export const oandoCatalog: Category[] = [
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3361,26 +3367,27 @@ export const oandoCatalog: Category[] = [
             id: "fluid",
             name: "Fluid",
             description: "Fluid-2 ergonomic office chair for posture support and productivity. Discover modern seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/revoq/image-1.webp",
+            flagshipImage: "/images/products/imported/fluid/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/fluid/image-1.webp"
+                  "/images/products/imported/fluid/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Fluid-2 ergonomic office chair for posture support and productivity. Discover modern seating for modern workspaces.",
+              overview: "Fluid ergonomic office chair features a weight-responsive mechanism and vibrant design for active sitting and dynamic environments.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Weight-responsive Mechanism",
+                "Active Sitting Support",
+                "Modern White Frame"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3413,7 +3420,7 @@ export const oandoCatalog: Category[] = [
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3446,7 +3453,7 @@ export const oandoCatalog: Category[] = [
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3460,26 +3467,27 @@ export const oandoCatalog: Category[] = [
             id: "fluid-x",
             name: "Fluid X",
             description: "Fluid-X ergonomic office chair for posture support and comfort. Discover modern seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/classy/image-1.webp",
+            flagshipImage: "/images/products/imported/fluid-x/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/fluid-x/image-1.webp"
+                  "/images/products/imported/fluid-x/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Fluid-X ergonomic office chair for posture support and comfort. Discover modern seating for modern workspaces.",
+              overview: "Fluid X takes the ergonomic excellence of Fluid and adds a dedicated headrest for enhanced neck and upper back support.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Adjustable Headrest",
+                "High Mesh Back",
+                "Superior Back Support"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3490,29 +3498,30 @@ export const oandoCatalog: Category[] = [
             }
           },
           {
-            id: "crotch",
-            name: "Crotch",
-            description: "Crotch ergonomic office chairs for posture support and comfort. Discover seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/logica/image-1.webp",
+            id: "solace",
+            name: "Solace",
+            description: "Solace ergonomic office chair designed for superior posture support and daily comfort. A perfect blend of style and ergonomics.",
+            flagshipImage: "/images/products/imported/solace/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
+                  "/images/products/imported/solace/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Crotch ergonomic office chairs for posture support and comfort. Discover seating for modern workspaces.",
+              overview: "Solace is crafted for the modern professional, offering advanced lumbar support and a breathable mesh back for all-day comfort.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Advanced Lumbar Support",
+                "Breathable Mesh Back",
+                "Synchronous Tilt"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
+                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
               ]
             },
             metadata: {
@@ -3658,22 +3667,23 @@ export const oandoCatalog: Category[] = [
             id: "flex",
             name: "Flex",
             description: "Flex office furniture for adaptable workspaces. Discover modular desks and seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/nuvora/image-1.webp",
+            flagshipImage: "/images/products/imported/flex/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/flex/image-1.webp"
+                  "/images/products/imported/flex/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Flex office furniture for adaptable workspaces. Discover modular desks and seating for modern workspaces.",
+              overview: "Flex office furniture for adaptable workspaces. Features a minimalist design with a black frame and a slim mesh backrest for agile teams.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Minimalist Design",
+                "Slim Mesh Backrest",
+                "Adaptable Support"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
@@ -3802,10 +3812,11 @@ export const oandoCatalog: Category[] = [
               }
             ],
             detailedInfo: {
-              overview: "Sullion office seating for modern interiors. Discover comfortable chairs for modern workspaces.",
+              overview: "Sullion executive seating offering refined comfort and modern appeal for professional leadership spaces.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Executive Appeal",
+                "Premium Comfort",
+                "Modern Interior Compatibility"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
@@ -3856,22 +3867,23 @@ export const oandoCatalog: Category[] = [
             id: "nuvic",
             name: "Nuvic",
             description: "Nuvic office chairs designed for comfort and posture support. Discover seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/zino/image-1.webp",
+            flagshipImage: "/images/products/imported/nuvic/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/nuvic/image-1.webp"
+                  "/images/products/imported/nuvic/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Nuvic office chairs designed for comfort and posture support. Discover seating for modern workspaces.",
+              overview: "Nuvic office chairs feature a clean white frame and mesh back designed for maximum breathability and posture support.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Clean White Frame",
+                "Breathable Mesh",
+                "Lumbar Support"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
@@ -3952,25 +3964,26 @@ export const oandoCatalog: Category[] = [
             }
           },
           {
-            id: "copse",
-            name: "Copse",
-            description: "Copse office storage solutions for organized workspaces. Discover cabinets and storage for modern workspaces.",
-            flagshipImage: "/images/products/imported/phoenix/image-1.webp",
+            id: "casca",
+            name: "Casca",
+            description: "Casca provides a sleek and modern seating solution with a focus on clean lines and ergonomic comfort for dynamic workspaces.",
+            flagshipImage: "/images/products/imported/casca/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
+                  "/images/products/imported/casca/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Copse office storage solutions for organized workspaces. Discover cabinets and storage for modern workspaces.",
+              overview: "Casca is designed for the modern workspace, combining a minimalist aesthetic with high-performance ergonomic features.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Minimalist Design",
+                "High-performance Mesh",
+                "Durable Frame"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
@@ -3988,22 +4001,23 @@ export const oandoCatalog: Category[] = [
             id: "breeze",
             name: "Breeze",
             description: "Breeze office chairs for modern workspaces. Discover breathable ergonomic seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/fluid/image-1.webp",
+            flagshipImage: "/images/products/imported/breez/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
+                  "/images/products/imported/breez/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Breeze office chairs for modern workspaces. Discover breathable ergonomic seating for modern workspaces.",
+              overview: "Breeze ergonomic chairs offer maximum airflow through advanced mesh technology, ensuring comfort during long work sessions.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Advanced Breathability",
+                "High Mesh Back",
+                "Ergonomic Base"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
@@ -4054,22 +4068,23 @@ export const oandoCatalog: Category[] = [
             id: "x-mesh",
             name: "X Mesh",
             description: "X-Mesh ergonomic office chair for breathability and comfort. Discover seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/breez/image-1.webp",
+            flagshipImage: "/images/products/imported/xmesh/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
+                  "/images/products/imported/xmesh/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "X-Mesh ergonomic office chair for breathability and comfort. Discover seating for modern workspaces.",
+              overview: "X-Mesh provides targeted lumbar support and breathable mesh for an exceptionally comfortable and cool sitting experience.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Targeted Lumbar Support",
+                "Cool Mesh Technology",
+                "Dynamic Tension Adjustment"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
@@ -4120,22 +4135,23 @@ export const oandoCatalog: Category[] = [
             id: "orbit",
             name: "Orbit",
             description: "Orbit office chairs designed for posture support and comfort. Discover seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/flex/image-1.webp",
+            flagshipImage: "/images/products/imported/orbit/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/orbit/image-1.webp"
+                  "/images/products/imported/orbit/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Orbit office chairs designed for posture support and comfort. Discover seating for modern workspaces.",
+              overview: "Orbit office chairs provide full-body support with a design focused on posture and effortless movement within the workspace.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Posture Focus",
+                "Effortless Movement",
+                "Robust Build"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
@@ -4186,22 +4202,23 @@ export const oandoCatalog: Category[] = [
             id: "toro",
             name: "Toro",
             description: "Toro office chairs for durability and comfort. Discover ergonomic seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/nuvic/image-1.webp",
+            flagshipImage: "/images/products/imported/toro/image-1.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/toro/image-1.webp"
+                  "/images/products/imported/toro/image-2.webp"
                 ]
               }
             ],
             detailedInfo: {
-              overview: "Toro office chairs for durability and comfort. Discover ergonomic seating for modern workspaces.",
+              overview: "Toro features a robust frame and high-quality mesh for durable, ergonomic support that stands up to daily use in busy offices.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Robust Frame",
+                "High-Quality Mesh",
+                "Daily Productivity Support"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [

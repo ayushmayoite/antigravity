@@ -281,7 +281,7 @@ export const products: Product[] = [
         category: "Workstations",
         price: "PO A",
         description: "A dynamic and innovative workstation that is adaptable to different workspaces. Curvivo office solution for enhanced efficiency, embracing fluidity and harmony.",
-        images: ["/products/deskpro-workstation-1.jpg"], // Placeholder using existing high-quality asset
+        images: ["/images/products/imported/cabin/image-1.webp"],
         features: ["Enhanced Efficiency", "Fluid Design", "Collaborative"],
         specs: [{ label: "Material", value: "Premium Laminate" }],
         related: ["deskpro-system"]
@@ -314,14 +314,14 @@ export const products: Product[] = [
     // Chairs
     {
         id: "afc-ch-1",
-        slug: "snap-chair",
-        name: "Snap",
+        slug: "halo-chair",
+        name: "Halo",
         category: "Chairs",
         price: "PO A",
-        description: "Snaps into action. A versatile task chair designed for agility and comfort.",
-        images: ["/products/chair-mesh-office.jpg"], // Placeholder
-        features: ["Synchro Tilt", "Lumbar Support", "Breathable Mesh"],
-        specs: [{ label: "Mechanism", value: "Auto-weight sensing" }],
+        description: "Halo ergonomic mesh chair with a wide headrest and supportive shell design. Engineered for daily productivity and style.",
+        images: ["/images/products/imported/halo/image-1.webp"],
+        features: ["Wide Headrest", "Supportive Shell Design", "Premium Mesh Breathability"],
+        specs: [{ label: "Mechanism", value: "Synchronous Tilt" }],
         related: ["arvo-chair"]
     },
     {
@@ -338,14 +338,14 @@ export const products: Product[] = [
     },
     {
         id: "afc-ch-3",
-        slug: "pinnacle-chair",
-        name: "Pinnacle",
+        slug: "myel-chair",
+        name: "Myel",
         category: "Chairs",
         price: "PO A",
-        description: "The peak of executive seating. Luxurious materials and commanding presence.",
-        images: ["/products/chair-leather-tan.jpg"], // Placeholder
-        features: ["Leather Upholstery", "Knee Tilt", "Chrome Details"],
-        specs: [{ label: "Material", value: "Genuine Leather Contact" }],
+        description: "A task chair for modern thinkers. MYEL combines weight-sensitive tilt and a dynamic backrest for effortless support.",
+        images: ["/images/products/imported/myel/with-headrest/image-1.webp"],
+        features: ["Weight-sensitive Tilt", "Dynamic Backrest", "Adjustable Armrests"],
+        specs: [{ label: "Material", value: "Breathable Mesh" }],
         related: ["phoenix-chair"]
     },
     {
@@ -354,22 +354,22 @@ export const products: Product[] = [
         name: "Phoenix",
         category: "Chairs",
         price: "PO A",
-        description: "Rise above the ordinary. A modern executive chair with a distinctive silhouette.",
-        images: ["/products/chair-executive-2.jpg"], // Placeholder
-        features: ["Unique Design", "Integrated Arms", "Tilt Lock"],
-        specs: [{ label: "Finish", value: "Matte Black" }],
+        description: "Phoenix ergonomic chair designed for durability and comprehensive support. Includes a wide headrest and white frame.",
+        images: ["/images/products/imported/phoenix/image-1.webp"],
+        features: ["White Modern Frame", "Advanced Ergonomics", "Tilt Lock"],
+        specs: [{ label: "Base", value: "Aluminum / Nylon" }],
         related: ["pinnacle-chair"]
     },
     {
         id: "afc-ch-5",
-        slug: "ember-chair",
-        name: "Ember",
+        slug: "solace-chair",
+        name: "Solace",
         category: "Chairs",
         price: "PO A",
-        description: "Warmth and comfort combined. Ideally suited for meeting rooms and guest seating.",
-        images: ["/products/chair-visitor-1.jpg"], // Placeholder
-        features: ["Cushioned", "Fabric Upholstery", "Visitor Friendly"],
-        specs: [{ label: "Legs", value: "Cantilever" }],
+        description: "Solace ergonomic office chair designed for superior posture support and daily comfort.",
+        images: ["/images/products/imported/solace/image-1.webp"],
+        features: ["Lumbar Support", "Mesh Back", "Ergonomic Design"],
+        specs: [{ label: "Type", value: "Task Chair" }],
         related: ["nordic-chair"]
     },
     {
@@ -386,15 +386,15 @@ export const products: Product[] = [
     },
     {
         id: "afc-ch-7",
-        slug: "flip-chair",
-        name: "Flip",
+        slug: "sway-chair",
+        name: "Sway",
         category: "Chairs",
         price: "PO A",
-        description: "Flexible seating for training rooms. Flip the seat and nest them away to save space.",
-        images: ["/products/chair-mesh-office.jpg"], // Placeholder
-        features: ["Nesting", "Castors", "Writing Tablet Optional"],
-        specs: [{ label: "Storage", value: "Nestable" }],
-        related: ["snap-chair"]
+        description: "Sway ergonomic mesh chairs designed for posture support and long-term comfort with high mesh back.",
+        images: ["/images/products/imported/sway/image-1.webp"],
+        features: ["Adjustable Headrest", "Synchronous Tilt", "Lumbar Support"],
+        specs: [{ label: "Mechanism", value: "Synchronous" }],
+        related: ["halo-chair"]
     },
 
     // Tables
@@ -404,8 +404,8 @@ export const products: Product[] = [
         name: "Exquisite",
         category: "Meeting Tables",
         price: "PO A",
-        description: "Exquisite blends refined craftsmanship with modern authority. It uses premium veneers and precise detailing to create a bold yet graceful presence that defines the executive space.",
-        images: ["/products/meeting-table-10pax.jpg"], // Placeholder
+        description: "Exquisite blends refined craftsmanship with modern authority. It uses premium veneers and precise detailing to create a bold presence.",
+        images: ["/images/products/imported/cabin/image-1.webp"],
         features: ["Premium Veneer", "Built-in Connectivity", "Refined Craftsmanship"],
         specs: [{ label: "Finish", value: "Walnut / Oak" }],
         related: ["collaborate-table"]
