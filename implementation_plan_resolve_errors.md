@@ -7,8 +7,8 @@ The user is experiencing 404 errors on their Vercel deployment and has requested
 1. **404 on Deployment**:
    - URL: `https://antigravity-ashy-mu.vercel.app/products/oando-workstations/`
    - **Cause A**: Duplicate configuration files (`next.config.js` and `next.config.ts`). Next.js behavior is undefined/ambiguous with both.
-   - **Cause B**: Missing environment variables on Vercel. `lib/db.ts` uses placeholders during build, but at runtime on Vercel, if `NEXT_PUBLIC_SUPABASE_URL` is missing, `getCatalog()` returns an empty array, triggerring `notFound()`.
-   - **Cause C**: `trailingSlash: true` in `.js` vs default in `.ts`.
+   - **Cause B**: Missing/Invalid environment variables on Vercel. `lib/db.ts` uses placeholders during build. I've updated the `anon` key to the new `sb_publishable_` format provided by the user, which has been verified to work.
+   - **Cause C**: `trailingSlash: true` in `.js` vs default in `.ts`. I've consolidated this into `next.config.js`.
 
 2. **"Mix of 4" Errors**:
    - **Error 1**: AI Advisor 500 (OpenRouter/Supabase integration).
