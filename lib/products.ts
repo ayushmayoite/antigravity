@@ -280,9 +280,9 @@ export const products: Product[] = [
         name: "Curvivo",
         category: "Workstations",
         price: "PO A",
-        description: "Organic shapes for fluid workspaces. Curvivo breaks the rigidity of traditional offices with its smooth curves.",
+        description: "A dynamic and innovative workstation that is adaptable to different workspaces. Curvivo office solution for enhanced efficiency, embracing fluidity and harmony.",
         images: ["/products/deskpro-workstation-1.jpg"], // Placeholder using existing high-quality asset
-        features: ["Curved Design", "Organic Layout", "Collaborative"],
+        features: ["Enhanced Efficiency", "Fluid Design", "Collaborative"],
         specs: [{ label: "Material", value: "Premium Laminate" }],
         related: ["deskpro-system"]
     },
@@ -404,9 +404,9 @@ export const products: Product[] = [
         name: "Exquisite",
         category: "Meeting Tables",
         price: "PO A",
-        description: "A statement piece for the executive cabin. Rich veneers and impeccable detailing.",
+        description: "Exquisite blends refined craftsmanship with modern authority. It uses premium veneers and precise detailing to create a bold yet graceful presence that defines the executive space.",
         images: ["/products/meeting-table-10pax.jpg"], // Placeholder
-        features: ["Premium Veneer", "Built-in Connectivity", "Heavy Base"],
+        features: ["Premium Veneer", "Built-in Connectivity", "Refined Craftsmanship"],
         specs: [{ label: "Finish", value: "Walnut / Oak" }],
         related: ["collaborate-table"]
     },

@@ -15,7 +15,7 @@ export function Footer() {
     <footer className="w-full font-sans">
       {/* Trust Badges Strip */}
       <div className="bg-neutral-900 text-white border-t border-neutral-700">
-        <div className="container px-6 2xl:px-0 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="container-wide py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           {TRUST_BADGES.map(({ icon: Icon, label, sub }) => (
             <div key={label} className="flex items-center gap-3">
               <div className="shrink-0 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
@@ -34,7 +34,7 @@ export function Footer() {
 
       {/* Main footer */}
       <div className="bg-neutral-50 text-neutral-500 py-16 lg:py-20 text-base lg:text-xl border-t border-neutral-200">
-        <div className="container px-6 2xl:px-0">
+        <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8">
             {/* Brand Column */}
             <div className="space-y-8 lg:col-span-1 border-r border-neutral-100 pr-8">
@@ -182,7 +182,7 @@ export function Footer() {
                 Terms &amp; Conditions
               </Link>
             </div>
-            <div>
+            <div suppressHydrationWarning>
               &copy; {new Date().getFullYear()} One and Only. All rights
               reserved.
             </div>

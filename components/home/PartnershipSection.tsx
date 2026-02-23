@@ -13,10 +13,11 @@ export function PartnershipSection() {
           <div className="shrink-0">
             <div className="relative w-80 h-24 md:w-96 md:h-32">
               <Image
-                src="/oando-logo.png"
-                alt="One and Only"
-                fill
-                className="object-contain object-center md:object-left"
+                src="/logo-final.png"
+                alt="One and Only Furniture"
+                width={240}
+                height={80}
+                className="h-10 w-auto opacity-70 grayscale hover:grayscale-0 transition-all"
               />
             </div>
           </div>
@@ -53,5 +54,3 @@ export function PartnershipSection() {
     </section>
   );
 }
-
-

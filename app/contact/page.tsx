@@ -55,28 +55,43 @@ export default function ContactPage() {
           <div className="bg-neutral-50 p-8 border border-neutral-100">
             <form className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-neutral-700 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-neutral-700 mb-2"
+                >
                   Name
                 </label>
                 <input
+                  id="name"
                   type="text"
+                  placeholder="Your Name"
                   className="w-full px-4 py-3 bg-white border border-neutral-200 focus:border-primary outline-none transition-colors"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-neutral-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-neutral-700 mb-2"
+                >
                   Email
                 </label>
                 <input
+                  id="email"
                   type="email"
+                  placeholder="your@email.com"
                   className="w-full px-4 py-3 bg-white border border-neutral-200 focus:border-primary outline-none transition-colors"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-neutral-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-neutral-700 mb-2"
+                >
                   Message
                 </label>
                 <textarea
+                  id="message"
+                  placeholder="How can we help you?"
                   rows={4}
                   className="w-full px-4 py-3 bg-white border border-neutral-200 focus:border-primary outline-none transition-colors"
                 />

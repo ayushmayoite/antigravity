@@ -65,55 +65,57 @@ export function FilterGrid({
       className="w-full bg-[#f8f9fa]"
       aria-label={`${category.name} product catalog`}
     >
-      {/* Top toolbar */}
-      <div className="container px-6 2xl:px-0 py-5 border-b border-neutral-200 bg-white sticky top-16 z-20">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-          {/* Search */}
-          <div className="relative flex-1 w-full">
-            <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" />
-            <input
-              type="text"
-              placeholder={`Search ${category.name.toLowerCase()}…`}
-              aria-label={`Search ${category.name}`}
-              className="w-full h-10 pl-9 pr-8 bg-white border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-neutral-800 transition-colors"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-            />
-            {query && (
-              <button
-                onClick={() => setQuery("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2"
-                title="Clear search"
-              >
-                <X className="w-3.5 h-3.5 text-neutral-400 hover:text-neutral-800" />
-              </button>
-            )}
-          </div>
+      {/* Top toolbar - fixed sticky layout */}
+      <div className="w-full bg-white border-b border-neutral-200 sticky top-16 z-20">
+        <div className="container-wide py-5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+            {/* Search */}
+            <div className="relative flex-1 w-full">
+              <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" />
+              <input
+                type="text"
+                placeholder={`Search ${category.name.toLowerCase()}…`}
+                aria-label={`Search ${category.name}`}
+                className="w-full h-10 pl-9 pr-8 bg-white border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-neutral-800 transition-colors"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+              {query && (
+                <button
+                  onClick={() => setQuery("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2"
+                  title="Clear search"
+                >
+                  <X className="w-3.5 h-3.5 text-neutral-400 hover:text-neutral-800" />
+                </button>
+              )}
+            </div>
 
-          {/* Sort */}
-          <div className="flex items-center gap-3 shrink-0">
-            <span
-              aria-live="polite"
-              aria-atomic="true"
-              className="text-xs text-neutral-500 font-medium"
-            >
-              {filteredProducts.length} products
-            </span>
-            <select
-              aria-label="Sort products"
-              title="Sort products"
-              className="h-10 px-3 bg-white border border-neutral-200 rounded-sm text-sm text-neutral-700 focus:outline-none focus:border-neutral-800"
-              value={sort}
-              onChange={(e) => setSort(e.target.value as "az" | "za")}
-            >
-              <option value="az">Name A–Z</option>
-              <option value="za">Name Z–A</option>
-            </select>
+            {/* Sort */}
+            <div className="flex items-center gap-3 shrink-0">
+              <span
+                aria-live="polite"
+                aria-atomic="true"
+                className="text-xs text-neutral-500 font-medium"
+              >
+                {filteredProducts.length} products
+              </span>
+              <select
+                aria-label="Sort products"
+                title="Sort products"
+                className="h-10 px-3 bg-white border border-neutral-200 rounded-sm text-sm text-neutral-700 focus:outline-none focus:border-neutral-800"
+                value={sort}
+                onChange={(e) => setSort(e.target.value as "az" | "za")}
+              >
+                <option value="az">Name A–Z</option>
+                <option value="za">Name Z–A</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="container px-6 2xl:px-0 py-8 flex gap-8">
+      <div className="container-wide py-8 flex gap-8">
         {/* LEFT SIDEBAR — always visible on desktop */}
         <aside className="hidden lg:block w-56 shrink-0 self-start sticky top-32">
           <div className="bg-white border border-neutral-200 rounded-sm overflow-hidden">
@@ -225,7 +227,7 @@ export function FilterGrid({
                           }}
                         />
                         {/* Hover overlay */}
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/[0.03] transition-colors duration-300 pointer-events-none" />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/3 transition-colors duration-300 pointer-events-none" />
                         {/* BIFMA badge */}
                         {product.metadata?.bifmaCertified && (
                           <div className="absolute top-3 left-3 bg-white border border-neutral-200 text-[9px] font-bold tracking-widest uppercase px-2 py-1 text-neutral-700">

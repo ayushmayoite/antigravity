@@ -86,7 +86,7 @@ export function Header() {
               isScrolled ? "h-0 opacity-0" : "h-10 opacity-100",
             )}
           >
-            <div className="container px-6 2xl:px-0 flex justify-end items-center gap-6 text-[11px] uppercase tracking-widest font-bold text-neutral-400">
+            <div className="container-wide flex justify-end items-center gap-6 text-[11px] uppercase tracking-widest font-bold text-neutral-400">
               <span className="hidden md:inline mr-auto text-neutral-500 font-medium">
                 One and Only Furniture
               </span>
@@ -121,7 +121,7 @@ export function Header() {
           {/* Main Navigation (Bottom Row) */}
           <div
             className={clsx(
-              "container flex items-center justify-between px-6 2xl:px-0 transition-all duration-300",
+              "container-wide flex items-center justify-between transition-all duration-300",
               isScrolled ? "h-16" : "h-20 lg:h-24",
             )}
           >

@@ -35,6 +35,7 @@ export default function Home() {
         buttonText="Explore Workspace Solutions"
         buttonLink="/products/seating"
         videoSrc="https://videos.pexels.com/video-files/3129671/3129671-sd_640_360_25fps.mp4"
+        posterSrc="/images/products/imported/cabin/image-1.webp"
         lightMode={true}
       />
 

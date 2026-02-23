@@ -17,7 +17,7 @@ export default function ProductsPage() {
         backgroundImage="/images/products/60x30-workstation-1.webp"
       />
 
-      <section className="container px-6 2xl:px-0 py-24">
+      <section className="container-wide py-24">
         <div className="max-w-4xl space-y-8 mb-20">
           <h2 className="typ-h2">
             Form follows <span className="text-primary italic">Function.</span>
@@ -32,7 +32,7 @@ export default function ProductsPage() {
         <CategoryGrid />
       </section>
 
-      <section className="container px-6 2xl:px-0 py-20">
+      <section className="container-wide py-20">
         <div className="max-w-3xl space-y-6 mb-12">
           <p className="typ-eyebrow">What We Offer</p>
           <h2 className="typ-h2">From concept to installation.</h2>
@@ -76,7 +76,7 @@ export default function ProductsPage() {
       </section>
 
       <section className="w-full bg-neutral-50 py-20 border-y border-neutral-200">
-        <div className="container px-6 2xl:px-0">
+        <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-8 bg-white rounded-2xl border border-neutral-200">
               <p className="typ-eyebrow mb-2">Individual Focus</p>
@@ -124,7 +124,7 @@ export default function ProductsPage() {
       </section>
 
       <section className="w-full bg-neutral-50 py-24 border-y border-neutral-200">
-        <div className="container px-6 2xl:px-0">
+        <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
               <Image
@@ -166,7 +166,7 @@ export default function ProductsPage() {
       {/* Highlight Section - New */}
       <section className="w-full py-32 bg-neutral-900 text-white overflow-hidden relative">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
-        <div className="container px-6 2xl:px-0 relative z-10 flex flex-col md:flex-row items-center gap-16">
+        <div className="container-wide relative z-10 flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2 relative aspect-square">
             <Image
               src="/images/products/fluid-chair-1.webp"
@@ -198,7 +198,7 @@ export default function ProductsPage() {
       </section>
 
       <section className="w-full py-20">
-        <div className="container px-6 2xl:px-0 text-center">
+        <div className="container-wide text-center">
           <p className="typ-eyebrow mb-3">Ready to Plan?</p>
           <h3 className="typ-h2 mb-6">Start your workspace project today.</h3>
           <div className="flex items-center justify-center gap-4">

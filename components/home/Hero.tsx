@@ -85,9 +85,8 @@ export function Hero({
             muted
             playsInline
             poster={backgroundImage}
-            className="w-full h-full object-cover scale-105 transition-opacity duration-1000"
-            onCanPlay={(e) => (e.currentTarget.style.opacity = "1")}
-            style={{ opacity: 0 }}
+            className="w-full h-full object-cover scale-105 transition-opacity duration-1000 opacity-0 data-[ready=true]:opacity-100"
+            onCanPlay={(e) => (e.currentTarget.dataset.ready = "true")}
           >
             <source src={videoBackground} type="video/mp4" />
           </video>
@@ -110,7 +109,7 @@ export function Hero({
 
       {/* Content Container */}
       <div className="absolute inset-0 z-10 flex flex-col justify-end">
-        <div className="container px-6 2xl:px-0 h-full flex flex-col justify-center pb-20 pt-32">
+        <div className="container-wide h-full flex flex-col justify-center pb-20 pt-32">
           <motion.div
             variants={containerVariants}
             initial="hidden"

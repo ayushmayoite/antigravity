@@ -14,10 +14,11 @@ export function PartnerSection() {
             {/* Partner Logo */}
             <div className="relative w-32 h-12 grayscale-0 opacity-100 transition-opacity hover:opacity-100">
               <Image
-                src="/oando-logo.png"
-                alt="One and Only"
-                fill
-                className="object-contain"
+                src="/logo-final.png"
+                alt="Logo"
+                width={120}
+                height={40}
+                className="h-8 w-auto grayscale"
               />
             </div>
 
@@ -50,5 +51,3 @@ export function PartnerSection() {
     </section>
   );
 }
-
-

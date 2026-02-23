@@ -61,7 +61,7 @@ export const oandoCatalog: Category[] = [
           {
             id: "curvivo",
             name: "Curvivo",
-            description: "Curvivo office chairs for modern interiors and comfort. Discover seating for modern workspaces.",
+            description: "A dynamic and innovative workstation that is adaptable to different workspaces. Curvivo office solution for enhanced efficiency, embracing fluidity and harmony.",
             flagshipImage: "/images/products/imported/cabin/image-1.webp",
             sceneImages: [],
             variants: [
@@ -74,9 +74,10 @@ export const oandoCatalog: Category[] = [
               }
             ],
             detailedInfo: {
-              overview: "Curvivo office chairs for modern interiors and comfort. Discover seating for modern workspaces.",
+              overview: "A dynamic and innovative workstation that is adaptable to different workspaces. Curvivo office solution for enhanced efficiency, embracing fluidity and harmony.",
               features: [
-                "Manufacturing",
+                "Enhanced Efficiency",
+                "Fluid Design",
                 "Sustainability"
               ],
               dimensions: "W600 D600 H900-1000mm (adj.)",
@@ -193,7 +194,7 @@ export const oandoCatalog: Category[] = [
           {
             id: "trio-2",
             name: "Trio",
-            description: "Trio office chairs for comfort and daily productivity. Discover seating for modern workspaces.",
+            description: "A workstation system built for open spaces, crafted to bring flow and flexibility. Modular and adaptable solution designed to shape every kind of workstyle.",
             flagshipImage: "/images/products/imported/cabin/image-40.webp",
             sceneImages: [],
             variants: [
@@ -206,10 +207,11 @@ export const oandoCatalog: Category[] = [
               }
             ],
             detailedInfo: {
-              overview: "Trio office chairs for comfort and daily productivity. Discover seating for modern workspaces.",
+              overview: "A workstation system built for open spaces, crafted to bring flow and flexibility. Modular and adaptable solution designed to shape every kind of workstyle, from focused corners to collaborative zones, creating harmony across the workplace.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Flow and Flexibility",
+                "Modular Adaptability",
+                "Supportive Design"
               ],
               dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
@@ -292,7 +294,7 @@ export const oandoCatalog: Category[] = [
           {
             id: "fenix",
             name: "Fenix",
-            description: "Fenix office chairs for durability and ergonomic comfort. Discover seating for modern workspaces.",
+            description: "Workstation featuring a strong 40x40 leg framework that pairs durability with a sleek, minimal profile. Modular adaptability supports the changing needs of contemporary teams.",
             flagshipImage: "/images/products/imported/cabin/image-70.webp",
             sceneImages: [],
             variants: [
@@ -305,10 +307,11 @@ export const oandoCatalog: Category[] = [
               }
             ],
             detailedInfo: {
-              overview: "Fenix office chairs for durability and ergonomic comfort. Discover seating for modern workspaces.",
+              overview: "Workstation featuring a strong 40x40 leg framework that pairs durability with a sleek, minimal profile. Modular adaptability supports the changing needs of contemporary teams through composed function.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "40x40 Leg Framework",
+                "Sleek Profile",
+                "Modular Adaptability"
               ],
               dimensions: "W600 D600 H900-1000mm (adj.)",
               materials: [
@@ -339,7 +342,7 @@ export const oandoCatalog: Category[] = [
           {
             id: "exquisite",
             name: "Exquisite",
-            description: "Premium executive office furniture designed for modern cabins. Exquisite desk by a trusted office furniture manufacturer in India for luxury workspaces.",
+            description: "Exquisite blends refined craftsmanship with modern authority. Premium executive office furniture designed for modern cabins, creating a bold yet graceful presence.",
             flagshipImage: "/images/products/imported/meeting-table/image-33.webp",
             sceneImages: [],
             variants: [
@@ -352,10 +355,11 @@ export const oandoCatalog: Category[] = [
               }
             ],
             detailedInfo: {
-              overview: "Premium executive office furniture designed for modern cabins. Exquisite desk by a trusted office furniture manufacturer in India for luxury workspaces.",
+              overview: "Exquisite blends refined craftsmanship with modern authority. It uses premium veneers and precise detailing to create a bold yet graceful presence that defines the executive space.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Refined Craftsmanship",
+                "Premium Veneers",
+                "Modern Authority"
               ],
               dimensions: "1800900750mm (standard)",
               materials: [
@@ -867,7 +871,7 @@ export const oandoCatalog: Category[] = [
           {
             id: "trio",
             name: "Trio",
-            description: "Trio ergonomic office chair for long working hours. Comfortable office seating solution from a leading office chairs manufacturer in India.",
+            description: "Trio modular desking solution built for open spaces and collaborative environments. Flexible and scalable furniture that supports modern workstyles.",
             flagshipImage: "/images/products/imported/meeting-table/image-92.webp",
             sceneImages: [],
             variants: [
@@ -880,10 +884,11 @@ export const oandoCatalog: Category[] = [
               }
             ],
             detailedInfo: {
-              overview: "Trio ergonomic office chair for long working hours. Comfortable office seating solution from a leading office chairs manufacturer in India.",
+              overview: "Trio modular desking solution built for open spaces and collaborative environments. Flexible and scalable furniture that supports modern workstyles, creating harmony across the workplace.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Modular Desking",
+                "Flexibility",
+                "Scalability"
               ],
               dimensions: "1800900750mm (standard)",
               materials: [
@@ -1065,7 +1070,7 @@ export const oandoCatalog: Category[] = [
           {
             id: "stake",
             name: "Stake",
-            description: "Stake office seating chair offering ergonomic comfort and durability. Ideal office chair for daily workstations and meetings.",
+            description: "Stake versatile modular table and desk system offering functionality and durability. Ideal workspace solution for daily workstations and team meetings.",
             flagshipImage: "/images/products/imported/folding-table/image-3.webp",
             sceneImages: [],
             variants: [
@@ -1078,10 +1083,11 @@ export const oandoCatalog: Category[] = [
               }
             ],
             detailedInfo: {
-              overview: "Stake office seating chair offering ergonomic comfort and durability. Ideal office chair for daily workstations and meetings.",
+              overview: "Stake versatile modular table and desk system offering functionality and durability. Ideal workspace solution for daily workstations and team meetings.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Modular Table System",
+                "Versatile Layouts",
+                "Durability"
               ],
               dimensions: "1800900750mm (standard)",
               materials: [
@@ -2988,7 +2994,7 @@ export const oandoCatalog: Category[] = [
           {
             id: "myel",
             name: "Myel",
-            description: "Myel office chairs for daily comfort and productivity. Discover modern seating for modern workspaces.",
+            description: "A task chair for modern thinkers. MYEL combines weight-sensitive tilt and a dynamic backrest to provide effortless support throughout the workday.",
             flagshipImage: "/images/products/imported/fluid/image-1.webp",
             sceneImages: [],
             variants: [
@@ -3001,10 +3007,11 @@ export const oandoCatalog: Category[] = [
               }
             ],
             detailedInfo: {
-              overview: "Myel office chairs for daily comfort and productivity. Discover modern seating for modern workspaces.",
+              overview: "A task chair for modern thinkers. MYEL combines weight-sensitive tilt and a dynamic backrest to provide effortless support throughout the workday.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Weight-sensitive Tilt",
+                "Dynamic Backrest",
+                "Effortless Support"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
@@ -3021,7 +3028,7 @@ export const oandoCatalog: Category[] = [
           {
             id: "flip",
             name: "Flip",
-            description: "Flip training tables for flexible learning spaces. Discover mobile and foldable tables for modern workspaces.",
+            description: "Flip training chair with optional tablet arm, designed for agility and comfort in flexible learning and meeting environments.",
             flagshipImage: "/images/products/imported/fluid-x/image-1.webp",
             sceneImages: [],
             variants: [
@@ -3034,10 +3041,11 @@ export const oandoCatalog: Category[] = [
               }
             ],
             detailedInfo: {
-              overview: "Flip training tables for flexible learning spaces. Discover mobile and foldable tables for modern workspaces.",
+              overview: "Flip training chair with optional tablet arm, designed for agility and comfort in flexible learning and meeting environments. Mobile and nestable for easy storage.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Nesting Capability",
+                "Optional Tablet Arm",
+                "Agile Design"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
@@ -3054,7 +3062,7 @@ export const oandoCatalog: Category[] = [
           {
             id: "nordic",
             name: "Nordic",
-            description: "Nordic office furniture inspired by clean lines and modern workspace aesthetics. Explore designs for modern workspaces.",
+            description: "Nordic wooden frame visitor chair inspired by Scandinavian minimalism. Perfect for breakout zones and casual meetings.",
             flagshipImage: "/images/products/imported/breez/image-1.webp",
             sceneImages: [],
             variants: [
@@ -3067,10 +3075,11 @@ export const oandoCatalog: Category[] = [
               }
             ],
             detailedInfo: {
-              overview: "Nordic office furniture inspired by clean lines and modern workspace aesthetics. Explore designs for modern workspaces.",
+              overview: "Nordic wooden frame visitor chair inspired by Scandinavian minimalism. Perfect for breakout zones and professional guest seating.",
               features: [
-                "Manufacturing",
-                "Sustainability"
+                "Wooden Frame",
+                "Minimalist Aesthetic",
+                "Comfortable Shell Design"
               ],
               dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
               materials: [
