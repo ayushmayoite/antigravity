@@ -175,4 +175,28 @@
       scrollbar-width: none;
     }
   }
+
+  /* Product grid fade-in animation */
+  .animate-fadein {
+    animation: fadein 0.25s ease-out both;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover scale utility (Tailwind doesn't include scale-103 by default) */
+.hover\:scale-103:hover {
+  transform: scale(1.03);
+}
+.group:hover .group-hover\:scale-103 {
+  transform: scale(1.03);
 }

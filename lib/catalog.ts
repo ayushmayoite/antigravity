@@ -25,10 +25,21 @@ export interface Product {
   metadata?: {
     source?: string;
     category?: string;
+    subcategory?: string;
     bifmaCertified?: boolean;
     warrantyYears?: number;
     sustainabilityScore?: number;
     tags?: string[];
+    priceRange?: "budget" | "mid" | "premium" | "luxury";
+    useCase?: string[];
+    material?: string[];
+    colorOptions?: string[];
+    hasHeadrest?: boolean;
+    isHeightAdjustable?: boolean;
+    isStackable?: boolean;
+    isNestable?: boolean;
+    isBifoldable?: boolean;
+    seriesId?: string;
   };
 }
 
@@ -88,6 +99,10 @@ export const oandoCatalog: Category[] = [
             metadata: {
               source: "oando.co.in",
               category: "workstations",
+              subcategory: "Linear Workstation",
+              priceRange: "premium",
+              useCase: ["Executive Office", "Focused Work"],
+              material: ["Steel", "MDF", "Melamine"],
               bifmaCertified: true,
               warrantyYears: 5
             }
@@ -121,6 +136,10 @@ export const oandoCatalog: Category[] = [
             metadata: {
               source: "oando.co.in",
               category: "workstations",
+              subcategory: "Modular Workstation",
+              priceRange: "mid",
+              useCase: ["Open Office", "Collaborative"],
+              material: ["Steel", "MFC"],
               bifmaCertified: true,
               warrantyYears: 5
             }
@@ -154,6 +173,10 @@ export const oandoCatalog: Category[] = [
             metadata: {
               source: "oando.co.in",
               category: "workstations",
+              subcategory: "L-Shaped Workstation",
+              priceRange: "mid",
+              useCase: ["Corner Office", "Managerial"],
+              material: ["Metal", "Laminate"],
               bifmaCertified: true,
               warrantyYears: 5
             }
@@ -187,6 +210,10 @@ export const oandoCatalog: Category[] = [
             metadata: {
               source: "oando.co.in",
               category: "workstations",
+              subcategory: "Linear Workstation",
+              priceRange: "budget",
+              useCase: ["BPO", "Compact Office"],
+              material: ["Steel", "MFC"],
               bifmaCertified: true,
               warrantyYears: 5
             }
@@ -373,39 +400,7 @@ export const oandoCatalog: Category[] = [
               warrantyYears: 5
             }
           },
-          {
-            id: "exquisite-mt",
-            name: "Exquisite",
-            description: "Exquisite MT meeting table for boardrooms and offices. Modern office meeting table built for teamwork and productivity.",
-            flagshipImage: "/images/products/imported/cafe-discussion-tables/image-10.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Exquisite MT meeting table for boardrooms and offices. Modern office meeting table built for teamwork and productivity.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "1800900750mm (standard)",
-              materials: [
-                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "tables",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
+
           {
             id: "nextable",
             name: "NexTable",
@@ -439,72 +434,7 @@ export const oandoCatalog: Category[] = [
               warrantyYears: 5
             }
           },
-          {
-            id: "verka",
-            name: "Verka",
-            description: "Verka lounge chair for receptions and breakout areas. Stylish office lounge chair and soft seating solution for modern offices.",
-            flagshipImage: "/images/products/imported/meeting-table/image-43.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Verka lounge chair for receptions and breakout areas. Stylish office lounge chair and soft seating solution for modern offices.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "1800900750mm (standard)",
-              materials: [
-                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "tables",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
-          {
-            id: "cafe-sleek",
-            name: "Sleek Cafe",
-            description: "Cafe Sleek cafeteria chair for cafes and office pantries. Durable cafe chair designed for comfort and daily use.",
-            flagshipImage: "/images/products/imported/cafe-discussion-tables/image-40.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Cafe Sleek cafeteria chair for cafes and office pantries. Durable cafe chair designed for comfort and daily use.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "1800900750mm (standard)",
-              materials: [
-                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "tables",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
+
           {
             id: "impulse",
             name: "Impulse",
@@ -637,39 +567,7 @@ export const oandoCatalog: Category[] = [
               warrantyYears: 5
             }
           },
-          {
-            id: "high-cafe",
-            name: "High-Cafe",
-            description: "High Cafe bar chair for breakout and dining spaces. Modern seating solution ideal for cafeterias and collaborative office zones.",
-            flagshipImage: "/images/products/imported/folding-table/image-4.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "High Cafe bar chair for breakout and dining spaces. Modern seating solution ideal for cafeterias and collaborative office zones.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "1800900750mm (standard)",
-              materials: [
-                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "tables",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
+
           {
             id: "uniflip",
             name: "Uniflip",
@@ -703,39 +601,7 @@ export const oandoCatalog: Category[] = [
               warrantyYears: 5
             }
           },
-          {
-            id: "opus",
-            name: "Opus",
-            description: "Opus executive office desk combining luxury office furniture design with durability. Ideal for modern office furniture and cabin setups.",
-            flagshipImage: "/images/products/imported/cafe-discussion-tables/image-10.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Opus executive office desk combining luxury office furniture design with durability. Ideal for modern office furniture and cabin setups.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "1800900750mm (standard)",
-              materials: [
-                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "tables",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
+
           {
             id: "sleek-meet",
             name: "Sleek-Meet",
@@ -802,106 +668,8 @@ export const oandoCatalog: Category[] = [
               warrantyYears: 5
             }
           },
-          {
-            id: "wiesner",
-            name: "Wiesner",
-            description: "Wiesner office seating designed for comfort and durability. Explore modern seating solutions for modern workspaces.",
-            flagshipImage: "/images/products/imported/cafe-discussion-tables/image-40.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Wiesner office seating designed for comfort and durability. Explore modern seating solutions for modern workspaces.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "1800900750mm (standard)",
-              materials: [
-                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "tables",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
-          {
-            id: "adaptable-2",
-            name: "Adaptable",
-            description: "Adaptable modular office furniture designed for flexible and scalable workspaces. Discover smart layouts that support productivity and modern offices.",
-            flagshipImage: "/images/products/imported/meeting-table/image-91.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Adaptable modular office furniture designed for flexible and scalable workspaces. Discover smart layouts that support productivity and modern offices.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "1800900750mm (standard)",
-              materials: [
-                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "tables",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
-          {
-            id: "trio",
-            name: "Trio",
-            description: "Trio modular desking solution built for open spaces and collaborative environments. Flexible and scalable furniture that supports modern workstyles.",
-            flagshipImage: "/images/products/imported/meeting-table/image-92.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Trio modular desking solution built for open spaces and collaborative environments. Flexible and scalable furniture that supports modern workstyles, creating harmony across the workplace.",
-              features: [
-                "Modular Desking",
-                "Flexibility",
-                "Scalability"
-              ],
-              dimensions: "1800900750mm (standard)",
-              materials: [
-                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "tables",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
+
+
           {
             id: "desk-meet",
             name: "Desk-Meet",
@@ -935,39 +703,7 @@ export const oandoCatalog: Category[] = [
               warrantyYears: 5
             }
           },
-          {
-            id: "crox",
-            name: "Crox",
-            description: "Crox visitor and cafe chair for offices and lounges. Comfortable seating solution for receptions and waiting areas.",
-            flagshipImage: "/images/products/imported/cafe-discussion-tables/image-80.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Crox visitor and cafe chair for offices and lounges. Comfortable seating solution for receptions and waiting areas.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "1800900750mm (standard)",
-              materials: [
-                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "tables",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
+
           {
             id: "modulus",
             name: "Modulus",
@@ -1167,39 +903,7 @@ export const oandoCatalog: Category[] = [
               warrantyYears: 5
             }
           },
-          {
-            id: "crew",
-            name: "Crew",
-            description: "Crew collaborative office seating for teamwork spaces. Comfortable soft seating office solution for modern coworking environments.",
-            flagshipImage: "/images/products/imported/meeting-table/image-91.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Crew collaborative office seating for teamwork spaces. Comfortable soft seating office solution for modern coworking environments.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "1800900750mm (standard)",
-              materials: [
-                "MFC top (25mm thick)", "Steel powder-coated base", "PVC edge banding 2mm"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "tables",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
+
           {
             id: "x-meet",
             name: "X Meet",
@@ -1625,6 +1329,161 @@ export const oandoCatalog: Category[] = [
         description: "Premium soft seating solutions",
         products: [
           {
+            id: "verka",
+            name: "Verka",
+            description: "Verka lounge chair for receptions and breakout areas, providing a stylish and comfortable seating solution for modern professional environments.",
+            flagshipImage: "/images/products/imported/meeting-table/image-43.webp",
+            sceneImages: [],
+            variants: [
+              {
+                id: "standard",
+                variantName: "Standard Model",
+                galleryImages: [
+                  "/images/products/imported/accent/image-1.webp"
+                ]
+              }
+            ],
+            detailedInfo: {
+              overview: "Verka lounge chair for receptions and breakout areas, providing a stylish and comfortable seating solution for modern professional environments.",
+              features: ["Ergonomic Support", "Modular Design", "Sustainability"],
+              dimensions: "W680 D700 H820mm",
+              materials: ["High-density foam", "Premium fabric upholstery", "Steel base"]
+            },
+            metadata: {
+              source: "oando.co.in",
+              category: "soft-seating",
+              subcategory: "Lounge Chair",
+              useCase: ["Reception", "Breakout"],
+              priceRange: "mid",
+              bifmaCertified: true,
+              warrantyYears: 5
+            }
+          },
+          {
+            id: "high-cafe",
+            name: "High Cafe",
+            description: "High Cafe bar chair for breakout and dining spaces, offering a modern seating solution for cafeterias and collaborative zones.",
+            flagshipImage: "/images/products/imported/folding-table/image-4.webp",
+            sceneImages: [],
+            variants: [
+              {
+                id: "standard",
+                variantName: "Standard Model",
+                galleryImages: [
+                  "/images/products/imported/accent/image-1.webp"
+                ]
+              }
+            ],
+            detailedInfo: {
+              overview: "High Cafe bar chair for breakout and dining spaces, offering a modern seating solution for cafeterias and collaborative zones.",
+              features: ["Sleek Profile", "Durable Frame", "Ergonomic Footrest"],
+              dimensions: "W450 D480 H1050mm",
+              materials: ["Powder-coated steel", "Molded plywood seat"]
+            },
+            metadata: {
+              source: "oando.co.in",
+              category: "soft-seating",
+              subcategory: "Bar Stool",
+              useCase: ["Cafeteria", "Collaborative"],
+              priceRange: "budget",
+              bifmaCertified: true,
+              warrantyYears: 5
+            }
+          },
+          {
+            id: "grace",
+            name: "Grace",
+            description: "Grace lounge seating for waiting areas and relaxed office spaces, offering a refined and comfortable aesthetic for modern professional environments.",
+            flagshipImage: "/images/products/imported/cirq/image-1.webp",
+            sceneImages: [],
+            variants: [
+              {
+                id: "standard",
+                variantName: "Standard Model",
+                galleryImages: [
+                  "/images/products/imported/accent/image-1.webp"
+                ]
+              }
+            ],
+            detailedInfo: {
+              overview: "Grace lounge seating for waiting areas and relaxed office spaces, offering a refined and comfortable aesthetic for modern professional environments.",
+              features: ["Elegant Silhouette", "Soft Cushioning", "Durable Upholstery"],
+              dimensions: "W720 D750 H850mm",
+              materials: ["Internal wood frame", "Memory foam topper", "Reinforced fabric"]
+            },
+            metadata: {
+              source: "oando.co.in",
+              category: "soft-seating",
+              subcategory: "Lounge Chair",
+              useCase: ["Waiting Area", "Lounge"],
+              priceRange: "premium",
+              bifmaCertified: true,
+              warrantyYears: 5
+            }
+          },
+          {
+            id: "brim",
+            name: "Brim",
+            description: "Brim lounge seating for waiting areas and informal spaces, designed to provide comfort and a touch of modern flair to shared office zones.",
+            flagshipImage: "/images/products/imported/sway/image-1.webp",
+            sceneImages: [],
+            variants: [
+              {
+                id: "standard",
+                variantName: "Standard Model",
+                galleryImages: [
+                  "/images/products/imported/accent/image-1.webp"
+                ]
+              }
+            ],
+            detailedInfo: {
+              overview: "Brim lounge seating for waiting areas and informal spaces, designed to provide comfort and a touch of modern flair to shared office zones.",
+              features: ["Versatile Styling", "Compact Footprint", "High-resilience Foam"],
+              dimensions: "W650 D680 H800mm",
+              materials: ["Molded internal frame", "Premium textile finish"]
+            },
+            metadata: {
+              source: "oando.co.in",
+              category: "soft-seating",
+              subcategory: "Lounge Chair",
+              useCase: ["Breakout", "Informal Meeting"],
+              priceRange: "mid",
+              bifmaCertified: true,
+              warrantyYears: 5
+            }
+          },
+          {
+            id: "fynn",
+            name: "Fynn",
+            description: "Fynn lounge seating for waiting areas and relaxed office spaces, combining ergonomic support with a contemporary design for professional settings.",
+            flagshipImage: "/images/products/imported/padora/image-1.webp",
+            sceneImages: [],
+            variants: [
+              {
+                id: "standard",
+                variantName: "Standard Model",
+                galleryImages: [
+                  "/images/products/imported/accent/image-1.webp"
+                ]
+              }
+            ],
+            detailedInfo: {
+              overview: "Fynn lounge seating for waiting areas and relaxed office spaces, combining ergonomic support with a contemporary design for professional settings.",
+              features: ["Ergonomic Contouring", "Contemporary Aesthetic", "Built-to-last"],
+              dimensions: "W700 D720 H830mm",
+              materials: ["Stainless steel legs", "Contoured foam shell"]
+            },
+            metadata: {
+              source: "oando.co.in",
+              category: "soft-seating",
+              subcategory: "Lounge Chair",
+              useCase: ["Reception", "Private Lounge"],
+              priceRange: "premium",
+              bifmaCertified: true,
+              warrantyYears: 5
+            }
+          },
+          {
             id: "accent",
             name: "Accent",
             description: "Accent office side and storage units for organized workspaces. Discover modern storage for modern workspaces.",
@@ -1658,42 +1517,9 @@ export const oandoCatalog: Category[] = [
             }
           },
           {
-            id: "solace",
-            name: "Solace",
-            description: "Solace ergonomic office chairs designed for posture support and daily comfort. Explore seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/cove/image-1.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/solace/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Solace ergonomic office chairs designed for posture support and daily comfort. Explore seating for modern workspaces.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "W600 D600 H900-1000mm (adj.)",
-              materials: [
-                "Solid wood or steel frame", "High-density foam (40D)", "Premium fabric or PU leather upholstery"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "soft-seating",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
-          {
             id: "como",
             name: "Como",
-            description: "Como executive office desks for premium leadership spaces. Explore modern desks for modern workspaces.",
+            description: "Como lounge chair with plush cushioning and solid wood legs, perfect for executive waiting areas and breakout lounges.",
             flagshipImage: "/images/products/imported/covea/image-1.webp",
             sceneImages: [],
             variants: [
@@ -1790,9 +1616,9 @@ export const oandoCatalog: Category[] = [
             }
           },
           {
-            id: "nordic-2",
-            name: "Nordic",
-            description: "Nordic office furniture inspired by clean lines and modern design. Discover workstations for modern workspaces.",
+            id: "luna",
+            name: "Luna",
+            description: "Luna lounge chair with Scandinavian-inspired wooden legs and deep cushioned seat. A calm, welcoming addition to any reception or breakout space.",
             flagshipImage: "/images/products/imported/embrace/image-1.webp",
             sceneImages: [],
             variants: [
@@ -2286,8 +2112,8 @@ export const oandoCatalog: Category[] = [
           },
           {
             id: "cocoon",
-            name: "Co",
-            description: "Cocoon acoustic seating for privacy and focus. Discover modern pod seating for modern workspaces.",
+            name: "Cocoon",
+            description: "Cocoon acoustic lounge chair wrapping you in comfort and focus. A high-back shell design ideal for breakout zones and informal meetings.",
             flagshipImage: "/images/products/imported/spectrum/image-1.webp",
             sceneImages: [],
             variants: [
@@ -2992,6 +2818,69 @@ export const oandoCatalog: Category[] = [
         description: "Premium seating solutions",
         products: [
           {
+            id: "cafe-sleek",
+            name: "Sleek Cafe",
+            description: "Sleek Cafe cafeteria chair for dining spaces and informal meeting zones, designed for durability and ease of maintenance.",
+            flagshipImage: "/images/products/imported/cafe-discussion-tables/image-40.webp",
+            sceneImages: [],
+            variants: [
+              {
+                id: "standard",
+                variantName: "Standard Model",
+                galleryImages: [
+                  "/images/products/imported/accent/image-1.webp"
+                ]
+              }
+            ],
+            detailedInfo: {
+              overview: "Sleek Cafe cafeteria chair for dining spaces and informal meeting zones, designed for durability and ease of maintenance.",
+              features: ["Stackable Design", "Lightweight", "Durable Finish"],
+              dimensions: "W520 D540 H800mm",
+              materials: ["Polypropylene shell", "Chromed steel legs"]
+            },
+            metadata: {
+              source: "oando.co.in",
+              category: "seating",
+              subcategory: "Cafe Chair",
+              useCase: ["Cafeteria", "Pantry"],
+              priceRange: "budget",
+              isStackable: true,
+              bifmaCertified: true,
+              warrantyYears: 5
+            }
+          },
+          {
+            id: "crox",
+            name: "Crox",
+            description: "Crox visitor and cafe chair, offering a comfortable and versatile seating solution for receptions, lounges, and waiting areas.",
+            flagshipImage: "/images/products/imported/cafe-discussion-tables/image-80.webp",
+            sceneImages: [],
+            variants: [
+              {
+                id: "standard",
+                variantName: "Standard Model",
+                galleryImages: [
+                  "/images/products/imported/accent/image-1.webp"
+                ]
+              }
+            ],
+            detailedInfo: {
+              overview: "Crox visitor and cafe chair, offering a comfortable and versatile seating solution for receptions, lounges, and waiting areas.",
+              features: ["Ergonomic Back", "Compact Footprint", "Modern Aesthetic"],
+              dimensions: "W550 D560 H810mm",
+              materials: ["Molded shell", "Steel tube base"]
+            },
+            metadata: {
+              source: "oando.co.in",
+              category: "seating",
+              subcategory: "Visitor Chair",
+              useCase: ["Reception", "Lounge"],
+              priceRange: "mid",
+              bifmaCertified: true,
+              warrantyYears: 5
+            }
+          },
+          {
             id: "myel",
             name: "Myel",
             description: "A task chair for modern thinkers. MYEL combines weight-sensitive tilt and a dynamic backrest to provide effortless support throughout the workday.",
@@ -3095,39 +2984,7 @@ export const oandoCatalog: Category[] = [
               warrantyYears: 5
             }
           },
-          {
-            id: "grace",
-            name: "Grace",
-            description: "Grace lounge seating for waiting areas and relaxed office spaces. Explore soft seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/cirq/image-1.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Grace lounge seating for waiting areas and relaxed office spaces. Explore soft seating for modern workspaces.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
-              materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, 50mm casters"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "seating",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
+
           {
             id: "sway",
             name: "Sway",
@@ -3763,39 +3620,7 @@ export const oandoCatalog: Category[] = [
               warrantyYears: 5
             }
           },
-          {
-            id: "brim",
-            name: "Brim",
-            description: "Brim lounge seating for waiting areas and informal spaces. Explore soft seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/sway/image-1.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Brim lounge seating for waiting areas and informal spaces. Explore soft seating for modern workspaces.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
-              materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "seating",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
+
           {
             id: "sullion",
             name: "Sullion",
@@ -4265,39 +4090,7 @@ export const oandoCatalog: Category[] = [
               warrantyYears: 5
             }
           },
-          {
-            id: "fynn",
-            name: "Fynn",
-            description: "Fynn lounge seating for waiting areas and relaxed office spaces. Explore soft seating for modern workspaces.",
-            flagshipImage: "/images/products/imported/padora/image-1.webp",
-            sceneImages: [],
-            variants: [
-              {
-                id: "standard",
-                variantName: "Standard Model",
-                galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
-                ]
-              }
-            ],
-            detailedInfo: {
-              overview: "Fynn lounge seating for waiting areas and relaxed office spaces. Explore soft seating for modern workspaces.",
-              features: [
-                "Manufacturing",
-                "Sustainability"
-              ],
-              dimensions: "W600D600H9001000mm (seat height adj. via gas lift)",
-              materials: [
-                "Mesh or fabric back", "Moulded foam seat, polyester cover", "Nylon 5-star base, �50mm casters"
-              ]
-            },
-            metadata: {
-              source: "oando.co.in",
-              category: "seating",
-              bifmaCertified: true,
-              warrantyYears: 5
-            }
-          },
+
           {
             id: "caneva-high",
             name: "Caneva-High",
@@ -4822,9 +4615,9 @@ export const oandoCatalog: Category[] = [
         description: "Soft seating solutions for modern collaborative workspaces",
         products: [
           {
-            id: "solace-lounge",
-            name: "Solace Lounge",
-            description: "Comfortable lounge seating for collaborative spaces",
+            id: "solace-pod",
+            name: "Solace Pod",
+            description: "Solace Pod — an acoustic privacy pod designed for teams needing focused conversation space in open offices. High curved back provides noise dampening without full enclosure.",
             flagshipImage: "/images/products/imported/pod/image-2.webp",
             sceneImages: [],
             variants: [
@@ -4861,9 +4654,9 @@ export const oandoCatalog: Category[] = [
             }
           },
           {
-            id: "cocoon-seating",
-            name: "Co",
-            description: "Private collaborative seating pods for focused discussions",
+            id: "cocoon-pod",
+            name: "Cocoon Pod",
+            description: "Cocoon Pod provides full acoustic enclosure with integrated USB charging, ideal for private calls and focused deep work in collaborative office environments.",
             flagshipImage: "/images/products/imported/pod/image-11.webp",
             sceneImages: [],
             variants: [
