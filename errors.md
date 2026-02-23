@@ -8,6 +8,7 @@
   - The OpenAI API key (`OPENAI_API_KEY`) was added to `.env.local`.
   - Logs added to `app/api/ai-advisor/route.ts` to trace where it fails.
   - Potential causes: `gpt-4o-mini` access denied for this key, billing issue, or environment variables not propagating to the App Router API route properly in Turbopack mode.
+  - **Note**: Manual testing via PowerShell showed a `308 Permanent Redirect` when hitting `http://localhost:3000/api/ai-advisor`, which might indicate a trailing slash issue or middleware redirect.
 - **Action**: Verify OpenAI key permissions and billing status.
 
 ## 2. Linting Configuration Error
