@@ -170,13 +170,13 @@ export async function getCatalog(): Promise<CompatCategory[]> {
 
     // Category display names
     const CATEGORY_NAMES: Record<string, { name: string; description: string }> = {
-        "oando-workstations": { name: "Workstations", description: "Modular workstation solutions for modern offices" },
-        "oando-tables": { name: "Tables", description: "Conference tables, meeting tables, and office desks" },
-        "oando-storage": { name: "Storage", description: "Filing cabinets, lockers, and storage solutions" },
-        "oando-soft-seating": { name: "Soft Seating", description: "Lounge chairs, sofas, and casual seating" },
-        "oando-seating": { name: "Seating", description: "Ergonomic and task chairs for modern offices" },
-        "oando-educational": { name: "Educational", description: "Furniture for classrooms, labs, and training" },
-        "oando-collaborative": { name: "Collaborative", description: "Collaboration pods, phone booths, and meeting pods" },
+        "oando-workstations": { name: "Workstations", description: "Modular engineered desking systems for scalable, high-performance offices" },
+        "oando-tables": { name: "Tables", description: "Precision-built conference and meeting table systems for institutional environments" },
+        "oando-storage": { name: "Storage", description: "Engineered storage infrastructure — secure, scalable, and space-efficient" },
+        "oando-soft-seating": { name: "Soft Seating", description: "Collaborative zoning systems with soft-seating engineered for comfort and acoustics" },
+        "oando-seating": { name: "Seating", description: "Engineered ergonomic seating systems for long-term health and sustained productivity" },
+        "oando-educational": { name: "Educational", description: "Purpose-built learning environment systems for institutions, labs, and classrooms" },
+        "oando-collaborative": { name: "Collaborative", description: "Acoustic pod and collaboration booth systems for enterprise focus and privacy" },
     };
 
     const result: CompatCategory[] = [];

@@ -14,6 +14,11 @@ const AdvancedBot = dynamic(() =>
     default: m.AdvancedBot,
   })),
 );
+const AIAdvisor = dynamic(() =>
+  import("@/components/ai/Advisor").then((m) => ({
+    default: m.AIAdvisor,
+  })),
+);
 
 const inter = Inter({
   subsets: ["latin"],
@@ -122,6 +127,7 @@ export default function RootLayout({
         <div id="main-content">{children}</div>
         <Footer />
         <AdvancedBot />
+        <AIAdvisor />
       </body>
     </html>
   );

@@ -16,10 +16,12 @@ export default function Home() {
         variant="cinema"
         title={
           <>
-            Work better. <br />
-            <span className="italic font-serif">Live better.</span>
+            One & Only – <span className="italic font-serif">Engineered</span>
+            <br />
+            Workspace Systems.
           </>
         }
+        subtitle="Performance-driven solutions for corporate, government, and institutions – Official AFC Regional Franchise"
         backgroundImage="/hero/titan-hero.webp"
       />
 
