@@ -3,7 +3,12 @@ import OpenAI from "openai";
 import { getProducts } from "@/lib/getProducts";
 
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY || "placeholder",
+    baseURL: "https://openrouter.ai/api/v1",
+    apiKey: process.env.OPENROUTER_API_KEY || "placeholder",
+    defaultHeaders: {
+        "HTTP-Referer": "http://localhost:3000",
+        "X-Title": "One and Only Furniture",
+    }
 });
 
 export async function POST(req: NextRequest) {
@@ -16,9 +21,9 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ error: "Query is required" }, { status: 400 });
         }
 
-        if (!process.env.OPENAI_API_KEY) {
+        if (!process.env.OPENROUTER_API_KEY) {
             return NextResponse.json(
-                { error: "AI advisor is not configured. Please add OPENAI_API_KEY." },
+                { error: "AI advisor is not configured. Please add OPENROUTER_API_KEY." },
                 { status: 503 }
             );
         }
@@ -57,19 +62,19 @@ Respond ONLY with valid JSON in this exact shape:
   "summary": "<2-sentence enterprise consultation summary>"
 }`;
 
-        console.log("🤖  [ai-advisor] Calling OpenAI...");
+        console.log("🤖  [ai-advisor] Calling OpenRouter...");
         const completion = await openai.chat.completions.create({
-            model: "gpt-4o-mini",
+            model: "openrouter/free",
             messages: [
                 { role: "system", content: systemPrompt },
                 { role: "user", content: query },
             ],
             temperature: 0.4,
-            response_format: { type: "json_object" },
         });
-        console.log("✅  [ai-advisor] OpenAI response received");
+        console.log("✅  [ai-advisor] OpenRouter response received");
 
-        const raw = completion.choices[0]?.message?.content ?? "{}";
+        let raw = completion.choices[0]?.message?.content ?? "{}";
+        raw = raw.replace(/^```json\n/, "").replace(/\n```$/, "").trim();
         const result = JSON.parse(raw);
 
         return NextResponse.json(result);
