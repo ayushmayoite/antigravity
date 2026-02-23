@@ -88,14 +88,15 @@ export const oandoCatalog: Category[] = [
             id: "curvivo",
             name: "Curvivo",
             description: "A dynamic and innovative workstation that is adaptable to different workspaces. Curvivo office solution for enhanced efficiency, embracing fluidity and harmony.",
-            flagshipImage: "/images/products/imported/cabin/image-1.webp",
+            flagshipImage: "/images/products/imported/workstations-copy/image-1.JPG.webp",
             sceneImages: [],
             variants: [
               {
                 id: "standard",
                 variantName: "Standard Model",
                 galleryImages: [
-                  "/images/products/imported/accent/image-1.webp"
+                  "/images/products/imported/workstations-copy/image-10.webp",
+                  "/images/products/imported/workstations-copy/image-6.webp"
                 ]
               }
             ],

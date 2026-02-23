@@ -3,6 +3,7 @@ import type { CompatCategory } from "@/lib/getProducts";
 import { notFound } from "next/navigation";
 import { Hero } from "@/components/home/Hero";
 import { FilterGrid } from "./FilterGrid";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 
@@ -68,6 +69,32 @@ export default async function CategoryPage({
   const { category: categoryId } = await params;
   const catalog = await getCatalog();
   const category = catalog.find((c: CompatCategory) => c.id === categoryId);
+
+  if (catalog.length === 0) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center p-8 text-center bg-white">
+        <h1 className="text-2xl font-light mb-4 text-neutral-900">
+          Workspace Engineering Engine - Offline
+        </h1>
+        <p className="max-w-md text-neutral-500 mb-8">
+          This system requires a connection to the Supabase product catalog.
+          Please ensure{" "}
+          <code className="bg-neutral-100 px-1 py-0.5 rounded">
+            NEXT_PUBLIC_SUPABASE_URL
+          </code>
+          is configured in your environment variables.
+        </p>
+        <div className="flex gap-4">
+          <Link
+            href="/"
+            className="px-6 py-2 bg-primary text-white text-sm tracking-widest uppercase font-bold"
+          >
+            Return Home
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   if (!category) {
     notFound();

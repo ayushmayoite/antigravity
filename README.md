@@ -29,6 +29,24 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## One and Only Furniture
+
+Premium furniture solutions for modern offices. Built with Next.js, Tailwind CSS, and Supabase.
+
+## Deployment Guide
+
+### Vercel Integration
+
+To avoid 404 errors on product pages and 500 errors in the AI Advisor, you **MUST** configure the following environment variables in your Vercel Project Settings:
+
+1. `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase Project URL.
+2. `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase Anon Key.
+3. `OPENROUTER_API_KEY`: Your OpenRouter API Key (sk-or-...).
+
+### Supabase RLS Warnings
+
+During the `npm run seed` process, you may see RLS (Row Level Security) warnings. These are **informational only** and expected because the seed script uses the `SUPABASE_SERVICE_ROLE_KEY` to bypass restrictions for bulk data management. In production, anonymous users have read-only access to the products table.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
