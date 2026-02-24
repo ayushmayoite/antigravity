@@ -266,7 +266,7 @@ export default function ProductsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/products/fluid-chair-1.webp"
+                src="/images/afc/oando-seating--fluid-x/image-1.webp"
                 alt="Ergonomic Seating System"
                 fill
                 className="object-cover"

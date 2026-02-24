@@ -47,7 +47,7 @@ export function Recommendations() {
               const [cat, id] = rec.productId.split("--");
               // Assuming fallback path if parsing slug fails
               const productHref =
-                cat && id ? `/products/${cat}/${id}/${id}` : `/products`;
+                cat && id ? `/products/${cat}/${id}` : `/products`;
 
               return (
                 <Link

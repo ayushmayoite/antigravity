@@ -17,9 +17,10 @@ const PROJECT_ITEMS: ProjectItem[] = [
   {
     title: "DMRC",
     images: [
+      "/projects/DMRC/IMG_20200612_123416.webp",
+      "/projects/DMRC/IMG_20200612_140613.webp",
+      "/projects/DMRC/IMG_20200612_175502.webp",
       "/projects/DMRC/IMG_20200612_185405.webp",
-      "/projects/DMRC/IMG_20200612_185428.webp",
-      "/projects/DMRC/IMG_20200612_185447.webp",
     ],
     link: "/gallery",
     large: false,
@@ -51,9 +52,10 @@ const PROJECT_ITEMS: ProjectItem[] = [
   {
     title: "Usha",
     images: [
+      "/projects/Usha/DSCN0741.webp",
+      "/projects/Usha/DSC_0077_edited.webp",
+      "/projects/Usha/DSC_0080.webp",
       "/projects/Usha/DSC_0111.webp",
-      "/projects/Usha/DSC_0113.webp",
-      "/projects/Usha/DSC_0115.webp",
     ],
     link: "/gallery",
     large: true,
