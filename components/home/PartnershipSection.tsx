@@ -6,18 +6,18 @@ import { ArrowRight } from "lucide-react";
 
 export function PartnershipSection() {
   return (
-    <section className="relative w-full py-24 md:py-32 overflow-hidden bg-white flex items-center justify-center border-y border-neutral-100">
+    <section className="relative w-full py-12 md:py-16 overflow-hidden bg-white flex items-center justify-center border-y border-neutral-100">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20 max-w-5xl mx-auto">
           {/* Partnership Logo */}
           <div className="shrink-0">
-            <div className="relative w-80 h-24 md:w-96 md:h-32">
+            <div className="relative">
               <Image
                 src="/afc-logo.png"
                 alt="AFC Furniture Solutions"
-                width={540}
-                height={180}
-                className="h-24 w-auto opacity-80 hover:opacity-100 transition-all"
+                width={756}
+                height={252}
+                className="h-[134px] w-auto opacity-80 hover:opacity-100 transition-all"
               />
             </div>
           </div>
