@@ -12,6 +12,8 @@
 import { createClient } from "@supabase/supabase-js";
 import * as dotenv from "dotenv";
 import * as path from "path";
+import * as fs from "fs";
+import sql from "../lib/sql";
 
 // Load env vars from .env.local
 dotenv.config({ path: path.resolve(__dirname, "../.env.local") });
@@ -69,6 +71,8 @@ interface ProductRow {
     name: string;
     slug: string;
     category: string;
+    category_id: string;
+    images: string[];
     performance_tier: string | null;
     flagship_image: string;
     description: string;
@@ -82,12 +86,20 @@ interface ProductRow {
 }
 
 async function main() {
+    console.log("🛠️  Running SQL migrations using postgres directly…");
+    const migrationSql = fs.readFileSync(path.resolve(__dirname, "002_image_mapping.sql"), "utf-8");
+    await sql.unsafe(migrationSql);
+    console.log("   ✅  Migrations applied.");
+
     console.log("🚀  Loading catalog data…");
     const catalog = await loadCatalog();
 
+    const categoryRows: { id: string; name: string }[] = [];
     const rows: ProductRow[] = [];
 
     for (const category of catalog) {
+        categoryRows.push({ id: category.id, name: category.name });
+
         for (const series of category.series) {
             for (const product of series.products) {
                 // Use category-scoped slug to guarantee global uniqueness
@@ -105,10 +117,21 @@ async function main() {
                 if (descText.includes("sustainable") || descText.includes("eco")) ecoScore += 2;
                 ecoScore = Math.min(10, Math.max(1, ecoScore));
 
+                const allRawImages = [product.flagshipImage, ...(product.sceneImages || [])].filter(Boolean);
+                const categoryShort = category.id.replace('oando-', '');
+
+                const images = allRawImages.map(imgStr => {
+                    const parts = imgStr.split('/');
+                    const filename = parts[parts.length - 1];
+                    return `/images/${categoryShort}/${filename}`;
+                });
+
                 rows.push({
                     name: product.name,
                     slug,
                     category: category.id,
+                    category_id: category.id,
+                    images,
                     performance_tier: (product.metadata?.priceRange as string) ?? null,
                     flagship_image: product.flagshipImage,
                     description: product.description,
@@ -132,17 +155,37 @@ async function main() {
     console.log(`📦  ${rows.length} products prepared.`);
 
     // Clear existing data first for a clean re-seed
-    console.log("🗑️  Clearing existing products table…");
-    const { error: deleteError } = await supabase
+    console.log("🗑️  Clearing existing data…");
+    const { error: deleteProductsError } = await supabase
         .from("products")
         .delete()
         .gte("created_at", "2000-01-01"); // delete all rows (gte on timestamp = all rows)
 
-    if (deleteError) {
-        console.error("❌  Failed to clear table:", deleteError.message);
+    if (deleteProductsError) {
+        console.error("❌  Failed to clear products table:", deleteProductsError.message);
         process.exit(1);
     }
-    console.log("   ✅  Table cleared.");
+
+    const { error: deleteCategoriesError } = await supabase
+        .from("categories")
+        .delete()
+        .not("id", "is", null);
+
+    if (deleteCategoriesError) {
+        console.error("❌  Failed to clear categories table:", deleteCategoriesError.message);
+        // We do not exit, maybe the table is not created yet? (Although it should be via migration)
+    }
+
+    console.log("   ✅  Tables cleared.");
+
+    // Insert categories
+    console.log("📂  Inserting categories…");
+    const { error: catError } = await supabase.from("categories").insert(categoryRows);
+    if (catError) {
+        console.error("❌  Failed to insert categories:", catError.message);
+        process.exit(1);
+    }
+    console.log("   ✅  Categories inserted.");
 
     // Insert in batches of 50
     const BATCH = 50;
@@ -170,6 +213,9 @@ async function main() {
         console.log("⚠️  Some batches failed. Check errors above.");
         process.exit(1);
     }
+
+    // Close the sql connection if successful
+    process.exit(0);
 }
 
 main().catch((err) => {

@@ -244,7 +244,12 @@ function ProductCard({
   product: FlatProduct;
   categoryId: string;
 }) {
-  const [imgSrc, setImgSrc] = useState(product.flagshipImage);
+  const firstImage =
+    product.images && product.images.length > 0
+      ? product.images[0]
+      : product.flagshipImage;
+
+  const [imgSrc, setImgSrc] = useState(firstImage);
   const displayName = product.name;
   const ecoScore = product.metadata?.sustainabilityScore || 0;
 
@@ -260,9 +265,7 @@ function ProductCard({
           alt={displayName}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-103"
-          onError={() =>
-            setImgSrc("/images/products/imported/accent/image-1.webp")
-          }
+          onError={() => setImgSrc("/images/fallback/category.webp")}
         />
         {product.metadata?.bifmaCertified && (
           <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-[9px] font-bold uppercase tracking-widest text-neutral-600 px-2 py-1 rounded-sm">

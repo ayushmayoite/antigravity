@@ -57,6 +57,7 @@ export interface Product {
     series_id: string;
     series_name: string;
     created_at: string;
+    images?: string[];
 }
 
 // ── Compatibility types that match the old catalog.ts shape ─────────────────
@@ -73,6 +74,7 @@ export interface CompatProduct {
     metadata: ProductMetadata;
     technicalDrawings?: string[];
     documents?: string[];
+    images?: string[];
 }
 
 export interface CompatSeries {
@@ -108,6 +110,7 @@ function toCompatProduct(p: Product): CompatProduct {
             ...(p.metadata ?? {}),
             sustainabilityScore: p.specs?.sustainability_score ?? 5, // fallback if missing
         },
+        images: p.images ?? [],
     };
 }
 
