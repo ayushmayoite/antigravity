@@ -15,9 +15,9 @@ export function PartnershipSection() {
               <Image
                 src="/afc-logo.png"
                 alt="AFC Furniture Solutions"
-                width={1512}
-                height={504}
-                className="h-[268px] w-auto opacity-80 hover:opacity-100 transition-all"
+                width={900}
+                height={300}
+                className="h-40 w-auto opacity-80 hover:opacity-100 transition-all"
               />
             </div>
           </div>

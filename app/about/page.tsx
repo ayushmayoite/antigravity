@@ -8,10 +8,9 @@ export default function AboutPage() {
       <section className="bg-stone-900 text-white py-12 px-12 text-xl leading-relaxed font-playfair text-center">
         <div className="max-w-4xl mx-auto">
           <p>
-            One and Only Furniture was founded in 2011
+            One and Only Furniture was founded in Patna in 2011
             <br />
-            to bring world-class office environments to India&apos;s leading
-            corporates.
+            to bring world-class office environments to Bihar and East India.
           </p>
           <p className="mt-8">
             We are the authorized franchise partner of AFC India —<br />
@@ -26,7 +25,7 @@ export default function AboutPage() {
       <section className="py-16 bg-neutral-50 text-center border-b border-neutral-200">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold uppercase tracking-widest text-neutral-800">
-            Official AFC India Authorized Partner
+            Official AFC India Authorized Partner, East India
           </h2>
         </div>
       </section>

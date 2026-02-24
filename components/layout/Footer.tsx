@@ -7,7 +7,7 @@ const TRUST_BADGES = [
   { icon: ShieldCheck, label: "5-Year Warranty", sub: "On all products" },
   { icon: Award, label: "BIFMA Certified", sub: "Internationally tested" },
   { icon: Leaf, label: "Sustainable", sub: "Eco-conscious materials" },
-  { icon: MapPin, label: "Made in India", sub: "Gurugram, Haryana" },
+  { icon: MapPin, label: "Made in India", sub: "Patna, Bihar" },
 ];
 
 export function Footer() {
@@ -49,15 +49,13 @@ export function Footer() {
                 </p>
                 <p>
                   One And Only Furniture <br />
-                  Khasra No. 129, Sector 84 <br />
-                  Gurugram, Haryana 122004 <br />
-                  +91 124 403 1666 <br />
-                  info@oando.co.in
+                  Patna, Bihar, India <br />
+                  +91 90310 22875
                 </p>
               </div>
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/911244031666?text=Hi%2C+I%27d+like+to+enquire+about+office+furniture"
+                href="https://wa.me/919031022875?text=Hi%2C+I%27d+like+to+enquire+about+office+furniture"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#25D366] text-white text-xs font-bold uppercase tracking-widest px-4 py-2.5 hover:bg-[#128C7E] transition-colors rounded-sm"

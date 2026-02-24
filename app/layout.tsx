@@ -40,22 +40,21 @@ const BASE_URL = "https://oando.co.in";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default:
-      "One and Only Furniture | Premium Office Solutions — Gurugram, Haryana",
+    default: "One and Only Furniture | Premium Office Solutions — Patna, Bihar",
     template: "%s | One and Only Furniture",
   },
   description:
-    "One and Only Furniture — premium ergonomic office furniture in Gurugram, Haryana, India. Workstations, seating, storage, tables & soft seating. Trusted by leading corporations.",
+    "One and Only Furniture — premium ergonomic office furniture in Patna, Bihar, India. Workstations, seating, storage, tables & soft seating. Trusted by leading corporations.",
   keywords: [
-    "office furniture Gurugram",
-    "premium office furniture Haryana",
+    "office furniture Patna",
+    "premium office furniture Bihar",
     "ergonomic chairs India",
-    "modular workstations Gurugram",
-    "office furniture Gurugram",
+    "modular workstations Patna",
+    "office furniture Bihar",
     "One and Only Furniture",
     "oando furniture",
-    "office chairs Gurugram",
-    "meeting tables Haryana",
+    "office chairs Patna",
+    "meeting tables Bihar",
     "storage solutions India",
   ],
   authors: [{ name: "One and Only Furniture", url: BASE_URL }],
@@ -70,7 +69,7 @@ export const metadata: Metadata = {
     siteName: "One and Only Furniture",
     title: "One and Only Furniture | Premium Office Solutions",
     description:
-      "Premium ergonomic office furniture in Gurugram, Haryana. Workstations, seating, storage & more. Trusted by leading corporates.",
+      "Premium ergonomic office furniture in Patna, Bihar. Workstations, seating, storage & more. Trusted by leading corporates.",
     images: [
       {
         url: "/images/products/imported/fluid/image-1.webp",
@@ -84,7 +83,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "One and Only Furniture | Premium Office Solutions",
     description:
-      "Premium ergonomic office furniture in Gurugram, Haryana. Workstations, seating, storage & more.",
+      "Premium ergonomic office furniture in Patna, Bihar. Workstations, seating, storage & more.",
     images: ["/images/products/imported/fluid/image-1.webp"],
   },
 };
@@ -96,20 +95,18 @@ const LOCAL_BUSINESS_JSON_LD = {
   url: BASE_URL,
   logo: `${BASE_URL}/logo.png`,
   description:
-    "Premium ergonomic office furniture in Gurugram, Haryana, India. Authorized dealer for leading office furniture brands.",
+    "Premium ergonomic office furniture in Patna, Bihar, India. Authorized dealer for leading office furniture brands.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Khasra No. 129, Village, Kherki Daula, Sector 84",
-    addressLocality: "Gurugram",
-    addressRegion: "Haryana",
-    postalCode: "122004",
+    addressLocality: "Patna",
+    addressRegion: "Bihar",
     addressCountry: "IN",
   },
-  geo: { "@type": "GeoCoordinates", latitude: 28.3992, longitude: 76.9741 },
-  telephone: "+91-124-403-1666",
+  geo: { "@type": "GeoCoordinates", latitude: 25.5941, longitude: 85.1376 },
+  telephone: "+91-XXXXXXXXXX",
   openingHours: "Mo-Sa 09:00-18:00",
   priceRange: "₹₹₹",
-  areaServed: ["Haryana", "Delhi NCR", "Punjab", "Rajasthan", "Uttar Pradesh"],
+  areaServed: ["Bihar", "Jharkhand", "Uttar Pradesh", "Delhi NCR"],
   sameAs: ["https://oando.co.in"],
 };
 

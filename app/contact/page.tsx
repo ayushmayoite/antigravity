@@ -24,19 +24,17 @@ export default function ContactPage() {
                   <p className="font-medium text-neutral-900 mb-1">
                     One And Only Furniture
                   </p>
-                  <p>Khasra No. 129, Village, Kherki Daula, Sector 84</p>
-                  <p>Gurugram, Haryana 122004</p>
-                  <p>India</p>
+                  <p>Patna, Bihar, India</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
                 <Phone className="w-6 h-6 text-primary" />
                 <a
-                  href="tel:+911244031666"
+                  href="tel:+919031022875"
                   className="text-neutral-600 font-light hover:text-primary transition-colors"
                 >
-                  +91 124 403 1666
+                  +91 90310 22875
                 </a>
               </div>
 
