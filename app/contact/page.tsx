@@ -9,7 +9,7 @@ export default function ContactPage() {
         title="Contact"
         subtitle="We are here for you. Get in touch with us."
         showButton={false}
-        backgroundImage="/hero/usha-hero.webp"
+        backgroundImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
       />
       <section className="container px-6 2xl:px-0 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">

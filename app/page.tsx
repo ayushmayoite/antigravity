@@ -62,7 +62,7 @@ export default async function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-playfair font-bold mb-4">Our Work</h2>
             <p className="text-stone-600 max-w-2xl mx-auto">
-              Trusted by leading organizations across East India to deliver
+              Trusted by leading organizations across the region to deliver
               exceptional workspace solutions.
             </p>
           </div>
