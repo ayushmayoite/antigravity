@@ -1,4 +1,6 @@
 import { HeroCarousel } from "@/components/HeroCarousel";
+import { ClientCard } from "@/components/ClientCard";
+import { supabase } from "@/lib/db";
 import { PartnershipSection } from "@/components/home/PartnershipSection";
 import { CategoryGrid } from "@/components/home/CategoryGrid";
 import { FeaturedCarousel } from "@/components/home/FeaturedCarousel";
@@ -6,11 +8,15 @@ import { VideoSection } from "@/components/home/VideoSection";
 import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { Teaser } from "@/components/home/Teaser";
 import { ServiceSection } from "@/components/home/ServiceSection";
-import { ClientLogos } from "@/components/home/ClientLogos";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { Recommendations } from "@/components/home/Recommendations";
 
-export default function Home() {
+export default async function Home() {
+  const { data: clients } = await supabase
+    .from("projects")
+    .select("*")
+    .eq("featured", true);
+
   return (
     <main className="min-h-screen bg-white pt-24 md:pt-0">
       <HeroCarousel />
@@ -48,7 +54,24 @@ export default function Home() {
         className="bg-neutral-50"
         linkUrl="/sustainability"
       />
-      <ClientLogos />
+      {/* Our Work Section */}
+      <section className="py-24 bg-neutral-50 border-t border-neutral-100">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-playfair font-bold mb-4">Our Work</h2>
+            <p className="text-stone-600 max-w-2xl mx-auto">
+              Trusted by leading organizations across East India to deliver
+              exceptional workspace solutions.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {clients?.map((client) => (
+              <ClientCard key={client.id} client={client} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <ServiceSection />
       <ContactTeaser />
     </main>
