@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import Image from "next/image";
+import { SafeImage } from "@/components/SafeImage";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion, useInView, useAnimation } from "framer-motion";
@@ -102,7 +102,7 @@ export function FeaturedCarousel() {
                 transition: { duration: 0.8, delay: 0.3 },
               },
             }}
-            className="our-work md:col-span-8 group relative w-full aspect-[4/3] md:aspect-auto md:h-[700px] overflow-hidden bg-stone-100 rounded-lg"
+            className="our-work md:col-span-8 group relative w-full aspect-4/3 md:aspect-auto md:h-[700px] overflow-hidden bg-stone-100 rounded-lg"
           >
             <Link
               href={FEATURED_PRODUCTS[0].link}
@@ -110,14 +110,14 @@ export function FeaturedCarousel() {
             >
               <span className="sr-only">View {FEATURED_PRODUCTS[0].name}</span>
             </Link>
-            <Image
+            <SafeImage
               src={FEATURED_PRODUCTS[0].image}
               alt={FEATURED_PRODUCTS[0].name}
               fill
               className="object-contain p-6 transition-transform duration-1000 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 66vw"
             />
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-stone-200/50 to-transparent pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-stone-200/50 to-transparent pointer-events-none" />
 
             <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full max-w-2xl z-10 text-neutral-900">
               <span className="text-xs font-semibold tracking-[0.2em] uppercase mb-4 block opacity-60">
@@ -146,19 +146,19 @@ export function FeaturedCarousel() {
                     transition: { duration: 0.8, delay: 0.4 + idx * 0.2 },
                   },
                 }}
-                className="our-work group relative flex-1 aspect-[4/3] md:aspect-auto overflow-hidden bg-stone-100 rounded-lg"
+                className="our-work group relative flex-1 aspect-4/3 md:aspect-auto overflow-hidden bg-stone-100 rounded-lg"
               >
                 <Link href={product.link} className="absolute inset-0 z-20">
                   <span className="sr-only">View {product.name}</span>
                 </Link>
-                <Image
+                <SafeImage
                   src={product.image}
                   alt={product.name}
                   fill
                   className="object-contain p-6 transition-transform duration-1000 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-stone-200/50 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-stone-200/50 to-transparent pointer-events-none" />
 
                 <div className="absolute bottom-0 left-0 p-8 z-10 text-neutral-900">
                   <span className="text-[10px] font-semibold tracking-[0.2em] uppercase mb-3 block opacity-60">

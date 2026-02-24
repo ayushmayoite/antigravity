@@ -1,8 +1,17 @@
 "use client";
-import Image from "next/image";
+import { SafeImage } from "@/components/SafeImage";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-export function ClientCard({ client }: { client: any }) {
+export interface ProjectClient {
+  id?: string;
+  client_name: string;
+  city: string;
+  sector: string;
+  description: string;
+  image: string;
+}
+
+export function ClientCard({ client }: { client: ProjectClient }) {
   const ref = useScrollAnimation();
   return (
     <div
@@ -10,7 +19,7 @@ export function ClientCard({ client }: { client: any }) {
       className="flex flex-col items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
     >
       <div className="relative w-24 h-16">
-        <Image
+        <SafeImage
           src={client.image}
           alt={client.client_name}
           fill

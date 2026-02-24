@@ -112,6 +112,7 @@ export function Header() {
                 onClick={() => setIsSearchOpen(true)}
                 className="hover:text-primary transition-colors flex items-center gap-1.5"
                 title="Search"
+                aria-label="Open search overlay"
               >
                 <Search className="w-4 h-4" />
               </button>
