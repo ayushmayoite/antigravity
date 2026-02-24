@@ -50,7 +50,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "100%" }}
           transition={{ type: "tween", duration: 0.3, ease: "circOut" }}
-          className="fixed inset-0 bg-neutral-50 z-1100 flex flex-col font-sans overflow-hidden"
+          className="fixed inset-0 bg-neutral-50 z-50 flex flex-col font-sans overflow-hidden"
         >
           {/* App-like Header */}
           <div className="flex items-center justify-between px-6 h-16 bg-white border-b border-neutral-100 shrink-0">
@@ -104,7 +104,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                         <Link
                           href={link.href}
                           onClick={onClose}
-                          className="block group py-3"
+                          className="block group py-3 min-h-[44px]"
                         >
                           <div className="flex items-center justify-between">
                             <span className="text-2xl font-light text-neutral-900 group-hover:text-primary transition-colors">
@@ -133,7 +133,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       key={category.href}
                       href={category.href}
                       onClick={onClose}
-                      className="text-sm text-neutral-700 hover:text-primary transition-colors py-2"
+                      className="text-sm text-neutral-700 hover:text-primary transition-colors flex items-center min-h-[44px]"
                     >
                       {category.label}
                     </Link>
@@ -157,7 +157,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                         <Link
                           href={link.href}
                           onClick={onClose}
-                          className="text-base text-neutral-600 hover:text-neutral-900 transition-colors"
+                          className="text-base text-neutral-600 hover:text-neutral-900 transition-colors flex items-center min-h-[44px]"
                         >
                           {link.label}
                         </Link>

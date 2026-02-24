@@ -69,7 +69,7 @@ export function Header() {
     <>
       <header
         className={clsx(
-          "fixed top-0 left-0 w-full z-1020 transition-all duration-500 ease-in-out",
+          "fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out",
           isVisible ? "translate-y-0" : "-translate-y-full",
           isScrolled
             ? "bg-white/95 backdrop-blur-md shadow-sm py-2"

@@ -10,7 +10,6 @@ import { ContactTeaser } from "@/components/shared/ContactTeaser";
 import { Teaser } from "@/components/home/Teaser";
 import { ServiceSection } from "@/components/home/ServiceSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
-import { Recommendations } from "@/components/home/Recommendations";
 
 export default async function Home() {
   const { data: clients } = await supabase
@@ -23,7 +22,7 @@ export default async function Home() {
       <HeroCarousel />
       <PartnershipSection />
       <FeaturedCarousel />
-      <Recommendations />
+
       <CategoryGrid />
       <VideoSection
         title="Space for collaboration."

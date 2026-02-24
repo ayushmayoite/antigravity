@@ -115,6 +115,7 @@ export function FeaturedCarousel() {
               alt={FEATURED_PRODUCTS[0].name}
               fill
               className="object-contain p-6 transition-transform duration-1000 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 66vw"
             />
             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-stone-200/50 to-transparent pointer-events-none" />
 
@@ -155,6 +156,7 @@ export function FeaturedCarousel() {
                   alt={product.name}
                   fill
                   className="object-contain p-6 transition-transform duration-1000 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-stone-200/50 to-transparent pointer-events-none" />
 

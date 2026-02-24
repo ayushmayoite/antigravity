@@ -122,6 +122,7 @@ export function Teaser({
                     alt={imageAlt}
                     fill
                     className="object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 )}
                 <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>

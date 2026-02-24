@@ -3,6 +3,7 @@
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -35,9 +36,22 @@ const carouselSlides = [
 ];
 
 export function HeroCarousel() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 4000 }),
   ]);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setActiveIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
 
   return (
     <div
@@ -72,6 +86,19 @@ export function HeroCarousel() {
               </div>
             </div>
           </div>
+        ))}
+      </div>
+
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2 z-20">
+        {carouselSlides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => emblaApi?.scrollTo(i)}
+            className={`w-2.5 h-2.5 rounded-full transition-colors ${
+              i === activeIndex ? "bg-white" : "bg-white/40"
+            }`}
+            aria-label={`Go to slide ${i + 1}`}
+          />
         ))}
       </div>
     </div>

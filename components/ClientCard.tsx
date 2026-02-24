@@ -15,6 +15,7 @@ export function ClientCard({ client }: { client: any }) {
           alt={client.client_name}
           fill
           className="object-contain"
+          sizes="96px"
         />
       </div>
       <p className="font-semibold text-stone-800">{client.client_name}</p>
