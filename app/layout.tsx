@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import dynamic from "next/dynamic";
@@ -23,10 +22,17 @@ const AIAdvisor = dynamic(() =>
   })),
 );
 
+import { Inter, Playfair_Display } from "next/font/google";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
 });
 
 const BASE_URL = "https://oando.co.in";
@@ -110,7 +116,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" className={inter.variable}>
+    <html lang="en-IN" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <script
           type="application/ld+json"

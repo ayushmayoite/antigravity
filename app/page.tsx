@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { HeroCarousel } from "@/components/HeroCarousel";
 import { PartnershipSection } from "@/components/home/PartnershipSection";
 import { CategoryGrid } from "@/components/home/CategoryGrid";
 import { FeaturedCarousel } from "@/components/home/FeaturedCarousel";
@@ -13,6 +14,7 @@ import { Recommendations } from "@/components/home/Recommendations";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white pt-24 md:pt-0">
+      <HeroCarousel />
       <Hero
         variant="cinema"
         title={
