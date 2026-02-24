@@ -32,7 +32,6 @@ export function ProductViewer({
   product,
   seriesName,
   categoryRoute,
-  categoryId,
 }: ProductViewerProps) {
   const cleanName = (raw: string) => {
     if (!raw) return raw;
@@ -51,10 +50,9 @@ export function ProductViewer({
       : null,
   );
 
-  const is3DSupported =
-    categoryId === "oando-workstations" ||
-    categoryId === "workstations" ||
-    categoryId === "desking";
+  const is3DSupported = Boolean(
+    selectedVariant?.threeDModelUrl || (product as any).threeDModelUrl,
+  );
 
   const allImages = [
     ...(product.images || []),
@@ -146,9 +144,10 @@ export function ProductViewer({
               {is3DMode ? (
                 <div className="w-full h-full absolute inset-0 z-10">
                   <ThreeDViewer
-                    src={(
-                      selectedVariant?.threeDModelUrl || product.flagshipImage
-                    ).replace(/\.(webp|png|jpe?g)$/i, ".glb")}
+                    src={
+                      selectedVariant?.threeDModelUrl ||
+                      (product as any).threeDModelUrl
+                    }
                     fallbackImage={uniqueImages[0]}
                   />
                 </div>

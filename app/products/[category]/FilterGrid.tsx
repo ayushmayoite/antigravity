@@ -249,7 +249,9 @@ function ProductCard({
       ? product.images[0]
       : product.flagshipImage;
 
-  const [imgSrc, setImgSrc] = useState(firstImage);
+  const [imgSrc, setImgSrc] = useState(
+    firstImage || "/images/fallback/category.webp",
+  );
   const displayName = product.name;
   const ecoScore = product.metadata?.sustainabilityScore || 0;
 

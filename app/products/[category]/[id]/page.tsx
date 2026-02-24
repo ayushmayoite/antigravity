@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import type { Product, CompatProduct } from "@/lib/getProducts";
 
-const BASE_URL = "https://oando.co.in";
+const BASE_URL = "http://localhost:3000";
 
 export async function generateMetadata({
   params,

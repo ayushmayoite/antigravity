@@ -162,7 +162,7 @@ export default function ProductsPage() {
             ).map((bundle) => (
               <div
                 key={bundle.tier}
-                className={`p-8 rounded-2xl border flex flex-col gap-6 transition-all ${
+                className={`p-8 rounded-2xl border flex flex-col gap-6 transition-all product-card ${
                   bundle.highlight
                     ? "bg-primary border-primary text-white"
                     : "bg-white/5 border-white/10 hover:bg-white/10"

@@ -7,7 +7,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 
-const BASE_URL = "https://oando.co.in";
+const BASE_URL = "http://localhost:3000";
 
 export async function generateMetadata({
   params,
