@@ -1,4 +1,5 @@
 import { FounderCard } from "@/components/FounderCard";
+import { ScrollAnimate } from "@/components/ScrollAnimate";
 
 export default function AboutPage() {
   return (
@@ -50,48 +51,50 @@ export default function AboutPage() {
       </section>
 
       {/* 4. 4-step process */}
-      <section className="py-24 bg-stone-100">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
-              <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
-                1
+      <ScrollAnimate>
+        <section className="py-24 bg-stone-100">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
+                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
+                  1
+                </div>
+                <h3 className="text-xl font-bold mb-3">Consult</h3>
+                <p className="text-stone-600">
+                  We understand your workspace needs and vision.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-3">Consult</h3>
-              <p className="text-stone-600">
-                We understand your workspace needs and vision.
-              </p>
-            </div>
-            <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
-              <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
-                2
+              <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
+                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
+                  2
+                </div>
+                <h3 className="text-xl font-bold mb-3">Design</h3>
+                <p className="text-stone-600">
+                  Creating optimized layouts and furniture plans.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-3">Design</h3>
-              <p className="text-stone-600">
-                Creating optimized layouts and furniture plans.
-              </p>
-            </div>
-            <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
-              <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
-                3
+              <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
+                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
+                  3
+                </div>
+                <h3 className="text-xl font-bold mb-3">Install</h3>
+                <p className="text-stone-600">
+                  Professional delivery and precision assembly.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-3">Install</h3>
-              <p className="text-stone-600">
-                Professional delivery and precision assembly.
-              </p>
-            </div>
-            <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
-              <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
-                4
+              <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
+                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
+                  4
+                </div>
+                <h3 className="text-xl font-bold mb-3">Support</h3>
+                <p className="text-stone-600">
+                  Ongoing maintenance and long-term care.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-3">Support</h3>
-              <p className="text-stone-600">
-                Ongoing maintenance and long-term care.
-              </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimate>
     </main>
   );
 }

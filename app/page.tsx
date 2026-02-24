@@ -1,5 +1,6 @@
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { ClientCard } from "@/components/ClientCard";
+import { ScrollAnimate } from "@/components/ScrollAnimate";
 import { supabase } from "@/lib/db";
 import { PartnershipSection } from "@/components/home/PartnershipSection";
 import { CategoryGrid } from "@/components/home/CategoryGrid";
@@ -43,17 +44,19 @@ export default async function Home() {
         lightMode={false}
         linkUrl="/products"
       />
-      <Teaser
-        title="Sustainability at the core."
-        subtitle="Future Proof Workspace"
-        description="Our commitment to the environment goes beyond the surface. We engineer premium office systems using 100% recycled waste wood and low-emission materials, ensuring your workspace supports both your team and the planet."
-        imageSrc="/images/afc/oando-seating--fluid-x/image-1.webp"
-        imageAlt="Sustainable Premium Chair Design"
-        reversed={true}
-        lightMode={true}
-        className="bg-neutral-50"
-        linkUrl="/sustainability"
-      />
+      <ScrollAnimate>
+        <Teaser
+          title="Sustainability at the core."
+          subtitle="Future Proof Workspace"
+          description="Our commitment to the environment goes beyond the surface. We engineer premium office systems using 100% recycled waste wood and low-emission materials, ensuring your workspace supports both your team and the planet."
+          imageSrc="/images/afc/oando-seating--fluid-x/image-1.webp"
+          imageAlt="Sustainable Premium Chair Design"
+          reversed={true}
+          lightMode={true}
+          className="bg-neutral-50"
+          linkUrl="/sustainability"
+        />
+      </ScrollAnimate>
       {/* Our Work Section */}
       <section className="py-24 bg-neutral-50 border-t border-neutral-100">
         <div className="container mx-auto px-4 max-w-6xl">

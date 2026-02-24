@@ -1,8 +1,14 @@
+"use client";
 import Image from "next/image";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export function ClientCard({ client }: { client: any }) {
+  const ref = useScrollAnimation();
   return (
-    <div className="flex flex-col items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+    <div
+      ref={ref}
+      className="flex flex-col items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+    >
       <div className="relative w-24 h-16">
         <Image
           src={client.image}

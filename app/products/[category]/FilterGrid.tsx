@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { useState, useMemo, useCallback, Suspense } from "react";
 import clsx from "clsx";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 
@@ -258,7 +259,7 @@ function ProductCard({
   return (
     <Link
       href={`/products/${categoryId}/${product.id}`}
-      className="group block bg-white border border-neutral-100 hover:border-neutral-300 transition-all duration-200 hover:shadow-sm"
+      className="group block bg-white border border-neutral-100 hover:border-neutral-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
     >
       {/* Image */}
       <div className="relative w-full aspect-square bg-stone-50 rounded-md overflow-hidden">
@@ -570,6 +571,7 @@ function AdvancedFilterGridInner({
   }, [router, pathname]);
 
   const activeCount = countActive(filters);
+  const gridScrollRef = useScrollAnimation();
 
   // ── Sidebar content (shared between desktop + drawer) ──
   const SidebarContent = (
@@ -858,7 +860,10 @@ function AdvancedFilterGridInner({
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+            <div
+              ref={gridScrollRef}
+              className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4"
+            >
               {filteredProducts.map((product) => (
                 <div
                   key={product.id}

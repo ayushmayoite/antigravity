@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 interface FounderProps {
   name: string;
@@ -8,8 +10,12 @@ interface FounderProps {
 }
 
 export function FounderCard({ name, title, bio, image }: FounderProps) {
+  const ref = useScrollAnimation();
   return (
-    <div className="bg-white shadow-md rounded-xl p-6 flex flex-col gap-4">
+    <div
+      ref={ref}
+      className="bg-white shadow-md rounded-xl p-6 flex flex-col gap-4"
+    >
       <div className="relative w-32 h-32 rounded-full overflow-hidden mx-auto">
         <Image src={image} alt={name} fill className="object-cover" />
       </div>
