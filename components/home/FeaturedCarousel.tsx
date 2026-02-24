@@ -117,16 +117,13 @@ export function FeaturedCarousel() {
               className="object-contain p-6 transition-transform duration-1000 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 66vw"
             />
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-stone-200/50 to-transparent pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-white via-white/40 to-transparent pointer-events-none" />
 
             <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full max-w-2xl z-10 text-neutral-900">
-              <span className="text-xs font-semibold tracking-[0.2em] uppercase mb-4 block opacity-60">
-                {FEATURED_PRODUCTS[0].category}
-              </span>
-              <h3 className="text-4xl md:text-5xl font-light tracking-tight mb-4">
+              <h3 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">
                 {FEATURED_PRODUCTS[0].name}
               </h3>
-              <p className="text-lg md:text-xl font-light text-neutral-600 line-clamp-2 md:line-clamp-none">
+              <p className="text-lg md:text-xl font-normal text-neutral-800 line-clamp-2 md:line-clamp-none">
                 {FEATURED_PRODUCTS[0].description}
               </p>
             </div>
@@ -158,13 +155,10 @@ export function FeaturedCarousel() {
                   className="object-contain p-6 transition-transform duration-1000 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-stone-200/50 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-white via-white/40 to-transparent pointer-events-none" />
 
                 <div className="absolute bottom-0 left-0 p-8 z-10 text-neutral-900">
-                  <span className="text-[10px] font-semibold tracking-[0.2em] uppercase mb-3 block opacity-60">
-                    {product.category}
-                  </span>
-                  <h3 className="text-2xl font-medium tracking-tight mb-2">
+                  <h3 className="text-2xl font-bold tracking-tight mb-2">
                     {product.name}
                   </h3>
                 </div>

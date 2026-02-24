@@ -25,7 +25,7 @@ export function PartnershipSection() {
           {/* Partnership Content */}
           <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-3">
             <div>
-              <p className="text-[10px] font-semibold text-neutral-400 uppercase tracking-[0.2em] mb-1">
+              <p className="text-[10px] font-bold text-neutral-500 uppercase tracking-[0.2em] mb-1">
                 Official Strategic Partnership
               </p>
               <h3 className="text-xl md:text-2xl font-serif text-neutral-900 leading-tight">
@@ -35,7 +35,7 @@ export function PartnershipSection() {
               </h3>
             </div>
 
-            <p className="text-sm text-neutral-500 italic leading-relaxed max-w-md">
+            <p className="text-sm text-neutral-600 italic leading-relaxed max-w-md">
               Bringing world-class manufacturing excellence and sustainable
               furniture solutions to your workspace.
             </p>

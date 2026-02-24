@@ -74,7 +74,7 @@ export function HeroCarousel() {
                 <span className="inline-block text-sm md:text-base font-semibold tracking-[0.2em] font-sans uppercase mb-4 text-gray-200">
                   {slide.tag}
                 </span>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] text-white">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] text-white [text-shadow:0_2px_10px_rgb(0_0_0/40%)]">
                   {slide.headline}
                 </h1>
                 <Link
