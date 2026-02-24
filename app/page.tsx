@@ -8,6 +8,7 @@ import { Teaser } from "@/components/home/Teaser";
 import { ServiceSection } from "@/components/home/ServiceSection";
 import { ClientLogos } from "@/components/home/ClientLogos";
 import { ProcessSection } from "@/components/home/ProcessSection";
+import { Recommendations } from "@/components/home/Recommendations";
 
 export default function Home() {
   return (
@@ -24,13 +25,10 @@ export default function Home() {
         subtitle="Performance-driven solutions for corporate, government, and institutions – Official AFC Regional Franchise"
         backgroundImage="/hero/titan-hero.webp"
       />
-
       <PartnershipSection />
-
       <FeaturedCarousel />
-
+      <Recommendations />
       <CategoryGrid />
-
       <VideoSection
         title="Space for collaboration."
         description="The office is the central home base for personal exchanges and meetings with colleagues. With our modular furniture systems, versatile communication spaces can be created to foster innovation."
@@ -40,9 +38,7 @@ export default function Home() {
         posterSrc="/images/products/imported/cabin/image-1.webp"
         lightMode={true}
       />
-
       <ProcessSection />
-
       <Teaser
         title="OandO STARTUP 2.0"
         subtitle="The Smart Entry"
@@ -53,7 +49,6 @@ export default function Home() {
         lightMode={false}
         linkUrl="/products"
       />
-
       <Teaser
         title="Sustainability at the core."
         subtitle="Future Proof Workspace"
@@ -65,11 +60,8 @@ export default function Home() {
         className="bg-neutral-50"
         linkUrl="/sustainability"
       />
-
       <ClientLogos />
-
       <ServiceSection />
-
       <ContactTeaser />
     </main>
   );

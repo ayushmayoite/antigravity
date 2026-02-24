@@ -52,6 +52,7 @@ export interface Product {
         dimensions: string;
         materials: string[];
         features: string[];
+        sustainability_score?: number;
     };
     series_id: string;
     series_name: string;
@@ -103,7 +104,10 @@ function toCompatProduct(p: Product): CompatProduct {
         sceneImages: p.scene_images ?? [],
         variants: p.variants ?? [],
         detailedInfo: p.detailed_info ?? { overview: "", features: [], dimensions: "", materials: [] },
-        metadata: p.metadata ?? {},
+        metadata: {
+            ...(p.metadata ?? {}),
+            sustainabilityScore: p.specs?.sustainability_score ?? 5, // fallback if missing
+        },
     };
 }
 

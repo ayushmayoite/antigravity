@@ -39,6 +39,7 @@ interface ActiveFilters {
   isStackable: boolean;
   sort: SortOption;
   query: string;
+  minEcoScore: number;
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -56,6 +57,8 @@ function buildUrl(pathname: string, filters: ActiveFilters): string {
   if (filters.isHeightAdjustable) params.set("height-adj", "1");
   if (filters.bifmaCertified) params.set("bifma", "1");
   if (filters.isStackable) params.set("stackable", "1");
+  if (filters.minEcoScore > 0)
+    params.set("eco", filters.minEcoScore.toString());
   const qs = params.toString();
   return qs ? `${pathname}?${qs}` : pathname;
 }
@@ -73,6 +76,7 @@ function parseFilters(sp: URLSearchParams): ActiveFilters {
     isHeightAdjustable: sp.get("height-adj") === "1",
     bifmaCertified: sp.get("bifma") === "1",
     isStackable: sp.get("stackable") === "1",
+    minEcoScore: parseInt(sp.get("eco") || "0", 10),
   };
 }
 
@@ -87,6 +91,7 @@ function countActive(f: ActiveFilters): number {
   if (f.isHeightAdjustable) n++;
   if (f.bifmaCertified) n++;
   if (f.isStackable) n++;
+  if (f.minEcoScore > 0) n++;
   return n;
 }
 
@@ -109,7 +114,7 @@ function AccordionSection({
       <button
         onClick={() => setOpen((o) => !o)}
         className="w-full flex items-center justify-between px-4 py-3 text-left group"
-        aria-expanded={open}
+        aria-expanded={open ? "true" : "false"}
       >
         <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-neutral-600 group-hover:text-neutral-900 transition-colors flex items-center gap-2">
           {title}
@@ -212,7 +217,7 @@ function Toggle({
       <span className="text-sm text-neutral-600">{label}</span>
       <button
         role="switch"
-        aria-checked={checked}
+        aria-checked={checked ? "true" : "false"}
         onClick={() => onChange(!checked)}
         className={clsx(
           "relative w-9 h-5 rounded-full transition-colors flex items-center shrink-0",
@@ -241,6 +246,7 @@ function ProductCard({
 }) {
   const [imgSrc, setImgSrc] = useState(product.flagshipImage);
   const displayName = product.name;
+  const ecoScore = product.metadata?.sustainabilityScore || 0;
 
   return (
     <Link
@@ -266,6 +272,18 @@ function ProductCard({
         {product.metadata?.priceRange && (
           <div className="absolute top-2 right-2 bg-neutral-900/75 text-white text-[9px] font-semibold uppercase tracking-wider px-2 py-1 rounded-sm">
             {product.metadata.priceRange}
+          </div>
+        )}
+        {ecoScore > 0 && (
+          <div
+            className={clsx(
+              "absolute bottom-2 left-2 text-[9px] font-bold uppercase tracking-widest px-2 py-1 rounded-sm",
+              ecoScore > 7
+                ? "bg-green-100/90 text-green-800"
+                : "bg-white/90 text-neutral-600",
+            )}
+          >
+            Eco-Score: {ecoScore}/10
           </div>
         )}
       </div>
@@ -334,6 +352,11 @@ function ActiveChips({
     chips.push({ label: "BIFMA certified", key: "bifmaCertified" });
   if (filters.isStackable)
     chips.push({ label: "Stackable", key: "isStackable" });
+  if (filters.minEcoScore > 0)
+    chips.push({
+      label: `Eco Score >= ${filters.minEcoScore}`,
+      key: "minEcoScore",
+    });
 
   return (
     <div className="flex flex-wrap items-center gap-2 py-3 border-b border-neutral-100">
@@ -470,6 +493,13 @@ function AdvancedFilterGridInner({
       list = list.filter((p) => p.metadata?.isStackable);
     }
 
+    // Eco Score
+    if (filters.minEcoScore > 0) {
+      list = list.filter(
+        (p) => (p.metadata?.sustainabilityScore || 0) >= filters.minEcoScore,
+      );
+    }
+
     // Sort
     list.sort((a, b) =>
       filters.sort === "za"
@@ -520,6 +550,8 @@ function AdvancedFilterGridInner({
         key === "isStackable"
       ) {
         updateFilters({ [key]: false });
+      } else if (key === "minEcoScore") {
+        updateFilters({ minEcoScore: 0 });
       } else if (key === "series") {
         updateFilters({ series: "all" });
       }
@@ -679,6 +711,33 @@ function AdvancedFilterGridInner({
             label="Stackable"
             checked={filters.isStackable}
             onChange={(v) => updateFilters({ isStackable: v })}
+          />
+        </div>
+      </AccordionSection>
+
+      {/* Eco Score Slider */}
+      <AccordionSection
+        title="Sustainability"
+        count={filters.minEcoScore > 0 ? 1 : 0}
+      >
+        <div className="space-y-3 pt-1">
+          <label
+            htmlFor="eco-score-range"
+            className="text-sm text-neutral-600 block"
+          >
+            Min Eco-Score: {filters.minEcoScore}
+          </label>
+          <input
+            id="eco-score-range"
+            type="range"
+            min="0"
+            max="10"
+            step="1"
+            value={filters.minEcoScore}
+            onChange={(e) =>
+              updateFilters({ minEcoScore: parseInt(e.target.value, 10) })
+            }
+            className="w-full accent-neutral-900"
           />
         </div>
       </AccordionSection>

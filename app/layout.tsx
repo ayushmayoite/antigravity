@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import dynamic from "next/dynamic";
+import QueryProvider from "@/app/providers/QueryProvider";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Lazy-load non-critical components — improves LCP / TTI
 // Note: ssr:false is NOT allowed in Server Components; use regular dynamic() here
@@ -123,11 +126,15 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <Header />
-        <div id="main-content">{children}</div>
-        <Footer />
-        <AdvancedBot />
-        <AIAdvisor />
+        <QueryProvider>
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <AdvancedBot />
+          <AIAdvisor />
+          <Analytics />
+          <SpeedInsights />
+        </QueryProvider>
       </body>
     </html>
   );

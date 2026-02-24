@@ -94,6 +94,17 @@ async function main() {
                 // e.g. "oando-workstations--curvivo"
                 const slug = `${category.id}--${product.id}`;
 
+                // Calculate a basic sustainability score
+                let ecoScore = 5;
+                const matText = JSON.stringify(product.detailedInfo?.materials ?? []).toLowerCase();
+                const descText = product.description.toLowerCase();
+                if (matText.includes("recycled")) ecoScore += 2;
+                if (matText.includes("wood")) ecoScore += 1;
+                if (matText.includes("aluminum")) ecoScore += 1;
+                if (descText.includes("made in india") || descText.includes("local")) ecoScore += 2;
+                if (descText.includes("sustainable") || descText.includes("eco")) ecoScore += 2;
+                ecoScore = Math.min(10, Math.max(1, ecoScore));
+
                 rows.push({
                     name: product.name,
                     slug,
@@ -109,6 +120,7 @@ async function main() {
                         dimensions: product.detailedInfo?.dimensions ?? "",
                         materials: product.detailedInfo?.materials ?? [],
                         features: product.detailedInfo?.features ?? [],
+                        sustainability_score: ecoScore,
                     },
                     series_id: series.id,
                     series_name: series.name,

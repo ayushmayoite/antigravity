@@ -1,14 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type {
   CompatProduct as Product,
   ProductVariant,
 } from "@/lib/getProducts";
-import { ArrowLeft, ChevronRight } from "lucide-react";
+import {
+  ArrowLeft,
+  ChevronRight,
+  Twitter,
+  Facebook,
+  ShieldCheck,
+  Award,
+  ThumbsUp,
+  Share2,
+} from "lucide-react";
 import Link from "next/link";
 import clsx from "clsx";
-import { Product3DViewer } from "./Product3DViewer";
+import { ThreeDViewer } from "@/components/3DViewer";
+import { Reviews } from "@/components/Reviews";
 
 interface ProductViewerProps {
   product: Product;
@@ -57,11 +67,28 @@ export function ProductViewer({
 
   const [activeImage, setActiveImage] = useState(uniqueImages[0]);
 
+  useEffect(() => {
+    // Basic anonymous tracking for recommendations
+    let userId = localStorage.getItem("oando_user_id");
+    if (!userId) {
+      userId = "user_" + Math.random().toString(36).substring(2, 9);
+      localStorage.setItem("oando_user_id", userId);
+    }
+
+    fetch("/api/tracking", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId, productId: product.id }),
+    }).catch(console.error);
+  }, [product.id]);
+
   const handleVariantChange = (variant: ProductVariant) => {
     setSelectedVariant(variant);
     const imgs = Array.from(new Set(variant.galleryImages || []));
     if (imgs.length > 0) setActiveImage(imgs[0]);
   };
+
+  const [is3DMode, setIs3DMode] = useState(false);
 
   const features =
     product.detailedInfo?.features?.filter(
@@ -149,16 +176,28 @@ export function ProductViewer({
             </div>
           )}
 
-          {/* 3D viewer */}
-          {is3DSupported && selectedVariant?.threeDModelUrl && (
-            <div className="w-full aspect-video bg-neutral-50 border-t border-neutral-200 relative">
-              <div className="absolute top-4 left-4 z-10 text-[10px] font-bold tracking-widest text-neutral-500 uppercase">
-                3D Viewer
+          {/* 3D viewer toggle wrapper */}
+          {is3DSupported && (
+            <div className="w-full aspect-video bg-neutral-50 border-t border-neutral-200 relative group">
+              <div className="absolute top-4 left-4 z-20 flex gap-2">
+                <button
+                  onClick={() => setIs3DMode(!is3DMode)}
+                  className="bg-white/90 backdrop-blur text-[10px] font-bold tracking-widest text-neutral-800 uppercase px-3 py-1.5 rounded-sm hover:bg-neutral-900 hover:text-white transition-colors border border-neutral-200"
+                >
+                  {is3DMode ? "View Image" : "View in 3D/AR"}
+                </button>
               </div>
-              <Product3DViewer
-                modelPath={selectedVariant.threeDModelUrl}
-                fallbackImage={activeImage}
-              />
+
+              {is3DMode ? (
+                <div className="w-full h-full absolute inset-0 z-10">
+                  <ThreeDViewer
+                    src={(
+                      selectedVariant?.threeDModelUrl || product.flagshipImage
+                    ).replace(/\.(webp|png|jpe?g)$/i, ".glb")}
+                    fallbackImage={activeImage}
+                  />
+                </div>
+              ) : null}
             </div>
           )}
         </div>
@@ -174,9 +213,50 @@ export function ProductViewer({
               <h1 className="text-4xl sm:text-5xl font-light text-neutral-900 tracking-tight leading-[1.05] mb-5">
                 {cleanName(product.name)}
               </h1>
-              <p className="text-[14px] text-neutral-500 leading-relaxed font-light">
+              <p className="text-[14px] text-neutral-500 leading-relaxed font-light mb-6">
                 {product.detailedInfo?.overview || product.description}
               </p>
+
+              <div className="flex gap-4 items-center mb-6">
+                <button
+                  onClick={() => {
+                    const text = encodeURIComponent(
+                      `Check out ${product.name} at One & Only Furniture!`,
+                    );
+                    const url = encodeURIComponent(window.location.href);
+                    window.open(
+                      `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
+                      "_blank",
+                    );
+                  }}
+                  className="w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center text-neutral-500 hover:text-neutral-900 hover:border-neutral-400 transition-colors"
+                  aria-label="Share on Twitter"
+                >
+                  <Twitter className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  onClick={() => {
+                    const url = encodeURIComponent(window.location.href);
+                    window.open(
+                      `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+                      "_blank",
+                    );
+                  }}
+                  className="w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center text-neutral-500 hover:text-neutral-900 hover:border-neutral-400 transition-colors"
+                  aria-label="Share on Facebook"
+                >
+                  <Facebook className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText(window.location.href);
+                    // could add a toast here
+                  }}
+                  className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors"
+                >
+                  <Share2 className="w-3.5 h-3.5" /> Copy Link
+                </button>
+              </div>
             </div>
 
             {/* Variant swatches */}
@@ -257,6 +337,37 @@ export function ProductViewer({
               </Link>
             </div>
 
+            {/* Trust Badges */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 pt-6 border-t border-neutral-100">
+              <div className="flex flex-col gap-2">
+                <ShieldCheck className="w-5 h-5 text-neutral-400" />
+                <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-900">
+                  5-Year Warranty
+                </span>
+                <p className="text-[10px] text-neutral-500 leading-relaxed font-light">
+                  Guaranteed durability and performance.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <Award className="w-5 h-5 text-neutral-400" />
+                <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-900">
+                  Made in India
+                </span>
+                <p className="text-[10px] text-neutral-500 leading-relaxed font-light">
+                  Engineered locally to global standards.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <ThumbsUp className="w-5 h-5 text-neutral-400" />
+                <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-900">
+                  Ergonomic
+                </span>
+                <p className="text-[10px] text-neutral-500 leading-relaxed font-light">
+                  Certified for extended use.
+                </p>
+              </div>
+            </div>
+
             {/* Specs */}
             <div className="space-y-6 pt-7 border-t border-neutral-100 text-[13px]">
               {features.length > 0 && (
@@ -317,6 +428,10 @@ export function ProductViewer({
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="container-wide px-6 2xl:px-0 pb-24">
+        <Reviews productId={product.id} />
       </div>
 
       <style

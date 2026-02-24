@@ -11,8 +11,16 @@ type MobileMenuProps = {
 };
 
 const MAIN_LINKS = [
-  { label: "Products", href: "/products", description: "Browse our furniture collections" },
-  { label: "Solutions", href: "/solutions", description: "Workspace solutions" },
+  {
+    label: "Products",
+    href: "/products",
+    description: "Browse our furniture collections",
+  },
+  {
+    label: "Solutions",
+    href: "/solutions",
+    description: "Workspace solutions",
+  },
   { label: "Gallery", href: "/gallery", description: "Project references" },
   { label: "About", href: "/about", description: "Company information" },
 ];
@@ -50,7 +58,9 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">O</span>
               </div>
-              <span className="text-lg font-semibold text-neutral-900">Menu</span>
+              <span className="text-lg font-semibold text-neutral-900">
+                Menu
+              </span>
             </div>
             <button
               onClick={onClose}
@@ -103,7 +113,9 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                             <ChevronRight className="w-5 h-5 text-neutral-400 group-hover:text-primary transition-colors" />
                           </div>
                           {link.description && (
-                            <p className="text-sm text-neutral-500 mt-1">{link.description}</p>
+                            <p className="text-sm text-neutral-500 mt-1">
+                              {link.description}
+                            </p>
                           )}
                         </Link>
                       </motion.div>
@@ -158,24 +170,22 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </div>
 
           {/* App-like Footer */}
-          <div className="bg-white p-6 border-t border-neutral-100 shrink-0">
-            <div className="flex items-center justify-between">
-              <Link
-                href="/contact"
-                className="btn-primary typ-cta h-12 rounded-xl"
+          <div className="bg-white border-t border-neutral-100 shrink-0 sticky bottom-0 z-50 px-6 py-4 flex items-center justify-between shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+            <Link
+              href="/contact"
+              onClick={onClose}
+              className="bg-neutral-900 text-white font-semibold text-sm h-12 px-6 rounded-sm flex items-center justify-center hover:bg-neutral-800 transition-colors w-full sm:w-auto"
+            >
+              Get Quote
+            </Link>
+            <div className="hidden sm:flex items-center gap-4 text-neutral-500">
+              <button
+                className="flex items-center gap-2 hover:text-neutral-900 transition-colors"
+                aria-label="Change language"
               >
-                Get Quote
-              </Link>
-              <div className="flex items-center gap-4">
-                <button
-                  className="flex items-center gap-2 text-neutral-600 hover:text-primary"
-                  aria-label="Change language"
-                  title="Language"
-                >
-                  <Globe className="w-4 h-4" />
-                  <span className="text-sm">EN</span>
-                </button>
-              </div>
+                <Globe className="w-4 h-4" />
+                <span className="text-sm font-medium">EN</span>
+              </button>
             </div>
           </div>
         </motion.div>
@@ -183,4 +193,3 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     </AnimatePresence>
   );
 }
-

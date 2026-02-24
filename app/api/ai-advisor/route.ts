@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import { getProducts } from "@/lib/getProducts";
+import { supabase } from "@/lib/db";
 
 const openai = new OpenAI({
     baseURL: "https://openrouter.ai/api/v1",
@@ -14,8 +15,8 @@ const openai = new OpenAI({
 export async function POST(req: NextRequest) {
     console.log("➡️  [ai-advisor] POST request received");
     try {
-        const { query } = await req.json();
-        console.log("📝  [ai-advisor] Query:", query);
+        const { query, userId } = await req.json();
+        console.log("📝  [ai-advisor] Query:", query, "User:", userId);
 
         if (!query || typeof query !== "string") {
             return NextResponse.json({ error: "Query is required" }, { status: 400 });
@@ -26,6 +27,19 @@ export async function POST(req: NextRequest) {
                 { error: "AI advisor is not configured. Please add OPENROUTER_API_KEY." },
                 { status: 503 }
             );
+        }
+
+        // Fetch user history from Supabase if authenticated/provided
+        let historyContext = "";
+        if (userId) {
+            const { data } = await supabase
+                .from("user_history")
+                .select("viewed_products")
+                .eq("user_id", userId)
+                .single();
+            if (data?.viewed_products?.length) {
+                historyContext = `\nClient History (Recently Viewed Products): ${data.viewed_products.join(", ")}\nPrioritize recommending complementary or similar items based on this history.`;
+            }
         }
 
         // Fetch product catalog from Supabase
@@ -43,7 +57,7 @@ export async function POST(req: NextRequest) {
         const systemPrompt = `You are an enterprise workspace engineering consultant for One & Only Furniture (Patna, Bihar India — AFC Regional Franchise).
 Your role is to recommend the best workspace systems from our catalog based on the client's requirements.
 Always recommend 3-5 specific products. Consider: team size, industry, budget sensitivity, location (Bihar/India context), and ergonomic needs.
-Bias toward ergonomic seating + modular workstations for government/corporate, and collaborative/soft-seating for creative/startup environments.
+Bias toward ergonomic seating + modular workstations for government/corporate, and collaborative/soft-seating for creative/startup environments.${historyContext}
 
 Available products:\n${productList}
 
