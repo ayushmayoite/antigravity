@@ -114,6 +114,7 @@ async function main() {
                 const categoryShort = category.id.replace('oando-', '');
 
                 const images = allRawImages.map(imgStr => {
+                    if (imgStr.startsWith('http')) return imgStr;
                     const parts = imgStr.split('/');
                     const filename = parts[parts.length - 1];
                     return `/images/${categoryShort}/${filename}`;

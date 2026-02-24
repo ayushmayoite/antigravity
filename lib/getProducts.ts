@@ -94,13 +94,8 @@ export interface CompatCategory {
 
 /** Map a Supabase row to the shape the old catalog.ts used */
 function toCompatProduct(p: Product): CompatProduct {
-    // Slug format is "categoryId--productId" — extract just the productId for URL routing
-    const productId = p.slug.includes("--")
-        ? p.slug.split("--").slice(1).join("--")
-        : p.slug;
-
     return {
-        id: productId,
+        id: p.id,
         name: p.name,
         description: p.description,
         flagshipImage: p.flagship_image,

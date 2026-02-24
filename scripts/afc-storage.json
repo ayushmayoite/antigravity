@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Wooden Locker",
+    "images": [
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33d7c901acf6f5ce4d01b_LOCKER%201.jpg",
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33d88ac691a23437da4a9_LOCKER%202.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Prelam Pedestal",
+    "images": [
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33ae51f36820d42518e0d_PEDESTAL%201.jpg",
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33aed4aa7c59dfbd123f7_PEDESTAL%202.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Metal Pedestal",
+    "images": [
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33bcf4a8d0f9a68a69e9a_PEDESTAL%201.jpg",
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33bd6c74b7831216a4bd2_PEDESTAL%202.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Compactor",
+    "images": [
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33d0e4e87f59cb2024410_COMPACTOR%201.jpg",
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33d1345008068da79673a_COMPACTOR%202.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Metal Locker",
+    "images": [
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33d4237b54c7c3b17f6a6_METAL%20LOCKER%201.jpg",
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33d4537b54c7c3b17f77b_METAL%20LOCKER%202.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Prelam Storage",
+    "images": [
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33b1f4db608137f871321_SIDE%20UNIT%201.jpg",
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33b233bf78d6262fce39b_SIDE%20UNIT%202.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Metal Storages",
+    "images": [
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33c16043e63956b75b995_FILING%20CABINET%201.jpg",
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33c1f277220df0e319a80_FILING%20CABINET%202.jpg"
+    ],
+    "description": null
+  },
+  {
+    "name": "Heavy Duty Racks",
+    "images": [
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33cc9d23f98155704413b_RACKS%201.jpg",
+      "https://cdn.prod.website-files.com/686d3b55385e7b905b01d3a5/68a33cd07e416b6139611e93_RACKS%202.jpg"
+    ],
+    "description": null
+  }
+]

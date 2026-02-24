@@ -1,4 +1,4 @@
-import { getCatalog, getCategoryIds } from "@/lib/getProducts";
+import { getCatalog } from "@/lib/getProducts";
 import type { CompatCategory } from "@/lib/getProducts";
 import { notFound } from "next/navigation";
 import { Hero } from "@/components/home/Hero";
@@ -34,15 +34,51 @@ const CATEGORY_HEROES: Record<string, string> = {
   "oando-workstations": "/images/products/imported/cabin/image-1.webp",
   "oando-tables": "/images/products/imported/meeting-table/image-33.webp",
   "oando-storage": "/images/products/imported/storage/image-14.webp",
-  "oando-seating": "/images/products/imported/fluid/image-1.webp",
+  chairs: "/images/hero/chairs.webp",
+  "other-seating": "/images/hero/other-seating.webp",
   "oando-soft-seating": "/images/products/imported/cocoon/image-1.webp",
   "oando-educational": "/images/products/imported/adam/image-1.webp",
   "oando-collaborative": "/images/products/imported/pod/image-2.webp",
 };
 
+const validCategories = [
+  "chairs",
+  "other-seating",
+  "tables",
+  "storage",
+  "workstations",
+  "soft-seating",
+  "educational",
+  "collaborative",
+  "oando-chairs",
+  "oando-other-seating",
+  "oando-tables",
+  "oando-storage",
+  "oando-workstations",
+  "oando-soft-seating",
+  "oando-educational",
+  "oando-collaborative",
+];
+
 export async function generateStaticParams() {
-  const ids = await getCategoryIds();
-  return ids.map((id) => ({ category: id }));
+  return [
+    { category: "chairs" },
+    { category: "other-seating" },
+    { category: "tables" },
+    { category: "storage" },
+    { category: "workstations" },
+    { category: "soft-seating" },
+    { category: "educational" },
+    { category: "collaborative" },
+    { category: "oando-chairs" },
+    { category: "oando-other-seating" },
+    { category: "oando-tables" },
+    { category: "oando-storage" },
+    { category: "oando-workstations" },
+    { category: "oando-soft-seating" },
+    { category: "oando-educational" },
+    { category: "oando-collaborative" },
+  ];
 }
 
 // Loading skeleton for the grid while Supabase data resolves
@@ -67,6 +103,7 @@ export default async function CategoryPage({
   params: Promise<{ category: string }>;
 }) {
   const { category: categoryId } = await params;
+  if (!validCategories.includes(categoryId)) return notFound();
   const catalog = await getCatalog();
   const category = catalog.find((c: CompatCategory) => c.id === categoryId);
 

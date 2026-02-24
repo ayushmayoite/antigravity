@@ -142,10 +142,10 @@ export function Header() {
             {/* Desktop Menu */}
             <nav className="hidden lg:flex items-center gap-8 h-full">
               {[
+                { label: "Home", href: "/" },
                 { label: "Products", href: "/products", hasMegaMenu: true },
-                { label: "Solutions", href: "/solutions" },
-                { label: "Projects", href: "/gallery" },
                 { label: "About", href: "/about" },
+                { label: "Contact", href: "/contact" },
               ].map((item) => (
                 <div
                   key={item.label}

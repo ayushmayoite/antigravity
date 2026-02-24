@@ -114,7 +114,7 @@ function AccordionSection({
       <button
         onClick={() => setOpen((o) => !o)}
         className="w-full flex items-center justify-between px-4 py-3 text-left group"
-        aria-expanded={open}
+        aria-expanded={open ? "true" : "false"}
       >
         <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-neutral-600 group-hover:text-neutral-900 transition-colors flex items-center gap-2">
           {title}
@@ -217,7 +217,7 @@ function Toggle({
       <span className="text-sm text-neutral-600">{label}</span>
       <button
         role="switch"
-        aria-checked={checked}
+        aria-checked={checked ? "true" : "false"}
         onClick={() => onChange(!checked)}
         className={clsx(
           "relative w-9 h-5 rounded-full transition-colors flex items-center shrink-0",
@@ -255,7 +255,7 @@ function ProductCard({
 
   return (
     <Link
-      href={`/products/${categoryId}/${product.seriesId}/${product.id}`}
+      href={`/products/${categoryId}/${product.id}`}
       className="group block bg-white border border-neutral-100 hover:border-neutral-300 transition-all duration-200 hover:shadow-sm"
     >
       {/* Image */}

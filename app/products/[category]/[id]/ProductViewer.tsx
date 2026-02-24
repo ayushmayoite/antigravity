@@ -19,6 +19,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { ThreeDViewer } from "@/components/3DViewer";
 import { Reviews } from "@/components/Reviews";
+import { ProductGallery } from "@/components/ProductGallery";
 
 interface ProductViewerProps {
   product: Product;
@@ -66,8 +67,6 @@ export function ProductViewer({
   const fallbackImg = "/images/products/imported/fluid/image-1.webp";
   if (uniqueImages.length === 0) uniqueImages.push(fallbackImg);
 
-  const [activeImage, setActiveImage] = useState(uniqueImages[0]);
-
   useEffect(() => {
     // Basic anonymous tracking for recommendations
     let userId = localStorage.getItem("oando_user_id");
@@ -85,8 +84,7 @@ export function ProductViewer({
 
   const handleVariantChange = (variant: ProductVariant) => {
     setSelectedVariant(variant);
-    const imgs = Array.from(new Set(variant.galleryImages || []));
-    if (imgs.length > 0) setActiveImage(imgs[0]);
+    // When variants change, uniqueImages will update which resets the ProductGallery index implicitly
   };
 
   const [is3DMode, setIs3DMode] = useState(false);
@@ -125,57 +123,13 @@ export function ProductViewer({
 
       <div className="flex flex-col lg:flex-row min-h-[calc(100vh-112px)]">
         {/* ── LEFT: IMAGE GALLERY ── */}
-        <div className="w-full lg:w-[58%] xl:w-[62%] flex flex-col">
-          {/* Main image */}
-          <div className="flex-1 bg-[#f5f5f5] flex items-center justify-center p-8 lg:p-16 relative group min-h-[50vw] lg:min-h-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={activeImage}
-              alt={cleanName(product.name)}
-              className="max-w-full max-h-[70vh] w-auto h-auto object-contain transition-transform duration-700 group-hover:scale-[1.03]"
-              loading="eager"
-              onError={(e) => {
-                const el = e.currentTarget as HTMLImageElement;
-                if (!el.dataset.fallback) {
-                  el.dataset.fallback = "1";
-                  el.src = fallbackImg;
-                }
-              }}
+        <div className="w-full lg:w-[58%] xl:w-[62%] flex flex-col pt-0 lg:pt-8 bg-[#f5f5f5]">
+          <div className="flex-1 w-full max-w-[800px] mx-auto p-4 lg:p-8">
+            <ProductGallery
+              images={uniqueImages}
+              productName={cleanName(product.name)}
             />
           </div>
-
-          {/* Thumbnail strip */}
-          {uniqueImages.length > 1 && (
-            <div className="flex gap-2 px-6 py-4 overflow-x-auto scrollbar-hide bg-[#f5f5f5] border-t border-white/60">
-              {uniqueImages.map((img, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActiveImage(img)}
-                  className={clsx(
-                    "shrink-0 w-16 h-16 bg-white rounded-sm overflow-hidden border-2 transition-all",
-                    activeImage === img
-                      ? "border-neutral-900 opacity-100"
-                      : "border-transparent opacity-60 hover:opacity-90 hover:border-neutral-300",
-                  )}
-                  title={`View ${idx + 1}`}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={img}
-                    alt=""
-                    className="w-full h-full object-contain p-1"
-                    onError={(e) => {
-                      const el = e.currentTarget as HTMLImageElement;
-                      if (!el.dataset.fallback) {
-                        el.dataset.fallback = "1";
-                        el.src = fallbackImg;
-                      }
-                    }}
-                  />
-                </button>
-              ))}
-            </div>
-          )}
 
           {/* 3D viewer toggle wrapper */}
           {is3DSupported && (
@@ -195,7 +149,7 @@ export function ProductViewer({
                     src={(
                       selectedVariant?.threeDModelUrl || product.flagshipImage
                     ).replace(/\.(webp|png|jpe?g)$/i, ".glb")}
-                    fallbackImage={activeImage}
+                    fallbackImage={uniqueImages[0]}
                   />
                 </div>
               ) : null}

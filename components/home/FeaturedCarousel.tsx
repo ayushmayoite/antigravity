@@ -14,7 +14,7 @@ const FEATURED_PRODUCTS = [
     description:
       "The next generation of ergonomic performance. Designed for movement.",
     image: "/products/fluid-chair-1.jpg",
-    link: "/products/seating/mesh-seating/fluid-x",
+    link: "/products/oando-seating/86ef7b3e-ed97-45f5-981e-a6cab2d437d4",
     theme: "light",
   },
   {
@@ -24,7 +24,7 @@ const FEATURED_PRODUCTS = [
     description:
       "Modular architecture to support any way of working, anywhere.",
     image: "/products/60x30-workstation-1.jpg",
-    link: "/products/desks/deskpro",
+    link: "/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2",
     theme: "dark",
   },
   {
@@ -34,7 +34,7 @@ const FEATURED_PRODUCTS = [
     description:
       "Where comfort meets collaboration. Redefining the modern reception area.",
     image: "/products/softseating-solace-1.jpg",
-    link: "/products/soft-seating/solace",
+    link: "/products/oando-seating/3b243285-4228-41c7-ae31-1a9f12ba3ff3",
     theme: "light",
   },
 ];
