@@ -12,7 +12,7 @@ const TRUST_BADGES = [
 
 export function Footer() {
   return (
-    <footer className="w-full font-sans">
+    <footer className="footer w-full font-sans">
       {/* Trust Badges Strip */}
       <div className="bg-neutral-900 text-white border-t border-neutral-700">
         <div className="container-wide py-8 grid grid-cols-2 md:grid-cols-4 gap-6">

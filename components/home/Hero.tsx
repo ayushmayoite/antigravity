@@ -71,7 +71,7 @@ export function Hero({
   return (
     <section
       ref={containerRef}
-      className={`relative w-full overflow-hidden group bg-neutral-900 ${getHeightClass()}`}
+      className={`relative w-full overflow-hidden group bg-neutral-900 hero-section ${getHeightClass()}`}
     >
       {/* Parallax Background */}
       <motion.div

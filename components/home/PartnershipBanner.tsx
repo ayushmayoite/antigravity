@@ -28,7 +28,7 @@ export function PartnershipBanner() {
               furniture solutions to your workspace.
             </p>
             <Link
-              href="https://oando.co.in"
+              href="/"
               target="_blank"
               className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-neutral-900 hover:text-primary transition-colors border-b-2 border-neutral-100 pb-1"
             >
@@ -40,5 +40,3 @@ export function PartnershipBanner() {
     </section>
   );
 }
-
-

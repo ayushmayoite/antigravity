@@ -36,7 +36,7 @@ export function CategoryGrid() {
               "/images/products/60x30-workstation-1.webp";
 
             return (
-              <div key={category.id} className="group relative">
+              <div key={category.id} className="group relative product-card">
                 <Link href={`/products/${category.id}`} className="block">
                   {/* Image Container - Premium Minimal */}
                   <div className="relative aspect-4/3 overflow-hidden bg-neutral-100 mb-6 rounded-xl ring-1 ring-neutral-200/50">

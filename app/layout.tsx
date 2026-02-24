@@ -35,7 +35,7 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
-const BASE_URL = "https://oando.co.in";
+const BASE_URL = "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -93,7 +93,7 @@ const LOCAL_BUSINESS_JSON_LD = {
   "@type": "FurnitureStore",
   name: "One and Only Furniture",
   url: BASE_URL,
-  logo: `${BASE_URL}/logo.webp`,
+  logo: `${BASE_URL}/logo.png`,
   description:
     "Premium ergonomic office furniture in Patna, Bihar, India. Authorized dealer for leading office furniture brands.",
   address: {
@@ -107,7 +107,7 @@ const LOCAL_BUSINESS_JSON_LD = {
   openingHours: "Mo-Sa 09:00-18:00",
   priceRange: "₹₹₹",
   areaServed: ["Bihar", "Jharkhand", "Uttar Pradesh", "Delhi NCR"],
-  sameAs: ["https://oando.co.in"],
+  sameAs: ["http://localhost:3000"],
 };
 
 export default function RootLayout({

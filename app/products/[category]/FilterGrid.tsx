@@ -271,19 +271,19 @@ function ProductCard({
           onError={() => setImgSrc("/images/fallback/category.webp")}
         />
         {product.metadata?.bifmaCertified && (
-          <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-[9px] font-bold uppercase tracking-widest text-neutral-600 px-2 py-1 rounded-sm">
+          <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-[10px] sm:text-xs font-bold uppercase tracking-widest text-neutral-600 px-2.5 py-1.5 rounded-sm shadow-sm">
             BIFMA
           </div>
         )}
         {product.metadata?.priceRange && (
-          <div className="absolute top-2 right-2 bg-neutral-900/75 text-white text-[9px] font-semibold uppercase tracking-wider px-2 py-1 rounded-sm">
+          <div className="absolute top-2 right-2 bg-neutral-900/75 text-white text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-2.5 py-1.5 rounded-sm shadow-sm">
             {product.metadata.priceRange}
           </div>
         )}
         {ecoScore > 0 && (
           <div
             className={clsx(
-              "absolute bottom-2 left-2 text-[9px] font-bold uppercase tracking-widest px-2 py-1 rounded-sm",
+              "absolute bottom-2 left-2 text-[10px] sm:text-xs font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-sm shadow-sm",
               ecoScore > 7
                 ? "bg-green-100/90 text-green-800"
                 : "bg-white/90 text-neutral-600",

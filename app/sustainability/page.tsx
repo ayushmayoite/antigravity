@@ -11,7 +11,7 @@ export default function SustainabilityPage() {
         title="Thinking Green."
         subtitle="Sustainability is deeply rooted in our corporate philosophy. For us, sustainable action means thinking about tomorrow, today."
         showButton={false}
-        backgroundImage="https://images.unsplash.com/photo-1518005020250-6859427509ff?auto=format&fit=crop&q=80&w=2000"
+        backgroundImage="/images/products/imported/halo/image-1.webp"
       />
       <section className="container px-6 2xl:px-0 py-24">
         <div className="max-w-4xl space-y-8 mb-20 text-center mx-auto">

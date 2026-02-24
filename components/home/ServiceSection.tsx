@@ -41,8 +41,8 @@ const PROJECT_ITEMS: ProjectItem[] = [
     title: "Titan",
     images: [
       "/projects/Titan/27-06-2025 Image 05_edited_edited.webp",
-      "/projects/Titan/27-06-2025 Image 06.webp",
-      "/projects/Titan/27-06-2025 Image 07.webp",
+      "/projects/Titan/snapedit_1688104539759_edited.webp",
+      "/projects/Titan/snapedit_1688105524557 (1).webp",
     ],
     link: "/gallery",
     large: false,
@@ -93,36 +93,36 @@ export function ServiceSection() {
               images[(tick + (item.offset ?? 0)) % images.length];
 
             return (
-            <Reveal
-              key={index}
-              delay={index * 0.1}
-              width="100%"
-              className={item.large ? "md:col-span-2" : ""}
-            >
-              <Link
-                href={item.link}
-                className="group block relative h-[400px] md:h-[500px] w-full overflow-hidden rounded-sm"
+              <Reveal
+                key={index}
+                delay={index * 0.1}
+                width="100%"
+                className={item.large ? "md:col-span-2" : ""}
               >
-                {/* Image */}
-                <Image
-                  src={currentImage}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                <Link
+                  href={item.link}
+                  className="group block relative h-[400px] md:h-[500px] w-full overflow-hidden rounded-sm"
+                >
+                  {/* Image */}
+                  <Image
+                    src={currentImage}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-neutral-900/10 group-hover:bg-neutral-900/20 transition-colors duration-500" />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-neutral-900/10 group-hover:bg-neutral-900/20 transition-colors duration-500" />
 
-                {/* Pill Button */}
-                <div className="absolute left-1/2 top-[450px] -translate-x-1/2">
-                  <span className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-neutral-900 text-sm font-medium tracking-wide shadow-lg transition-transform duration-300 group-hover:scale-105">
-                    {item.title}
-                  </span>
-                </div>
-              </Link>
-            </Reveal>
-          );
+                  {/* Pill Button */}
+                  <div className="absolute left-1/2 top-[450px] -translate-x-1/2">
+                    <span className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-neutral-900 text-sm font-medium tracking-wide shadow-lg transition-transform duration-300 group-hover:scale-105">
+                      {item.title}
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
+            );
           })}
         </div>
       </div>

@@ -38,7 +38,7 @@ export function PartnerSection() {
 
           {/* CTA Link */}
           <Link
-            href="https://oando.co.in"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 text-base text-[#BF0D17] font-medium hover:text-[#9A0A12] transition-colors"

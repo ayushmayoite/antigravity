@@ -1,4 +1,3 @@
-import { Hero } from "@/components/home/Hero";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { PartnershipSection } from "@/components/home/PartnershipSection";
 import { CategoryGrid } from "@/components/home/CategoryGrid";
@@ -15,18 +14,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white pt-24 md:pt-0">
       <HeroCarousel />
-      <Hero
-        variant="cinema"
-        title={
-          <>
-            One & Only – <span className="italic font-serif">Engineered</span>
-            <br />
-            Workspace Systems.
-          </>
-        }
-        subtitle="Performance-driven solutions for corporate, government, and institutions – Official AFC Regional Franchise"
-        backgroundImage="/hero/titan-hero.webp"
-      />
       <PartnershipSection />
       <FeaturedCarousel />
       <Recommendations />
@@ -36,7 +23,6 @@ export default function Home() {
         description="The office is the central home base for personal exchanges and meetings with colleagues. With our modular furniture systems, versatile communication spaces can be created to foster innovation."
         buttonText="Explore Workspace Solutions"
         buttonLink="/products/seating"
-        videoSrc="https://videos.pexels.com/video-files/3129671/3129671-sd_640_360_25fps.mp4"
         posterSrc="/images/products/imported/cabin/image-1.webp"
         lightMode={true}
       />
@@ -45,7 +31,7 @@ export default function Home() {
         title="OandO STARTUP 2.0"
         subtitle="The Smart Entry"
         description="Height-adjustable by electric motor, customizable, robust and 'Made in India' - and all at a convincing price. With the new technical update, new colors, and many expansion options."
-        imageSrc="https://images.unsplash.com/photo-1595515106962-92182bd893a7?auto=format&fit=crop&q=80&w=1600"
+        imageSrc="/images/products/imported/cabin/image-1.webp"
         imageAlt="OandO STARTUP 2.0 Desk"
         reversed={false}
         lightMode={false}

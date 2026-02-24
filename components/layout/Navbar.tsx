@@ -16,18 +16,27 @@ const navigationData = {
           { label: "Task Chairs", href: "/products?category=seating" },
           { label: "Executive Chairs", href: "/products?category=seating" },
           { label: "Conference Chairs", href: "/products?category=seating" },
-          { label: "Lounge Seating", href: "/products?category=reception-lounge" },
-          { label: "Guest Chairs", href: "/products?category=seating" }
-        ]
+          {
+            label: "Lounge Seating",
+            href: "/products?category=reception-lounge",
+          },
+          { label: "Guest Chairs", href: "/products?category=seating" },
+        ],
       },
       {
         heading: "Workspaces",
         items: [
           { label: "Modular Desks", href: "/products?category=workstations" },
           { label: "Executive Desks", href: "/products?category=workstations" },
-          { label: "Height Adjustable", href: "/products?category=workstations" },
-          { label: "Benching Systems", href: "/products?category=workstations" }
-        ]
+          {
+            label: "Height Adjustable",
+            href: "/products?category=workstations",
+          },
+          {
+            label: "Benching Systems",
+            href: "/products?category=workstations",
+          },
+        ],
       },
       {
         heading: "Storage",
@@ -35,10 +44,10 @@ const navigationData = {
           { label: "Filing Cabinets", href: "/products?category=storage" },
           { label: "Pedestals", href: "/products?category=storage" },
           { label: "Bookcases", href: "/products?category=storage" },
-          { label: "Lockers", href: "/products?category=storage" }
-        ]
-      }
-    ]
+          { label: "Lockers", href: "/products?category=storage" },
+        ],
+      },
+    ],
   },
   solutions: {
     title: "Solutions",
@@ -46,13 +55,13 @@ const navigationData = {
       {
         heading: "Industries",
         items: [
-          { label: "Corporate", href: "/solutions/corporate" },
-          { label: "Government", href: "/solutions/government" },
-          { label: "Education", href: "/solutions/education" },
-          { label: "Healthcare", href: "/solutions/healthcare" }
-        ]
-      }
-    ]
+          { label: "Corporate", href: "/products" },
+          { label: "Government", href: "/products" },
+          { label: "Education", href: "/products" },
+          { label: "Healthcare", href: "/products" },
+        ],
+      },
+    ],
   },
   resources: {
     title: "Resources",
@@ -60,15 +69,18 @@ const navigationData = {
       {
         heading: "Tools & Downloads",
         items: [
-          { label: "Workstation Configurator", href: "/workstations/configurator" },
-          { label: "Specifications", href: "/resources/specs" },
-          { label: "CAD Files", href: "/resources/cad" },
-          { label: "Sustainability", href: "/resources/sustainability" },
-          { label: "Design Guides", href: "/resources/design-guides" }
-        ]
-      }
-    ]
-  }
+          {
+            label: "Workstation Configurator",
+            href: "/workstations/configurator",
+          },
+          { label: "Specifications", href: "/downloads" },
+          { label: "CAD Files", href: "/downloads" },
+          { label: "Sustainability", href: "/sustainability" },
+          { label: "Design Guides", href: "/downloads" },
+        ],
+      },
+    ],
+  },
 };
 
 export function Navbar() {
@@ -100,7 +112,7 @@ export function Navbar() {
           "fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out border-b",
           scrolled || isMobileMenuOpen
             ? "bg-white py-4 border-neutral-200 shadow-sm"
-            : "bg-white/95 py-5 border-transparent"
+            : "bg-white/95 py-5 border-transparent",
         )}
       >
         <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
@@ -126,14 +138,16 @@ export function Navbar() {
                     "flex items-center gap-1 text-[22px] font-medium tracking-wide transition-colors duration-200 py-2",
                     activeMegaMenu === key
                       ? "text-[#D30000]"
-                      : "text-neutral-900 hover:text-[#D30000]"
+                      : "text-neutral-900 hover:text-[#D30000]",
                   )}
                 >
                   {section.title}
                   <ChevronDown
                     className={cn(
                       "w-3 h-3 transition-transform duration-300 mt-1",
-                      activeMegaMenu === key ? "rotate-180 text-[#D30000]" : "text-neutral-400"
+                      activeMegaMenu === key
+                        ? "rotate-180 text-[#D30000]"
+                        : "text-neutral-400",
                     )}
                   />
                 </button>
@@ -144,10 +158,12 @@ export function Navbar() {
                     "absolute top-full -left-20 pt-8 w-[900px] transition-all duration-300 origin-top-left",
                     activeMegaMenu === key
                       ? "opacity-100 translate-y-0 visible"
-                      : "opacity-0 translate-y-2 invisible pointer-events-none"
+                      : "opacity-0 translate-y-2 invisible pointer-events-none",
                   )}
                 >
-                  <div className={`bg-white shadow-[0_20px_40px_-5px_rgba(0,0,0,0.08)] border border-neutral-100 p-10 grid gap-12 ${section.columns.length <= 2 ? 'grid-cols-2' : 'grid-cols-4'}`}>
+                  <div
+                    className={`bg-white shadow-[0_20px_40px_-5px_rgba(0,0,0,0.08)] border border-neutral-100 p-10 grid gap-12 ${section.columns.length <= 2 ? "grid-cols-2" : "grid-cols-4"}`}
+                  >
                     {section.columns.map((col, idx) => (
                       <div key={idx} className="space-y-6">
                         <h4 className="text-sm font-semibold text-neutral-400 uppercase tracking-widest">
@@ -233,7 +249,9 @@ export function Navbar() {
       <div
         className={cn(
           "fixed inset-0 bg-white z-40 transition-all duration-500 ease-in-out lg:hidden",
-          isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+          isMobileMenuOpen
+            ? "opacity-100 visible"
+            : "opacity-0 invisible pointer-events-none",
         )}
       >
         <div className="h-full overflow-y-auto pt-28 pb-12 px-6 flex flex-col justify-between">
@@ -250,7 +268,7 @@ export function Navbar() {
                         {col.heading}
                       </h4>
                       <ul className="space-y-2">
-                        {col.items.map(item => (
+                        {col.items.map((item) => (
                           <li key={item.label}>
                             <Link
                               href={item.href}
