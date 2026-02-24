@@ -13,11 +13,11 @@ export function PartnershipSection() {
           <div className="shrink-0">
             <div className="relative w-80 h-24 md:w-96 md:h-32">
               <Image
-                src="/logo-final.png"
-                alt="One and Only Furniture"
+                src="/afc-logo.png"
+                alt="AFC Furniture Solutions"
                 width={240}
                 height={80}
-                className="h-10 w-auto opacity-70 grayscale hover:grayscale-0 transition-all"
+                className="h-10 w-auto opacity-80 hover:opacity-100 transition-all"
               />
             </div>
           </div>
@@ -41,12 +41,12 @@ export function PartnershipSection() {
             </p>
 
             <a
-              href="/"
+              href="https://afcindia.in"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs font-medium text-neutral-900 hover:text-neutral-600 transition-colors border-b border-neutral-200 pb-0.5"
             >
-              Visit oando.co.in <ArrowRight className="w-3 h-3" />
+              Visit afcindia.in <ArrowRight className="w-3 h-3" />
             </a>
           </div>
         </div>
