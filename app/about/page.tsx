@@ -1,83 +1,97 @@
-import { Values } from "@/components/home/Values";
-import { Hero } from "@/components/home/Hero";
-import { StatsSection } from "@/components/home/StatsSection";
-import { Newsletter } from "@/components/shared/Newsletter";
-import { ContactTeaser } from "@/components/shared/ContactTeaser";
+import { FounderCard } from "@/components/FounderCard";
 
-export default function CompanyPage() {
-    return (
-        <main className="flex min-h-screen flex-col items-center bg-white">
-            <Hero
-                variant="small"
-                title="Company Profile"
-                subtitle="A family business with tradition and a vision for the future of work."
-                showButton={false}
-                backgroundImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
+export default function AboutPage() {
+  return (
+    <main className="min-h-screen bg-white">
+      {/* 1. Story banner — full-width dark bg, 2-line company origin statement */}
+      <section className="bg-stone-900 text-white py-20 px-12 text-xl leading-relaxed font-playfair text-center">
+        <div className="max-w-4xl mx-auto">
+          <p>
+            One and Only Furniture was founded in Patna in 2011
+            <br />
+            to bring world-class office environments to Bihar and East India.
+          </p>
+          <p className="mt-8">
+            We are the authorized franchise partner of AFC India —<br />
+            delivering BIFMA-certified, sustainable workspaces to corporates,
+            <br />
+            governments, and institutions across the region.
+          </p>
+        </div>
+      </section>
+
+      {/* 2. Partnership section */}
+      <section className="py-16 bg-neutral-50 text-center border-b border-neutral-200">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold uppercase tracking-widest text-neutral-800">
+            Official AFC India Authorized Partner, East India
+          </h2>
+        </div>
+      </section>
+
+      {/* 3. Two founder cards side by side */}
+      <section className="py-24">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <FounderCard
+              name="Ayush Kumar"
+              title="Co-Founder & Director"
+              image="/images/team/ayush.jpg"
+              bio="MBA from SMU Singapore. 10+ years building One and Only Furniture into East India's leading office furniture partner. Previously consulted with PwC and EY. Specializes in B2B negotiations, workspace innovation, and enterprise client relationships."
             />
-
-            <section className="container px-6 2xl:px-0 py-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div className="space-y-8">
-                        <h2 className="text-4xl md:text-5xl font-light text-neutral-900 leading-tight">
-                            Quality made in <span className="text-primary italic">Germany.</span>
-                        </h2>
-                        <p className="text-xl font-light text-neutral-600 leading-relaxed">
-                            WINI Büromöbel is a medium-sized family business with over 100 years of history.
-                            We stand for high-quality office furniture and holistic furnishing concepts that adapt to people - not the other way around.
-                        </p>
-                        <p className="text-lg font-light text-neutral-500 leading-relaxed">
-                            Based in Coppenbrügge, we combine traditional craftsmanship with state-of-the-art production technologies.
-                            Our modular systems offer maximum flexibility for the ever-changing requirements of the modern working world.
-                        </p>
-                    </div>
-                    <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                        <img
-                            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1000"
-                            alt="WINI Production"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                </div>
-            </section>
-
-            <Values />
-
-            <section className="w-full bg-neutral-900 text-white py-24">
-                <div className="container px-6 2xl:px-0">
-                    <div className="max-w-3xl space-y-8">
-                        <h2 className="text-4xl font-light">Our Philosophy</h2>
-                        <p className="text-xl font-light text-white/70 leading-relaxed">
-                            We don't just sell furniture; we create spaces where people feel comfortable and can work productively.
-                            Sustainability, ergonomics, and design are the cornerstones of our development process.
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 text-white/60">
-                            <div className="space-y-4">
-                                <h4 className="text-white font-medium text-lg italic underline decoration-primary underline-offset-8">Human-Centric</h4>
-                                <p>Every product is designed with the user's wellbeing and productivity in mind.</p>
-                            </div>
-                            <div className="space-y-4">
-                                <h4 className="text-white font-medium text-lg italic underline decoration-primary underline-offset-8">Future-Proof</h4>
-                                <p>Modular systems that can grow and change with your organization.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <StatsSection
-                title="Our History. Your Security."
-                subtitle="From a local joinery to a specialist in ergonomic desk systems. We are proud of our roots and our innovation."
-                stats={[
-                    { value: "1908", label: "Year founded" },
-                    { value: "4th", label: "Generation Family-run" },
-                    { value: "120k", label: "Sqm Production Area" },
-                    { value: "Red Dot", label: "Design Awards" }
-                ]}
+            <FounderCard
+              name="Arvind Kumar"
+              title="Managing Director & Co-Founder"
+              image="/images/team/arvind.jpg"
+              bio="20+ years in furniture manufacturing and business governance. Co-founded One and Only Furniture in 2011 with a vision to transform how Bihar's offices work. Leads operations, supply chain, and institutional partnerships."
             />
+          </div>
+        </div>
+      </section>
 
-            <Newsletter />
-
-            <ContactTeaser />
-        </main>
-    );
+      {/* 4. 4-step process */}
+      <section className="py-24 bg-stone-100">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
+              <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
+                1
+              </div>
+              <h3 className="text-xl font-bold mb-3">Consult</h3>
+              <p className="text-stone-600">
+                We understand your workspace needs and vision.
+              </p>
+            </div>
+            <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
+              <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
+                2
+              </div>
+              <h3 className="text-xl font-bold mb-3">Design</h3>
+              <p className="text-stone-600">
+                Creating optimized layouts and furniture plans.
+              </p>
+            </div>
+            <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
+              <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
+                3
+              </div>
+              <h3 className="text-xl font-bold mb-3">Install</h3>
+              <p className="text-stone-600">
+                Professional delivery and precision assembly.
+              </p>
+            </div>
+            <div className="flex flex-col items-center flex-1 text-center p-6 bg-white rounded-2xl shadow-sm">
+              <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">
+                4
+              </div>
+              <h3 className="text-xl font-bold mb-3">Support</h3>
+              <p className="text-stone-600">
+                Ongoing maintenance and long-term care.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }
