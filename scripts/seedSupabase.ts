@@ -12,8 +12,6 @@
 import { createClient } from "@supabase/supabase-js";
 import * as dotenv from "dotenv";
 import * as path from "path";
-import * as fs from "fs";
-import sql from "../lib/sql";
 
 // Load env vars from .env.local
 dotenv.config({ path: path.resolve(__dirname, "../.env.local") });
@@ -86,11 +84,6 @@ interface ProductRow {
 }
 
 async function main() {
-    console.log("🛠️  Running SQL migrations using postgres directly…");
-    const migrationSql = fs.readFileSync(path.resolve(__dirname, "002_image_mapping.sql"), "utf-8");
-    await sql.unsafe(migrationSql);
-    console.log("   ✅  Migrations applied.");
-
     console.log("🚀  Loading catalog data…");
     const catalog = await loadCatalog();
 

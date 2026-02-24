@@ -114,7 +114,7 @@ function AccordionSection({
       <button
         onClick={() => setOpen((o) => !o)}
         className="w-full flex items-center justify-between px-4 py-3 text-left group"
-        aria-expanded={open ? "true" : "false"}
+        aria-expanded={open}
       >
         <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-neutral-600 group-hover:text-neutral-900 transition-colors flex items-center gap-2">
           {title}
@@ -217,7 +217,7 @@ function Toggle({
       <span className="text-sm text-neutral-600">{label}</span>
       <button
         role="switch"
-        aria-checked={checked ? "true" : "false"}
+        aria-checked={checked}
         onClick={() => onChange(!checked)}
         className={clsx(
           "relative w-9 h-5 rounded-full transition-colors flex items-center shrink-0",
@@ -259,12 +259,13 @@ function ProductCard({
       className="group block bg-white border border-neutral-100 hover:border-neutral-300 transition-all duration-200 hover:shadow-sm"
     >
       {/* Image */}
-      <div className="relative aspect-4/3 overflow-hidden bg-neutral-50">
+      <div className="relative w-full aspect-square bg-stone-50 rounded-md overflow-hidden">
         <Image
           src={imgSrc}
           alt={displayName}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-103"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-contain p-4 transition-transform duration-500 group-hover:scale-103"
           onError={() => setImgSrc("/images/fallback/category.webp")}
         />
         {product.metadata?.bifmaCertified && (

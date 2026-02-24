@@ -102,7 +102,7 @@ export function FeaturedCarousel() {
                 transition: { duration: 0.8, delay: 0.3 },
               },
             }}
-            className="md:col-span-8 group relative aspect-video md:aspect-auto md:h-[700px] overflow-hidden bg-neutral-200"
+            className="md:col-span-8 group relative w-full aspect-[4/3] md:aspect-auto md:h-[700px] overflow-hidden bg-stone-100 rounded-lg"
           >
             <Link
               href={FEATURED_PRODUCTS[0].link}
@@ -114,18 +114,18 @@ export function FeaturedCarousel() {
               src={FEATURED_PRODUCTS[0].image}
               alt={FEATURED_PRODUCTS[0].name}
               fill
-              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              className="object-contain p-6 transition-transform duration-1000 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-stone-200/50 to-transparent pointer-events-none" />
 
-            <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full max-w-2xl z-10 text-white">
-              <span className="text-xs font-semibold tracking-[0.2em] uppercase mb-4 block opacity-80">
+            <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full max-w-2xl z-10 text-neutral-900">
+              <span className="text-xs font-semibold tracking-[0.2em] uppercase mb-4 block opacity-60">
                 {FEATURED_PRODUCTS[0].category}
               </span>
               <h3 className="text-4xl md:text-5xl font-light tracking-tight mb-4">
                 {FEATURED_PRODUCTS[0].name}
               </h3>
-              <p className="text-lg md:text-xl font-light text-white/80 line-clamp-2 md:line-clamp-none">
+              <p className="text-lg md:text-xl font-light text-neutral-600 line-clamp-2 md:line-clamp-none">
                 {FEATURED_PRODUCTS[0].description}
               </p>
             </div>
@@ -145,7 +145,7 @@ export function FeaturedCarousel() {
                     transition: { duration: 0.8, delay: 0.4 + idx * 0.2 },
                   },
                 }}
-                className="group relative flex-1 aspect-square md:aspect-auto overflow-hidden bg-neutral-200"
+                className="group relative flex-1 aspect-[4/3] md:aspect-auto overflow-hidden bg-stone-100 rounded-lg"
               >
                 <Link href={product.link} className="absolute inset-0 z-20">
                   <span className="sr-only">View {product.name}</span>
@@ -154,18 +154,12 @@ export function FeaturedCarousel() {
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="object-contain p-6 transition-transform duration-1000 group-hover:scale-105"
                 />
-                <div
-                  className={`absolute inset-0 bg-linear-to-t pointer-events-none ${product.theme === "dark" ? "from-black/70 via-black/20 to-transparent" : "from-black/40 via-transparent to-transparent"}`}
-                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-stone-200/50 to-transparent pointer-events-none" />
 
-                <div
-                  className={`absolute bottom-0 left-0 p-8 z-10 ${product.theme === "dark" ? "text-white" : "text-white"}`}
-                >
-                  <span
-                    className={`text-[10px] font-semibold tracking-[0.2em] uppercase mb-3 block opacity-90`}
-                  >
+                <div className="absolute bottom-0 left-0 p-8 z-10 text-neutral-900">
+                  <span className="text-[10px] font-semibold tracking-[0.2em] uppercase mb-3 block opacity-60">
                     {product.category}
                   </span>
                   <h3 className="text-2xl font-medium tracking-tight mb-2">

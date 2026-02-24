@@ -30,12 +30,12 @@ export function Product3DViewer({
 }: Product3DViewerProps) {
   if (!modelPath) {
     return (
-      <div className="w-full h-[70vh] lg:h-[90vh] relative">
+      <div className="w-full h-[70vh] lg:h-[90vh] relative bg-stone-50">
         <Image
           src={fallbackImage}
           alt="Product 3D View Unavailable"
           fill
-          className="object-cover"
+          className="object-contain p-8"
           sizes="(max-width: 1024px) 100vw, 60vw"
         />
       </div>

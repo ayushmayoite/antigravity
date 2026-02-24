@@ -58,6 +58,7 @@ export interface Product {
     series_name: string;
     created_at: string;
     images?: string[];
+    category_id?: string;
 }
 
 // ── Compatibility types that match the old catalog.ts shape ─────────────────
@@ -160,35 +161,53 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
     return data as Product;
 }
 
+interface CategoryRow {
+    id: string;
+    name: string;
+}
+
 /** Fetch all products and group them into the old Category[] shape.
  *  This is the main bridge used by pages during migration. */
 export async function getCatalog(): Promise<CompatCategory[]> {
-    const products = await getProducts();
+    // Fetch categories and products in parallel
+    const [catRes, prodRes] = await Promise.all([
+        supabase.from("categories").select("*"),
+        supabase.from("products").select("*").order("name", { ascending: true }),
+    ]);
 
-    // Group by category, then by series
-    const catMap = new Map<string, { products: Product[] }>();
-
-    for (const p of products) {
-        if (!catMap.has(p.category)) {
-            catMap.set(p.category, { products: [] });
-        }
-        catMap.get(p.category)!.products.push(p);
+    if (catRes.error) {
+        console.error("[getCatalog] Categories error:", catRes.error.message);
+        return [];
+    }
+    if (prodRes.error) {
+        console.error("[getCatalog] Products error:", prodRes.error.message);
+        return [];
     }
 
-    // Category display names
-    const CATEGORY_NAMES: Record<string, { name: string; description: string }> = {
-        "oando-workstations": { name: "Workstations", description: "Modular engineered desking systems for scalable, high-performance offices" },
-        "oando-tables": { name: "Tables", description: "Precision-built conference and meeting table systems for institutional environments" },
-        "oando-storage": { name: "Storage", description: "Engineered storage infrastructure — secure, scalable, and space-efficient" },
-        "oando-soft-seating": { name: "Soft Seating", description: "Collaborative zoning systems with soft-seating engineered for comfort and acoustics" },
-        "oando-seating": { name: "Seating", description: "Engineered ergonomic seating systems for long-term health and sustained productivity" },
-        "oando-educational": { name: "Educational", description: "Purpose-built learning environment systems for institutions, labs, and classrooms" },
-        "oando-collaborative": { name: "Collaborative", description: "Acoustic pod and collaboration booth systems for enterprise focus and privacy" },
-    };
+    const categories = catRes.data as CategoryRow[];
+    const products = prodRes.data as Product[];
+
+    // Group by category, then by series
+    const catMap = new Map<string, { info: CategoryRow; products: Product[] }>();
+
+    for (const cat of categories) {
+        catMap.set(cat.id, { info: cat, products: [] });
+    }
+
+    for (const p of products) {
+        const catId = p.category_id || p.category;
+        if (!catMap.has(catId)) {
+            // Should not happen if data is clean, but handle gracefully
+            continue;
+        }
+        catMap.get(catId)!.products.push(p);
+    }
 
     const result: CompatCategory[] = [];
 
     for (const [catId, catData] of catMap) {
+        if (catData.products.length === 0) continue;
+
         // Group products by series
         const seriesMap = new Map<string, Product[]>();
         for (const p of catData.products) {
@@ -202,16 +221,15 @@ export async function getCatalog(): Promise<CompatCategory[]> {
             series.push({
                 id: sId,
                 name: sProducts[0]?.series_name || "Series",
-                description: `Premium ${CATEGORY_NAMES[catId]?.name?.toLowerCase() ?? "furniture"} solutions`,
+                description: `Premium ${catData.info.name.toLowerCase()} solutions`,
                 products: sProducts.map(toCompatProduct),
             });
         }
 
-        const info = CATEGORY_NAMES[catId] ?? { name: catId, description: "" };
         result.push({
             id: catId,
-            name: info.name,
-            description: info.description,
+            name: catData.info.name,
+            description: `Professional furniture systems for ${catData.info.name.toLowerCase()}`,
             series,
         });
     }

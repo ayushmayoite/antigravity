@@ -56,6 +56,7 @@ export function ProductViewer({
     categoryId === "desking";
 
   const allImages = [
+    ...(product.images || []),
     product.flagshipImage,
     ...(selectedVariant?.galleryImages || []),
     ...(product.sceneImages || []),
