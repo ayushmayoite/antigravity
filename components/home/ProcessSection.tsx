@@ -1,38 +1,33 @@
 "use client";
 
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { motion } from "framer-motion";
 
 const steps = [
   {
     id: "01",
     title: "Consultation",
-    description:
-      "We discuss your requirements, budget, and timeline to understand your vision.",
+    description: "We discuss your requirements, budget, and timeline to understand your vision.",
   },
   {
     id: "02",
     title: "Space Planning",
-    description:
-      "Our experts create 2D/3D layouts to optimize your workspace efficiency.",
+    description: "Our experts create 2D/3D layouts to optimize your workspace efficiency.",
   },
   {
     id: "03",
     title: "Selection",
-    description:
-      "Choose materials, finishes, and configurations from our premium catalog.",
+    description: "Choose materials, finishes, and configurations from our premium catalog.",
   },
   {
     id: "04",
     title: "Installation",
-    description:
-      "Professional delivery and assembly by our trained technical team.",
+    description: "Professional delivery and assembly by our trained technical team.",
   },
 ];
 
 export function ProcessSection() {
-  const ref = useScrollAnimation();
   return (
-    <section ref={ref} className="py-24 bg-white">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           {/* Sticky Left Content */}
@@ -44,8 +39,7 @@ export function ProcessSection() {
               Seamless from Start to Finish
             </h2>
             <p className="text-neutral-500 text-lg mb-8">
-              We&apos;ve refined our workflow to ensure your office
-              transformation is smooth, on-time, and within budget.
+              We&apos;ve refined our workflow to ensure your office transformation is smooth, on-time, and within budget.
             </p>
             <button className="bg-neutral-900 text-white px-8 py-3 rounded-full font-medium hover:bg-neutral-800 transition-colors">
               Start Your Project
@@ -55,7 +49,14 @@ export function ProcessSection() {
           {/* Scrolling Right Steps */}
           <div className="lg:w-2/3 grid gap-12">
             {steps.map((step, index) => (
-              <div key={step.id} className="flex gap-8 group">
+              <motion.div
+                key={step.id}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="flex gap-8 group"
+              >
                 <span className="text-5xl md:text-6xl font-light text-neutral-200 group-hover:text-amber-600 transition-colors duration-300">
                   {step.id}
                 </span>
@@ -67,7 +68,7 @@ export function ProcessSection() {
                     {step.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

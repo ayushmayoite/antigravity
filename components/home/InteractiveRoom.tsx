@@ -2,7 +2,6 @@
 
 import { HotspotImage, Hotspot } from "@/components/ui/HotspotImage";
 import { Reveal } from "@/components/shared/Reveal";
-import { oandoCatalog } from "@/lib/catalog";
 
 // Temporarily disabling dynamic path resolution to fix build
 // using static paths based on standard structure
@@ -12,18 +11,18 @@ const DEFAULT_HOTSPOTS: Hotspot[] = [
     id: "h1",
     x: 65,
     y: 45,
-    title: "Fluid X Executive",
+    title: "Fluid X",
     description:
-      "Experience the pinnacle of ergonomic design for modern professionals.",
-    linkUrl: "/products/seating/fluid/fluid-x",
+      "Ergonomic executive seating engineered for long-duration performance.",
+    linkUrl: "/products/oando-seating/oando-seating--fluid-x",
   },
   {
     id: "h2",
     x: 35,
     y: 65,
-    title: "DeskPro System",
-    description: "Versatile communication space for your next big idea.",
-    linkUrl: "/products/desks/deskpro",
+    title: "Cabin Workstation",
+    description: "Modular L-shape workstation for focused, heads-down work.",
+    linkUrl: "/products/oando-workstations/cabin-l-shape",
   },
 ];
 

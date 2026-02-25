@@ -1,191 +1,135 @@
-"use client";
+// Cleaned Footer — logo, nav links, address, phone, email only.
+// Removed: redundant trust-badge strip (already shown in ClientLogos section above).
 
 import Link from "next/link";
-import { ShieldCheck, Leaf, Award, MapPin, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
-const TRUST_BADGES = [
-  { icon: ShieldCheck, label: "5-Year Warranty", sub: "On all products" },
-  { icon: Award, label: "BIFMA Certified", sub: "Internationally tested" },
-  { icon: Leaf, label: "Sustainable", sub: "Eco-conscious materials" },
-  { icon: MapPin, label: "Made in India", sub: "Patna, Bihar" },
+const NAV = [
+  {
+    heading: "Products",
+    links: [
+      { href: "/products", label: "All Products" },
+      { href: "/products/oando-seating", label: "Seating" },
+      { href: "/products/oando-workstations", label: "Workstations" },
+      { href: "/products/oando-tables", label: "Tables" },
+      { href: "/products/oando-storage", label: "Storage" },
+      { href: "/products/oando-soft-seating", label: "Soft Seating" },
+      { href: "/products/oando-collaborative", label: "Collaborative" },
+    ],
+  },
+  {
+    heading: "Company",
+    links: [
+      { href: "/about", label: "About Us" },
+      { href: "/projects", label: "Projects" },
+      { href: "/sustainability", label: "Sustainability" },
+      { href: "/service", label: "Service" },
+      { href: "/contact", label: "Contact" },
+    ],
+  },
 ];
 
 export function Footer() {
   return (
-    <footer className="footer w-full font-sans">
-      {/* Trust Badges Strip */}
-      <div className="bg-neutral-900 text-white border-t border-neutral-700">
-        <div className="container-wide py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {TRUST_BADGES.map(({ icon: Icon, label, sub }) => (
-            <div key={label} className="flex items-center gap-3">
-              <div className="shrink-0 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
-                <Icon className="w-4 h-4 text-white" />
-              </div>
-              <div>
-                <p className="text-[12px] font-bold uppercase tracking-widest text-white">
-                  {label}
-                </p>
-                <p className="text-[11px] text-neutral-400 font-light">{sub}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <footer className="w-full bg-neutral-900 text-neutral-400 font-sans">
+      {/* Main grid */}
+      <div className="container px-6 2xl:px-0 py-16 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+          {/* Brand + contact */}
+          <div className="md:col-span-1 flex flex-col gap-6">
+            <Link href="/" className="block">
+              <span className="text-xl font-semibold tracking-tight text-white">
+                One and Only
+              </span>
+              <span className="text-xs text-neutral-500 block mt-0.5 tracking-widest uppercase">
+                Furniture
+              </span>
+            </Link>
 
-      {/* Main footer */}
-      <div className="bg-neutral-50 text-neutral-500 py-16 lg:py-20 text-base lg:text-xl border-t border-neutral-200">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8">
-            {/* Brand Column */}
-            <div className="space-y-8 lg:col-span-1 border-r border-neutral-100 pr-8">
-              <Link href="/" className="block">
-                <span className="text-2xl font-bold tracking-tighter text-neutral-900">
-                  One and Only
-                </span>
-              </Link>
-              <div className="space-y-2 text-sm lg:text-base font-light">
-                <p className="font-semibold text-neutral-900 uppercase tracking-wider">
-                  Our Headquarters
-                </p>
-                <p>
-                  One And Only Furniture <br />
-                  Patna, Bihar, India <br />
-                  +91 90310 22875
-                </p>
-              </div>
-              {/* WhatsApp CTA */}
+            <address className="not-italic text-sm leading-7 text-neutral-400">
+              One and Only Furniture
+              <br />
+              Patna, Bihar, India
+            </address>
+
+            <div className="text-sm space-y-1">
               <a
-                href="https://wa.me/919031022875?text=Hi%2C+I%27d+like+to+enquire+about+office+furniture"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] text-white text-xs font-bold uppercase tracking-widest px-4 py-2.5 hover:bg-[#128C7E] transition-colors rounded-sm"
-                aria-label="Chat on WhatsApp"
+                href="tel:+919031022875"
+                className="block hover:text-white transition-colors"
               >
-                <MessageCircle className="w-4 h-4" />
-                WhatsApp Us
+                +91 90310 22875
+              </a>
+              <a
+                href="mailto:info@oando.co.in"
+                className="block hover:text-white transition-colors"
+              >
+                info@oando.co.in
               </a>
             </div>
 
-            {/* Navigation Columns */}
-            <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
-              {/* Products */}
-              <div className="space-y-6">
-                <p className="text-xl lg:text-2xl font-semibold text-neutral-900">
-                  Products
-                </p>
-                <ul className="flex flex-col gap-3 text-sm lg:text-lg font-light">
-                  {[
-                    { href: "/products", label: "All Products" },
-                    { href: "/products/oando-seating", label: "Seating" },
-                    {
-                      href: "/products/oando-workstations",
-                      label: "Workstations",
-                    },
-                    { href: "/products/oando-tables", label: "Tables" },
-                    { href: "/products/oando-storage", label: "Storage" },
-                    {
-                      href: "/products/oando-soft-seating",
-                      label: "Soft Seating",
-                    },
-                    {
-                      href: "/configurator",
-                      label: "3D Configurator",
-                      highlight: true,
-                    },
-                  ].map(({ href, label, highlight }) => (
-                    <li key={href}>
-                      <Link
-                        href={href}
-                        className={`hover:text-primary transition-colors ${highlight ? "text-primary font-medium italic" : ""}`}
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Company */}
-              <div className="space-y-6">
-                <p className="text-xl lg:text-2xl font-semibold text-neutral-900">
-                  One and Only
-                </p>
-                <ul className="flex flex-col gap-3 text-sm lg:text-lg font-light">
-                  {[
-                    { href: "/about", label: "About Us" },
-                    { href: "/sustainability", label: "Sustainability" },
-                    { href: "/career", label: "Career", dot: true },
-                    { href: "/gallery", label: "Project Gallery" },
-                    { href: "/news", label: "News" },
-                  ].map(({ href, label, dot }) => (
-                    <li key={href}>
-                      <Link
-                        href={href}
-                        className="relative hover:text-primary transition-colors inline-block"
-                      >
-                        {label}
-                        {dot && (
-                          <span className="absolute -top-1 -right-2 w-1.5 h-1.5 bg-red-600 rounded-full" />
-                        )}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Service */}
-              <div className="space-y-6">
-                <p className="text-xl lg:text-2xl font-semibold text-neutral-900">
-                  Service
-                </p>
-                <ul className="flex flex-col gap-3 text-sm lg:text-lg font-light">
-                  {[
-                    { href: "/downloads", label: "Downloads" },
-                    { href: "/planning", label: "Space Planning" },
-                    { href: "/showrooms", label: "Showrooms" },
-                    { href: "/contact", label: "Contact" },
-                    { href: "/tracking", label: "Order Tracking" },
-                  ].map(({ href, label }) => (
-                    <li key={href}>
-                      <Link
-                        href={href}
-                        className="hover:text-primary transition-colors"
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <a
+              href="https://wa.me/919031022875?text=Hi%2C+I%27d+like+to+enquire+about+office+furniture"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="inline-flex items-center gap-2 bg-[#25D366] text-white text-xs font-semibold tracking-widest uppercase px-4 py-2.5 hover:bg-[#128C7E] transition-colors w-fit"
+            >
+              <MessageCircle className="w-4 h-4" />
+              WhatsApp Us
+            </a>
           </div>
 
-          {/* Bottom Bar */}
-          <div className="mt-20 pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-6 text-sm lg:text-base font-light text-neutral-400">
-            <div className="flex gap-6 lg:gap-12 flex-wrap justify-center">
-              <Link
-                href="/imprint"
-                className="hover:text-neutral-900 transition-colors"
-              >
-                Imprint
-              </Link>
-              <Link
-                href="/privacy"
-                className="hover:text-neutral-900 transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="hover:text-neutral-900 transition-colors"
-              >
-                Terms &amp; Conditions
-              </Link>
-            </div>
-            <div suppressHydrationWarning>
-              &copy; {new Date().getFullYear()} One and Only. All rights
-              reserved.
-            </div>
+          {/* Nav columns */}
+          <div className="md:col-span-3 grid grid-cols-2 md:grid-cols-2 gap-10 md:gap-16">
+            {NAV.map((col) => (
+              <div key={col.heading}>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500 mb-5">
+                  {col.heading}
+                </p>
+                <ul className="flex flex-col gap-3">
+                  {col.links.map(({ href, label }) => (
+                    <li key={href}>
+                      <Link
+                        href={href}
+                        className="text-sm text-neutral-400 hover:text-white transition-colors"
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-neutral-800">
+        <div className="container px-6 2xl:px-0 py-5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-neutral-600">
+          <div className="flex gap-6">
+            <Link
+              href="/imprint"
+              className="hover:text-neutral-400 transition-colors"
+            >
+              Imprint
+            </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-neutral-400 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-neutral-400 transition-colors"
+            >
+              Terms
+            </Link>
+          </div>
+          <div suppressHydrationWarning>
+            &copy; {new Date().getFullYear()} One and Only Furniture. All rights
+            reserved.
           </div>
         </div>
       </div>

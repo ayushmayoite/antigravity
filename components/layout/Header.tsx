@@ -7,16 +7,12 @@ import clsx from "clsx";
 import { MobileMenu } from "./MobileMenu";
 import { SearchOverlay } from "./SearchOverlay";
 import { MegaMenu } from "./MegaMenu";
-
-import { oandoCatalog } from "@/lib/catalog";
 import { OneAndOnlyLogo } from "@/components/ui/Logo";
 
-const discoverMenuItems = oandoCatalog
-  .map((category) => ({
-    label: category.name,
-    href: `/products/${category.id}`,
-  }))
-  .concat([{ label: "All Products", href: "/products" }]);
+interface MenuItem {
+  label: string;
+  href: string;
+}
 
 const discoverMenuCards = [
   {
@@ -48,6 +44,23 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [discoverMenuItems, setDiscoverMenuItems] = useState<MenuItem[]>([
+    { label: "All Products", href: "/products" },
+  ]);
+
+  useEffect(() => {
+    fetch("/api/categories")
+      .then((r) => r.json())
+      .then((cats: { id: string; name: string }[]) => {
+        if (!Array.isArray(cats)) return;
+        setDiscoverMenuItems(
+          cats
+            .map((c) => ({ label: c.name, href: `/products/${c.id}` }))
+            .concat([{ label: "All Products", href: "/products" }]),
+        );
+      })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,12 +82,11 @@ export function Header() {
     <>
       <header
         className={clsx(
-          "fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out",
+          "fixed top-0 left-0 w-full z-1020 transition-all duration-500 ease-in-out",
           isVisible ? "translate-y-0" : "-translate-y-full",
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm py-2"
-            : "bg-white py-0",
-          "border-b border-neutral-100",
+            ? "bg-white/95 backdrop-blur-md shadow-sm"
+            : "bg-white border-b border-neutral-100",
         )}
         onMouseLeave={() => setActiveMenu(null)}
       >
@@ -112,7 +124,6 @@ export function Header() {
                 onClick={() => setIsSearchOpen(true)}
                 className="hover:text-primary transition-colors flex items-center gap-1.5"
                 title="Search"
-                aria-label="Open search overlay"
               >
                 <Search className="w-4 h-4" />
               </button>
@@ -134,7 +145,7 @@ export function Header() {
                 aria-label="One and Only Home"
               >
                 <OneAndOnlyLogo
-                  className="h-12 md:h-[60px]"
+                  className="h-8 md:h-10"
                   variant={isScrolled ? "orange" : "orange"}
                 />
               </Link>
@@ -160,10 +171,9 @@ export function Header() {
                   <Link
                     href={item.href}
                     className={clsx(
-                      "h-full flex items-center text-[15px] font-semibold uppercase tracking-widest transition-all duration-300 border-b-2 border-transparent",
-                      activeMenu === item.label
-                        ? "text-primary border-primary-hover"
-                        : "text-neutral-900 hover:text-primary",
+                      "h-full flex items-center text-sm font-medium transition-colors duration-200",
+                      "text-neutral-700 hover:text-primary",
+                      activeMenu === item.label && "text-primary",
                     )}
                   >
                     {item.label}
@@ -182,17 +192,26 @@ export function Header() {
 
             {/* Desktop Actions */}
             <div className="hidden lg:flex items-center gap-6">
-              <Link href="/contact" className="btn-primary typ-cta">
+              <Link
+                href="/contact"
+                className={clsx(
+                  "text-xs font-semibold tracking-widest uppercase px-5 py-2.5 border transition-colors duration-200",
+                  "border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white",
+                )}
+              >
                 Request Quote
               </Link>
             </div>
 
             <button
               onClick={() => setIsMenuOpen(true)}
-              className="flex lg:hidden items-center justify-center w-10 h-10 bg-white border border-neutral-200 rounded-xl hover:bg-neutral-50 transition-colors shadow-sm"
-              title="Open menu"
+              className={clsx(
+                "flex lg:hidden items-center justify-center w-10 h-10 border transition-colors",
+                "border-neutral-200 text-neutral-700 hover:bg-neutral-50",
+              )}
+              aria-label="Open menu"
             >
-              <Menu className="w-5 h-5 text-neutral-700" />
+              <Menu className="w-5 h-5" />
             </button>
           </div>
         </div>

@@ -65,7 +65,7 @@ export function Projects() {
                     : "md:col-span-6 lg:col-span-6 lg:mt-[-100px]"
               }`}
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-100 mb-6">
+              <div className="relative aspect-4/3 w-full overflow-hidden bg-neutral-100 mb-6">
                 <Image
                   src={project.image}
                   alt={`${project.client} - ${project.category}`}
@@ -79,7 +79,7 @@ export function Projects() {
                   <span className="text-xs font-semibold uppercase tracking-widest text-neutral-500">
                     {project.category}
                   </span>
-                  <div className="h-[1px] flex-1 bg-neutral-200"></div>
+                  <div className="h-px flex-1 bg-neutral-200"></div>
                 </div>
                 <h3 className="text-2xl font-medium text-neutral-900 mb-1">
                   {project.client}

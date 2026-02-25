@@ -9,7 +9,7 @@ export default function ContactPage() {
         title="Contact"
         subtitle="We are here for you. Get in touch with us."
         showButton={false}
-        backgroundImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
+        backgroundImage="/hero/usha-hero.webp"
       />
       <section className="container px-6 2xl:px-0 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -24,17 +24,19 @@ export default function ContactPage() {
                   <p className="font-medium text-neutral-900 mb-1">
                     One And Only Furniture
                   </p>
-                  <p>Patna, Bihar, India</p>
+                  <p>Khasra No. 129, Village, Kherki Daula, Sector 84</p>
+                  <p>Gurugram, Haryana 122004</p>
+                  <p>India</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
                 <Phone className="w-6 h-6 text-primary" />
                 <a
-                  href="tel:+919031022875"
+                  href="tel:+911244031666"
                   className="text-neutral-600 font-light hover:text-primary transition-colors"
                 >
-                  +91 90310 22875
+                  +91 124 403 1666
                 </a>
               </div>
 

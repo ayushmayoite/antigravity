@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import dynamic from "next/dynamic";
-
+import QueryProvider from "@/app/providers/QueryProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -35,7 +35,7 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
-const BASE_URL = "https://oando.co.in";
+const BASE_URL = "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     template: "%s | One and Only Furniture",
   },
   description:
-    "One and Only Furniture — premium ergonomic office furniture in Patna, Bihar, India. Workstations, seating, storage, tables & soft seating. Trusted by leading corporations.",
+    "One and Only Furniture — premium ergonomic office furniture in Patna, Bihar, India. Workstations, seating, storage, tables & soft seating. Trusted by DMRC, TVS, Titan & more.",
   keywords: [
     "office furniture Patna",
     "premium office furniture Bihar",
@@ -107,7 +107,7 @@ const LOCAL_BUSINESS_JSON_LD = {
   openingHours: "Mo-Sa 09:00-18:00",
   priceRange: "₹₹₹",
   areaServed: ["Bihar", "Jharkhand", "Uttar Pradesh", "Delhi NCR"],
-  sameAs: ["https://oando.co.in"],
+  sameAs: ["http://localhost:3000"],
 };
 
 export default function RootLayout({
@@ -125,20 +125,22 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased bg-white selection:bg-primary selection:text-white overflow-x-hidden">
+      <body className="font-sans antialiased bg-white selection:bg-primary selection:text-white">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-9999 focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:outline-none focus:ring-2 focus:ring-primary"
         >
           Skip to main content
         </a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <AdvancedBot />
-        <AIAdvisor />
-        <Analytics />
-        <SpeedInsights />
+        <QueryProvider>
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <AdvancedBot />
+          <AIAdvisor />
+          <Analytics />
+          <SpeedInsights />
+        </QueryProvider>
       </body>
     </html>
   );

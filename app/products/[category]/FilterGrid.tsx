@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import { useState, useMemo, useCallback, Suspense } from "react";
 import clsx from "clsx";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 
@@ -115,7 +114,7 @@ function AccordionSection({
       <button
         onClick={() => setOpen((o) => !o)}
         className="w-full flex items-center justify-between px-4 py-3 text-left group"
-        aria-expanded={open ? "true" : "false"}
+        aria-expanded={open}
       >
         <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-neutral-600 group-hover:text-neutral-900 transition-colors flex items-center gap-2">
           {title}
@@ -218,7 +217,7 @@ function Toggle({
       <span className="text-sm text-neutral-600">{label}</span>
       <button
         role="switch"
-        aria-checked={checked ? "true" : "false"}
+        aria-checked={checked}
         onClick={() => onChange(!checked)}
         className={clsx(
           "relative w-9 h-5 rounded-full transition-colors flex items-center shrink-0",
@@ -259,7 +258,7 @@ function ProductCard({
   return (
     <Link
       href={`/products/${categoryId}/${product.id}`}
-      className="group block bg-white border border-neutral-100 hover:border-neutral-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+      className="group block bg-white border border-neutral-100 hover:border-neutral-300 transition-all duration-200 hover:shadow-sm"
     >
       {/* Image */}
       <div className="relative w-full aspect-square bg-stone-50 rounded-md overflow-hidden">
@@ -571,7 +570,6 @@ function AdvancedFilterGridInner({
   }, [router, pathname]);
 
   const activeCount = countActive(filters);
-  const gridScrollRef = useScrollAnimation();
 
   // ── Sidebar content (shared between desktop + drawer) ──
   const SidebarContent = (
@@ -860,10 +858,7 @@ function AdvancedFilterGridInner({
               </button>
             </div>
           ) : (
-            <div
-              ref={gridScrollRef}
-              className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4"
-            >
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
               {filteredProducts.map((product) => (
                 <div
                   key={product.id}

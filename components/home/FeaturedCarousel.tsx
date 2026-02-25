@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { SafeImage } from "@/components/SafeImage";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion, useInView, useAnimation } from "framer-motion";
@@ -14,27 +14,27 @@ const FEATURED_PRODUCTS = [
     description:
       "The next generation of ergonomic performance. Designed for movement.",
     image: "/images/afc/oando-seating--fluid-x/image-1.webp",
-    link: "/products/oando-seating/86ef7b3e-ed97-45f5-981e-a6cab2d437d4",
+    link: "/products/oando-seating/oando-seating--fluid-x",
     theme: "light",
   },
   {
-    id: "deskpro",
-    name: "DeskPro System",
+    id: "cabin",
+    name: "Cabin Workstation",
     category: "Workstations",
     description:
       "Modular architecture to support any way of working, anywhere.",
-    image: "/images/afc/oando-workstations--deskpro/image-1.webp",
-    link: "/products/oando-workstations/9aea071d-f393-4243-aa8e-8efcdbafcfc2",
+    image: "/images/products/imported/cabin/image-1.webp",
+    link: "/products/oando-workstations/cabin-l-shape",
     theme: "dark",
   },
   {
-    id: "solace",
-    name: "Solace Lounge",
-    category: "Soft Seating",
+    id: "cocoon",
+    name: "Cocoon Pod",
+    category: "Collaborative",
     description:
-      "Where comfort meets collaboration. Redefining the modern reception area.",
-    image: "/images/afc/oando-seating--solace/image-1.webp",
-    link: "/products/oando-seating/3b243285-4228-41c7-ae31-1a9f12ba3ff3",
+      "Where focus meets comfort. The perfect acoustic pod for deep work.",
+    image: "/images/products/imported/cocoon/image-1.webp",
+    link: "/products/oando-collaborative/oando-collaborative--cocoon-pod",
     theme: "light",
   },
 ];
@@ -61,7 +61,7 @@ export function FeaturedCarousel() {
               variants={{
                 visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
               }}
-              className="text-[44px] md:text-[56px] font-light tracking-tight leading-tight text-neutral-900"
+              className="hidden"
             >
               Our projects
             </motion.h2>
@@ -110,20 +110,19 @@ export function FeaturedCarousel() {
             >
               <span className="sr-only">View {FEATURED_PRODUCTS[0].name}</span>
             </Link>
-            <SafeImage
+            <Image
               src={FEATURED_PRODUCTS[0].image}
               alt={FEATURED_PRODUCTS[0].name}
               fill
               className="object-contain p-6 transition-transform duration-1000 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 66vw"
             />
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-white via-white/40 to-transparent pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-stone-200/50 to-transparent pointer-events-none" />
 
             <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full max-w-2xl z-10 text-neutral-900">
-              <h3 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">
+              <h3 className="text-4xl md:text-5xl font-light tracking-tight mb-4">
                 {FEATURED_PRODUCTS[0].name}
               </h3>
-              <p className="text-lg md:text-xl font-normal text-neutral-800 line-clamp-2 md:line-clamp-none">
+              <p className="text-lg md:text-xl font-light text-neutral-600 line-clamp-2 md:line-clamp-none">
                 {FEATURED_PRODUCTS[0].description}
               </p>
             </div>
@@ -148,17 +147,16 @@ export function FeaturedCarousel() {
                 <Link href={product.link} className="absolute inset-0 z-20">
                   <span className="sr-only">View {product.name}</span>
                 </Link>
-                <SafeImage
+                <Image
                   src={product.image}
                   alt={product.name}
                   fill
                   className="object-contain p-6 transition-transform duration-1000 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-white via-white/40 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-stone-200/50 to-transparent pointer-events-none" />
 
                 <div className="absolute bottom-0 left-0 p-8 z-10 text-neutral-900">
-                  <h3 className="text-2xl font-bold tracking-tight mb-2">
+                  <h3 className="text-2xl font-medium tracking-tight mb-2">
                     {product.name}
                   </h3>
                 </div>

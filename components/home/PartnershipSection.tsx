@@ -6,18 +6,18 @@ import { ArrowRight } from "lucide-react";
 
 export function PartnershipSection() {
   return (
-    <section className="relative w-full py-8 md:py-10 overflow-hidden bg-white flex items-center justify-center border-y border-neutral-100">
+    <section className="relative w-full py-16 md:py-20 overflow-hidden bg-white flex items-center justify-center border-y border-neutral-100">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20 max-w-5xl mx-auto">
           {/* Partnership Logo */}
           <div className="shrink-0">
-            <div className="relative">
+            <div className="relative w-80 h-32 md:w-96 md:h-48 flex items-center justify-center md:justify-start">
               <Image
                 src="/afc-logo.png"
                 alt="AFC Furniture Solutions"
-                width={900}
-                height={300}
-                className="h-40 w-auto opacity-80 hover:opacity-100 transition-all"
+                width={480}
+                height={160}
+                className="h-20 w-auto opacity-80 hover:opacity-100 transition-all"
               />
             </div>
           </div>
@@ -25,7 +25,7 @@ export function PartnershipSection() {
           {/* Partnership Content */}
           <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-3">
             <div>
-              <p className="text-[10px] font-bold text-neutral-500 uppercase tracking-[0.2em] mb-1">
+              <p className="text-[10px] font-semibold text-neutral-400 uppercase tracking-[0.2em] mb-1">
                 Official Strategic Partnership
               </p>
               <h3 className="text-xl md:text-2xl font-serif text-neutral-900 leading-tight">
@@ -35,7 +35,7 @@ export function PartnershipSection() {
               </h3>
             </div>
 
-            <p className="text-sm text-neutral-600 italic leading-relaxed max-w-md">
+            <p className="text-sm text-neutral-500 italic leading-relaxed max-w-md">
               Bringing world-class manufacturing excellence and sustainable
               furniture solutions to your workspace.
             </p>

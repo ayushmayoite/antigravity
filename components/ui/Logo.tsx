@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -8,29 +7,25 @@ interface LogoProps {
   variant?: "orange" | "white";
 }
 
+const WIX_LOGO_URL =
+  "https://static.wixstatic.com/media/f82adb_06d84ac65d43406ca062fdaf2558c6c2~mv2_d_11432_2937_s_4_2.png/v1/fill/w_166,h_43,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/One_Only%20(2).png";
+
 export function OneAndOnlyLogo({ className, variant = "orange" }: LogoProps) {
   return (
-    <div className={cn("relative w-auto", className)}>
+    <div className={cn("relative flex items-center", className)}>
       {variant === "orange" ? (
-        // Blue logo for scrolled state
-        <Image
-          src="/logo-final.png"
+        // Standard full-color logo
+        <img
+          src={WIX_LOGO_URL}
           alt="One and Only Furniture"
-          width={240}
-          height={80}
           className="h-full w-auto object-contain"
-          priority
         />
       ) : (
-        // White logo for dark hero
-        <Image
-          src="/logo-final.png"
+        // White logo for dark backgrounds using CSS filters
+        <img
+          src={WIX_LOGO_URL}
           alt="One and Only Furniture"
-          width={240}
-          height={80}
-          className="h-full w-auto object-contain grayscale brightness-0 invert-[0.9] opacity-90"
-          priority
-          key="white-logo"
+          className="h-full w-auto object-contain brightness-0 invert opacity-90"
         />
       )}
     </div>
