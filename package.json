@@ -67,8 +67,5 @@
     "tailwindcss": "^4.2.1",
     "ts-morph": "^27.0.2",
     "typescript": "^5"
-  },
-  "overrides": {
-    "three": "^0.183.1"
   }
 }
